@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Tableau de bord</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('admin/images/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('local/logo.png')}}">
     <link rel="stylesheet" href="{{asset('user/vendor/chartist/css/chartist.min.css')}}">
     <link href="{{asset('admin/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 
@@ -14,10 +15,16 @@
     <link href="{{asset('admin/vendor/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
 
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
+
+    
+    <!-- Summernote -->
+    <link href="{{asset('admin/vendor/summernote/summernote.css')}}" rel="stylesheet">
+    
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <!--*******************
@@ -164,6 +171,25 @@
                         <li><a href="">Toutes les Devis</a></li>
                     </ul>
                 </li>
+                
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-381-settings-2"></i>
+							<span class="nav-text"><!--Setting-->Réglage</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{route('setting.create')}}">Paramètre d'application</a></li>
+                            <li><a href="{{route('feature.create')}}">Caractéristiques</a></li>
+                            <li><a href="{{route('about.create')}}">à propos de nous</a></li>
+                            <li><a href="{{route('course.create')}}">catégorie de cours</a></li>
+                            <li><a href="{{route('video.create')}}">Video</a></li>
+                            <li><a href="{{route('price.create')}}">plan tarifaire</a></li>
+                            <li><a href="{{route('instructor.index')}}">Instractur</a></li>
+                            <li><a href="{{route('galery.create')}}">galerie</a></li>
+                            <li><a href="{{route('jobber.index')}}">grossiste</a></li>
+                            <li><a href="{{route('faq.create')}}">FAQ</a></li>
+                            <li><a href="{{route('funfact.create')}}">Fait amusant</a></li>
+                        </ul>
+                    </li>
 <!--                <li>
                     <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                         <i class="flaticon-381-notepad"></i>
@@ -220,6 +246,11 @@
 <script src="{{asset('admin/js/deznav-init.js')}}"></script>
 <script src="{{asset('admin/vendor/owl-carousel/owl.carousel.js')}}"></script>
 
+  <!-- Summernote -->
+  <script src="{{asset('admin/vendor/summernote/js/summernote.min.js')}}"></script>
+    <!-- Summernote init -->
+    <script src="{{asset('admin//js/plugins-init/summernote-init.js')}}"></script>
+
 <!-- Chart piety plugin files -->
 <script src="{{asset('admin/vendor/peity/jquery.peity.min.js')}}"></script>
 
@@ -272,5 +303,7 @@
         }, 1000);
     });
 </script>
+
+ 
 </body>
 </html>
