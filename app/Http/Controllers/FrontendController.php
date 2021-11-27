@@ -13,11 +13,24 @@ use App\Pricing;
 use App\Features;
 use App\Website;
 use App\CourseCategory;
+use App\Instructor;
 
 class FrontendController extends Controller
 {
     public function index(){
         $about = About::first();
-        return view('front.index',compact('about'));
+        $funfact = Funfact::first();
+        $feature = Features::first();
+        $faq = FAQ::first();
+        $galery = Galery::first();
+        $jobber = Jobber::all();
+        $website = Website::first();
+        $courseCategory = CourseCategory::first();
+        $pricing = Pricing::first();
+        $video = Video::first();
+        $instructor = Instructor::all();
+
+
+        return view('front.index',compact('about','funfact','feature','faq','galery','jobber','website','courseCategory','pricing','video','instructor'));
     }
 }
