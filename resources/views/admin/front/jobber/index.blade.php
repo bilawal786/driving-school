@@ -32,7 +32,7 @@
                             <div class="card-header">
                                 <h4 class="card-title"><!-- Developer -->Développeuse</h4>
                                 <div class="float-lg-right">
-                                <a href="{{route('jobber.create')}}" class="btn btn-primary">Ajouter un développeur</a>
+                                <a href="{{route('testimonial.create')}}" class="btn btn-primary">Ajouter un nouveau</a>
                                 
                
 
@@ -48,7 +48,7 @@
                                                 <th><!--  Name -->Nom</th>
                                                  <th><!-- Job -->Travail</th>
                                                  <th><!-- Job -->Profil image</th>
-                                                 <th><!-- Job -->image de fond</th>
+                                                 
                                                 <th><!-- Action -->Action</th>
                                             </tr>
                                         </thead>
@@ -62,18 +62,16 @@
                                                 <td><a href="{{ asset($row->image ?? ' ')  }} " data-lightbox="image-1" 
                                 data-title="{{$row->name}}"><img class="rounded-circle" width="50" src="{{asset($row->image)}}" alt="Album Photo" style="border-radius: 20%;height: 60px;width: 60px; text-align: center;"></a></td>
                                                
-                                <td><a href="{{ asset($row->backGroundImage ?? ' ')  }} " data-lightbox="image-1" 
-                                data-title="{{$row->name}}"><img class="rounded-circle" width="50" src="{{asset($row->backGroundImage)}}" alt="Album Photo" style="border-radius: 20%;height: 60px;width: 60px; text-align: center;"></a></td>
-                                               
+                                
                                                
                                                 <td>
 													<div class="d-flex">
 														
                                                     
-                                                <a href="{{route('jobber.delete', ['id' => $row->id])}}" id="delete" class="btn btn-danger shadow btn-xs sharp" data-toggle="tooltip" title="Delete">
+                                                <a href="{{route('testimonial.delete', ['id' => $row->id])}}" id="delete" class="btn btn-danger shadow btn-xs sharp" data-toggle="tooltip" title="Delete">
                                                    <i class="fa fa-trash"></i>
                                                 </a>
-                                                <a href="{{route('jobber.edit', ['id' => $row->id])}}" id="edit" class="btn btn-primary shadow btn-xs sharp" data-toggle="tooltip" title="edit">
+                                                <a href="{{route('testimonial.edit', ['id' => $row->id])}}" id="edit" class="btn btn-primary shadow btn-xs sharp" data-toggle="tooltip" title="edit">
                                                    <i class="fa fa-pencil"></i>
                                                 </a>
 													</div>												

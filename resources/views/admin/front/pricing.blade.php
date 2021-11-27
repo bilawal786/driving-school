@@ -53,28 +53,28 @@
                                             <input type="text" class="form-control" name="pricingTitle1" value="{{$price->pricingTitle1 ?? ''}}"  placeholder="Entrez le Titre du prix1" >
                                                 
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix1 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils1 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails11" value="{{$price->pricingDetails11 ?? ''}}"  placeholder="Entrez le Deatils des Pix1" >
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix2 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils2 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails12" value="{{$price->pricingDetails12 ?? ''}}"  placeholder="Entrez le Deatils des Pix2" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix3 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils3 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails13" value="{{$price->pricingDetails13 ?? ''}}"  placeholder="Entrez le Deatils des Pix3" >
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix4 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils4 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails14" value="{{$price->pricingDetails14 ?? ''}}"  placeholder="Entrez le Deatils des Pix4" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix5 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils5 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails15" value="{{$price->pricingDetails15 ?? ''}}"  placeholder="Entrez le Deatils des Pix5" >
                                             </div>
@@ -88,7 +88,7 @@
                                            
                                         </div>
                                         </div>
-
+                                        <hr><br>
 
 
                                         <div class="form-group row">
@@ -97,28 +97,28 @@
                                             <input type="text" class="form-control" name="pricingTitle2" value="{{$price->pricingTitle2 ?? ''}}"  placeholder="Entrez le Titre du prix2" >
                                                 
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix1 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils1 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails21" value="{{$price->pricingDetails21 ?? ''}}"  placeholder="Entrez le Deatils des Pix1" >
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix2 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils2 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails22" value="{{$price->pricingDetails22 ?? ''}}"  placeholder="Entrez le Deatils des Pix2" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix3 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils3 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails23" value="{{$price->pricingDetails23 ?? ''}}"  placeholder="Entrez le Deatils des Pix3" >
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix4 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils4 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails24" value="{{$price->pricingDetails24 ?? ''}}"  placeholder="Entrez le Deatils des Pix4" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix5 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils5 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails25" value="{{$price->pricingDetails25 ?? ''}}"  placeholder="Entrez le Deatils des Pix5" >
                                             </div>
@@ -131,35 +131,35 @@
                                                 
                                         </div> 
                                         </div>
-
+                                        <hr><br>
                                         <div class="form-group row">
                                             <label class="col-sm-2 col-form-label"><!-- Title -->Titre du prix3 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingTitle3" value="{{$price->pricingTitle3 ?? ''}}"  placeholder="Entrez le Titre du prix3" >
                                                 
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix1 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils1 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails31" value="{{$price->pricingDetails31 ?? ''}}"  placeholder="Entrez le Deatils des Pix1" >
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix2 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils2 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails32" value="{{$price->pricingDetails32 ?? ''}}"  placeholder="Entrez le Deatils des Pix2" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix3 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils3 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails33" value="{{$price->pricingDetails33 ?? ''}}"  placeholder="Entrez le Deatils des Pix3" >
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix4 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils4 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails34" value="{{$price->pricingDetails34 ?? ''}}"  placeholder="Entrez le Deatils des Pix4" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix5 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils5 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails35" value="{{$price->pricingDetails35 ?? ''}}"  placeholder="Entrez le Deatils des Pix5" >
                                             </div>
@@ -172,35 +172,35 @@
                                                 
                                           </div> 
                                         </div>
-
+                                        <hr><br>
                                         <div class="form-group row">
                                             <label class="col-sm-2 col-form-label"><!-- Title -->Titre du prix4 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingTitle4" value="{{$price->pricingTitle4 ?? ''}}"  placeholder="Entrez le Titre du prix4" >
                                                 
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix1 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils1 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails41" value="{{$price->pricingDetails41 ?? ''}}"  placeholder="Entrez le Deatils des Pix1" >
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix2 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils2 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails42" value="{{$price->pricingDetails42 ?? ''}}"  placeholder="Entrez le Deatils des Pix2" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix3 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils3 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails43" value="{{$price->pricingDetails43 ?? ''}}"  placeholder="Entrez le Deatils des Pix3" >
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix4 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <label class="col-sm-2 col-form-label"><!-- Title -->Deatils4 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails44" value="{{$price->pricingDetails44 ?? ''}}"  placeholder="Entrez le Deatils des Pix4" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils  Prix5 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <label class="col-sm-2 col-form-label"><!-- Title -->Deatils5 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                             <input type="text" class="form-control" name="pricingDetails45" value="{{$price->pricingDetails45 ?? ''}}"  placeholder="Entrez le Deatils des Pix5" >
                                             </div>
@@ -213,7 +213,7 @@
                                                 
                                          </div>  
                                         </div>
-
+                                        <hr><br>
                                         <div class="form-group row">
                                         <label class="col-sm-3 col-form-label"><!-- Description -->La description <strong style="color: red;font-size: 20px;"> *</strong></label>
                                         <div class="col-sm-12">

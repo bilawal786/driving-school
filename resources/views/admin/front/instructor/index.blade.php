@@ -32,7 +32,7 @@
                             <div class="card-header">
                                 <h4 class="card-title"><!-- Developer -->INSTRUCTEUR</h4>
                                 <div class="float-lg-right">
-                                <a href="{{route('instructor.create')}}" class="btn btn-primary">Ajouter un instructur</a>
+                                <a href="{{route('instructor.create')}}" class="btn btn-primary">Ajouter un nouveau</a>
                                 
                
 

@@ -43,12 +43,12 @@ Route::post('/faq/store', 'GeneralSettingsController@faqStore')->name('faq.store
 
 // APP jobber 
 
-Route::get('/jobber/create', 'GeneralSettingsController@jobberCreate')->name('jobber.create');
-Route::post('/jobber/store', 'GeneralSettingsController@jobberStore')->name('jobber.store');
-Route::get('/jobber/index', 'JobberController@index')->name('jobber.index');
-Route::get('/jobber/delete/{id}', 'JobberController@destroy')->name('jobber.delete');
-Route::get('/jobber/edit/{id}', 'JobberController@edit')->name('jobber.edit');
-Route::post('/jobber/update/{id}', 'JobberController@update')->name('jobber.update');
+Route::get('/testimonial/create', 'GeneralSettingsController@jobberCreate')->name('testimonial.create');
+Route::post('/testimonial/store', 'GeneralSettingsController@jobberStore')->name('testimonial.store');
+Route::get('/testimonial/index', 'JobberController@index')->name('testimonial.index');
+Route::get('/testimonial/delete/{id}', 'JobberController@destroy')->name('testimonial.delete');
+Route::get('/testimonial/edit/{id}', 'JobberController@edit')->name('testimonial.edit');
+Route::post('/testimonial/update/{id}', 'JobberController@update')->name('testimonial.update');
 
 //END APP jobber
 

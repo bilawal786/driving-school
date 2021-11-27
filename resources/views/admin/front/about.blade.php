@@ -77,7 +77,7 @@
                                         <div class="card-body">
 
                                         <div >
-                                        <textarea class="summernote" name="description"  >{{$about->description}}</textarea>
+                                        <textarea class="summernote" name="description"  >{{$about->description }}!}</textarea>
                                         </div>
                                         </div>
                                     </div>

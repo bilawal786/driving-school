@@ -162,7 +162,7 @@
                         <span class="nav-text">Tableau de bord</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                         <i class="flaticon-381-television"></i>
                         <span class="nav-text">Devis</span>
@@ -170,7 +170,7 @@
                     <ul aria-expanded="false">
                         <li><a href="">Toutes les Devis</a></li>
                     </ul>
-                </li>
+                </li> -->
                 
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-settings-2"></i>
@@ -179,13 +179,13 @@
                         <ul aria-expanded="false">
                             <li><a href="{{route('setting.create')}}">Paramètre d'application</a></li>
                             <li><a href="{{route('feature.create')}}">Caractéristiques</a></li>
-                            <li><a href="{{route('about.create')}}">à propos de nous</a></li>
-                            <li><a href="{{route('course.create')}}">catégorie de cours</a></li>
+                            <li><a href="{{route('about.create')}}">A propos de nous</a></li>
+                            <li><a href="{{route('course.create')}}">Catégorie de cours</a></li>
                             <li><a href="{{route('video.create')}}">Video</a></li>
-                            <li><a href="{{route('price.create')}}">plan tarifaire</a></li>
+                            <li><a href="{{route('price.create')}}">Plan tarifaire</a></li>
                             <li><a href="{{route('instructor.index')}}">Instractur</a></li>
-                            <li><a href="{{route('galery.create')}}">galerie</a></li>
-                            <li><a href="{{route('jobber.index')}}">grossiste</a></li>
+                            <li><a href="{{route('galery.create')}}">Galerie</a></li>
+                            <li><a href="{{route('testimonial.index')}}">Témoignage</a></li>
                             <li><a href="{{route('faq.create')}}">FAQ</a></li>
                             <li><a href="{{route('funfact.create')}}">Fait amusant</a></li>
                         </ul>

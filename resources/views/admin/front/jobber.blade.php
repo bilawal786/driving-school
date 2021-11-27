@@ -42,7 +42,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="basic-form">
-                                    <form method="POST" action="{{ route('jobber.store') }}" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ route('testimonial.store') }}" enctype="multipart/form-data">
                                              @csrf
 
                                              <div class="form-group row">
@@ -68,19 +68,7 @@
                                         <img id="output_image1" src="{{asset('front/img/testimonial/1.jpg')}}" />
                     
                                         </div></div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label"><!--Icon-->image(1950x510)<strong style="color: red;font-size: 20px;"> * </strong></label>
-                                            <div class="col-sm-5">
-                                               <label class="form-control @error('backGroundImage') is-invalid @enderror">
-                      <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre Image</strong></center><input type="file" style="display: none;"name="backGroundImage" value="{{ old('backGroundImage') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp2" onchange="preview_image2(event)">
-                        </label>
-                                            </div>
                                         
-                                        <div class="col-sm-4">
-                      
-                                        <img id="output_image2" src="{{asset('front/img/testimonial/1.jpg')}}" />
-                    
-                                        </div></div>
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label"><!-- Description -->La description <strong style="color: red;font-size: 20px;"> *</strong></label>
                                         <div class="col-sm-12">

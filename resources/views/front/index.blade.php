@@ -32,7 +32,35 @@
     <!-- Modernizer JS
     ============================================ -->
     <script src="{{asset('front/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
+    
     <style>
+ 
+
+.footer-area {
+    background: rgba(0, 0, 0, 0) url('{{ asset($website->footerBackGroundImage ?? '') }}') repeat scroll center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.testimonial-area {
+    background: rgba(0, 0, 0, 0) url('{{ asset($website->jooberBackGroundImage ?? '') }}') repeat scroll 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.pricing-area {
+    background: rgba(0, 0, 0, 0) url('{{ asset($website->pricingBackGroundImage ?? '') }}') repeat scroll 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.video-area {
+    background: rgba(0, 0, 0, 0) url('{{ asset($video->backGroundImage ?? '') }}') repeat scroll 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 195px 0;
+}
 .heading {
   color:red;
 }
@@ -139,7 +167,7 @@
                         <h2 class="heading"><!--About our shop--> À propos de nous</h2>
                     </div>
                     <div class="full margin_top_20">
-                        {{$about->description ?? ''}}
+                        {!!$about->description !!}
                     </div>
                     <div class="full margin_top_50" >
                     <img class="img-responsive" src="{{ asset($about->image2 ?? ' ')  }}" alt="#" />
@@ -276,7 +304,7 @@
         <div class="container">
             <div class="row">
                 <div class="video-content text-center col-12">
-                    <a class="video-popup" href="{{$video->video ?? ''}}"><i class="icofont icofont-play-alt-2"></i></a>
+                    <a class="video-popup" href="https://www.youtube.com/watch?v={{$video->video ?? ''}}"><i class="icofont icofont-play-alt-2"></i></a>
                     <h3><!--our teaching process-->{{$video->title ?? ''}}</h3>
                 </div>
             </div>
@@ -291,7 +319,7 @@
                 <div class="section-title title-white text-center col-12 mb-45">
                     <h3 class="heading"><!--your pricing plan-->VOTRE PLAN TARIFAIRE</h3>
                     <div class="excerpt">
-                        <p>{{$pricing->pricingDescription ?? ' '}}</p>
+                        <p>{!!$pricing->pricingDescription ?? ' '!!}</p>
                     </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
@@ -390,14 +418,15 @@
                 <div class="col-lg-10 col-12 mx-auto">
                     <!-- Instructor Tab Content -->
                     <div class="tab-content">
-                    @foreach($instructor as $key=>$row)
+                    @foreach($instructor as $key=> $row)
                       
-                        <div class="tab-pane fade show active" id="instructor-{{$key++}}">
+                    @if($key+1 == 1)
+                        <div class="tab-pane fade show active" id="instructor-{{$row->id}}">
                             <div class="row">
                                 <div class="instructor-details text-left col-lg-7 col-12">
-                                    <h4 class="instructor-name">{{$row->name}}</h4>
-                                    <h5 class="instructor-title">{{$row->job}}</h5>
-                                    <p>{{$row->description2}}</p>
+                                    <h4 class="instructor-name">{{$row->name ?? ''}}</h4>
+                                    <h5 class="instructor-title">{{$row->job ?? ''}}</h5>
+                                    <p>{!! $row->description2 ?? '' !!}</p>
                                     <div class="instructor-social fix">
                                     <a href="{{$row->facebook}}"><i class="icofont icofont-social-facebook"></i></a>
                                     <a href="{{$row->instagram}}"><i class="icofont icofont-social-instagram"></i></a>
@@ -405,20 +434,45 @@
                                     </div>
                                 </div>
                                 <div class="instructor-image col-lg-5 col-md-6 col-12">
-                                    <img src="{{asset($row->image1)}}" alt="" />
+                                    <img src="{{asset($row->image1 ?? '')}}" alt="" />
                                 </div>
                             </div>
                         </div>
+                    @else
+                    <div class="tab-pane fade show " id="instructor-{{$row->id}}">
+                            <div class="row">
+                                <div class="instructor-details text-left col-lg-7 col-12">
+                                    <h4 class="instructor-name">{{$row->name ?? ''}}</h4>
+                                    <h5 class="instructor-title">{{$row->job ?? ''}}</h5>
+                                    <p>{!! $row->description2 ?? '' !!}</p>
+                                    <div class="instructor-social fix">
+                                    <a href="{{$row->facebook}}"><i class="icofont icofont-social-facebook"></i></a>
+                                    <a href="{{$row->instagram}}"><i class="icofont icofont-social-instagram"></i></a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="instructor-image col-lg-5 col-md-6 col-12">
+                                    <img src="{{asset($row->image1 ?? '')}}" alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                    @endif
 
                     @endforeach
                         
                     </div>
                     <!-- Instructor Tab List -->
                     <ul class="nav instructor-tab-list fix">
-                        <li class="active"><a href="#instructor-1" data-toggle="tab"><img src="{{asset('front/img/instructor/1.jpg')}}" alt="" /></a></li>
-                        <li><a href="#instructor-2" data-toggle="tab"><img src="{{asset('front/img/instructor/2.jpg')}}" alt="" /></a></li>
-                        <li><a href="#instructor-3" data-toggle="tab"><img src="{{asset('front/img/instructor/3.jpg')}}" alt="" /></a></li>
-                        <li><a href="#instructor-4" data-toggle="tab"><img src="{{asset('front/img/instructor/4.jpg')}}" alt="" /></a></li>
+                    @foreach($instructor as $key=>$row)
+                        
+                        @if($key+1 == 1)
+                        <li class="active"><a href="#instructor-{{$row->id ??''}}" data-toggle="tab"><img src="{{asset($row->image2 ?? '')}}" alt="" /></a></li>
+                        @else
+                        <li><a href="#instructor-{{$row->id ?? ''}}" data-toggle="tab"><img src="{{asset($row->image2 ?? '')}}" alt="" /></a></li>
+                        @endif
+                    @endforeach
+                        
                     </ul>
                 </div>
             </div>
@@ -434,7 +488,7 @@
                 <div class="section-title text-center col-12 mb-45">
                     <h3 class="heading">GALERIE D'OR</h3>
                     <div class="excerpt">
-                        <p>{{$galery->description ?? ''}}</p>
+                        <p>{!!$galery->description ?? '' !!}</p>
                     </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
@@ -450,7 +504,7 @@
             <!-- Gallery Grid -->
             <div class="gallery-grid row">
                 <div class="gallery-item cars col-lg-3 col-md-4 col-12">
-                    <a href="img/gallery/1.jpg" class="gallery-image image-popup">
+                    <a href="{{asset($galery->image1 ?? '')}}" class="gallery-image image-popup">
                         <img src="{{asset($galery->image1 ?? '')}}" alt="" />
                         <div class="content">
                             <i class="icofont icofont-search"></i>
@@ -459,7 +513,7 @@
                     </a>
                 </div>
                 <div class="gallery-item cars exam col-lg-3 col-md-4 col-12">
-                    <a href="img/gallery/2.jpg" class="gallery-image image-popup">
+                    <a href="{{asset($galery->image2 ?? '')}}" class="gallery-image image-popup">
                         <img src="{{asset($galery->image2 ?? '')}}" alt="" />
                         <div class="content">
                             <i class="icofont icofont-search"></i>
@@ -468,7 +522,7 @@
                     </a>
                 </div>
                 <div class="gallery-item classroom col-lg-3 col-md-4 col-12">
-                    <a href="img/gallery/3.jpg" class="gallery-image image-popup">
+                    <a href="{{asset($galery->image3 ?? '')}}" class="gallery-image image-popup">
                         <img src="{{asset($galery->image3 ?? '')}}" alt="" />
                         <div class="content">
                             <i class="icofont icofont-search"></i>
@@ -477,7 +531,7 @@
                     </a>
                 </div>
                 <div class="gallery-item cars students exam col-lg-3 col-md-4 col-12">
-                    <a href="img/gallery/4.jpg" class="gallery-image image-popup">
+                    <a href="{{asset($galery->image4 ?? '')}}" class="gallery-image image-popup">
                         <img src="{{asset($galery->image4 ?? '')}}" alt="" />
                         <div class="content">
                             <i class="icofont icofont-search"></i>
@@ -486,7 +540,7 @@
                     </a>
                 </div>
                 <div class="gallery-item cars students col-lg-3 col-md-4 col-12">
-                    <a href="img/gallery/5.jpg" class="gallery-image image-popup">
+                    <a href="{{asset($galery->image5 ?? '')}}" class="gallery-image image-popup">
                         <img src="{{asset($galery->image5 ?? '')}}" alt="" />
                         <div class="content">
                             <i class="icofont icofont-search"></i>
@@ -495,7 +549,7 @@
                     </a>
                 </div>
                 <div class="gallery-item students classroom col-lg-3 col-md-4 col-12">
-                    <a href="img/gallery/6.jpg" class="gallery-image image-popup">
+                    <a href="{{asset($galery->image6 ?? '')}}" class="gallery-image image-popup">
                         <img src="{{asset($galery->image6 ?? '')}}" alt="" />
                         <div class="content">
                             <i class="icofont icofont-search"></i>
@@ -557,7 +611,7 @@
                 <div class="section-title text-center col-12 mb-45">
                     <h3 class="heading">QUESTIONS FRÉQUEMMENT POSÉES</h3>
                     <div class="excerpt">
-                        <p>{{$faq->description ?? ''}}</p>
+                        <p>{!! $faq->description ?? '' !!}</p>
                     </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
@@ -663,7 +717,7 @@
     <div id="footer-area" class="footer-area overlay overlay-black overlay-70 pt-90">
         <div class="container">
             <div class="row">
-                <div class="footer-widget text-left col-lg-4 col-md-6 col-12">
+                <div class="footer-widget text-left col-lg-6 col-md-6 col-12">
                     <h4 class="widget-title"><!--about drive on-->À PROPOS DE LA CONDUITE</h4>
                     <div class="about-widget">
                         <p>{{$website->aboutDescription ?? ''}}</p>
@@ -674,7 +728,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-widget text-left col-lg-4 col-md-6 col-12">
+                <div class="footer-widget text-left col-lg-6 col-md-6 col-12">
                     <h4 class="widget-title">CONTACT RAPIDE</h4>
                     <div class="contact-widget">
                         <h5>address:</h5>
@@ -688,7 +742,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="footer-widget text-left col-lg-4 col-md-6 col-12">
+                <!-- <div class="footer-widget text-left col-lg-4 col-md-6 col-12">
                     <h4 class="widget-title">ARTICLE DE BLOG</h4>
                     <div class="blog-widget">
                         <div class="widget-blog fix">
@@ -713,7 +767,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- <div class="footer-widget text-left col-lg-3 col-md-6 col-12">
                     <h4 class="widget-title">GALERIE INSTAGRAM</h4>
                     <div class="instagram-widget">
@@ -730,7 +784,7 @@
                 </div> -->
             </div>
             <div class="footer-bottom text-center col-12">
-                <p class="copyright">Copyright &copy; <a href="#">Driveon</a> ALL Right Reserved</p>
+                <p class="copyright">Copyright &copy; {{$website->copyRight}}</p>
             </div>
         </div>
     </div>

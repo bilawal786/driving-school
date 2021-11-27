@@ -32,7 +32,7 @@ class WebsiteSeeder extends Seeder
             avons décidé d'en faire notre mission.
             Parcourez,notre site pour découvrir nos services.
             En cas de questions. n'hésitez pas à nous contacter. Auto école LIGNE DE 
-            CONDUITE 971 est là pour vous servir</p>",
+            CONDUITE 971 est là pour vous servir",
             'image1' => 'front/image2.png',
             'image2' => 'front/image.png',
             
@@ -63,9 +63,9 @@ class WebsiteSeeder extends Seeder
            
         ]);
         Video::create([
-            'video' => "https://www.youtube.com/watch?v=ngaeb1jARAY",
+            'video' => "ngaeb1jARAY",
             'title' => "NOTRE PROCESSUS D'ENSEIGNEMENT",
-            'backGroundImage' => 'front/img/feature.png',
+            'backGroundImage' => 'front/img/section-bg/video.jpg',
             ]);
 
         Pricing::create([
@@ -161,44 +161,87 @@ class WebsiteSeeder extends Seeder
                 'simage1' => 'front/img/slider/1.jpg',
                 'simage2' => "front/img/slider/4.jpg",
                 'simage3' => 'front/img/slider/3.jpg',
-                ]);
-                Jobber::create([
-                    'image' => "front/img/testimonial/1.jpg",
-                    'backGroundImage' => "front/img/testimonial/1.jpg",
-                    'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
-                    'name' => "Momen bhuiyan",
-                    'job' => "Graphic Designer",
-                    
-                    ]);
-                    Jobber::create([
-                'image' => "front/img/testimonial/1.jpg",
-                'backGroundImage' => "front/img/testimonial/1.jpg",
-                'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
-                'name' => "Momen bhuiyan",
-                'job' => "Graphic Designer",
+                'footerBackGroundImage' => 'front/img/section-bg/footer.jpg',
+                'copyRight' => 'Driveon ALL Right Reserved',
+                'jooberBackGroundImage' => 'front/img/section-bg/testimonial.jpg',
+                'pricingBackGroundImage' => 'front/img/section-bg/pricing.jpg',
                 
                 ]);
-                Jobber::create([
-                    'image' => "front/img/testimonial/1.jpg",
-                    'backGroundImage' => "front/img/testimonial/1.jpg",
-                    'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
-                    'name' => "Momen bhuiyan",
-                    'job' => "Graphic Designer",
+        Jobber::create([
+            'image' => "front/img/testimonial/1.jpg",
+            'backGroundImage' => "front/img/testimonial/1.jpg",
+            'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
+            'name' => "Momen bhuiyan",
+            'job' => "Graphic Designer",
+            
+            ]);
+            Jobber::create([
+        'image' => "front/img/testimonial/1.jpg",
+        'backGroundImage' => "front/img/testimonial/1.jpg",
+        'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
+        'name' => "Momen bhuiyan",
+        'job' => "Graphic Designer",
+        
+        ]);
+        Jobber::create([
+            'image' => "front/img/testimonial/1.jpg",
+            'backGroundImage' => "front/img/testimonial/1.jpg",
+            'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
+            'name' => "Momen bhuiyan",
+            'job' => "Graphic Designer",
+            
+            ]);
+
+            Instructor::create([
+                'image1' => "front/img/instructor/1.jpg",
+                'image2' => "front/img/instructor/big-3.jpg",
+                'description1' => "Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua",
+                'description2' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
+                'name' => "Momen bhuiyan",
+                'job' => "Graphic Designer",
+                'facebook' => "www.facebook.com",
+                'instagram' => "instagram.com",
+                
+                
+                ]);
+                Instructor::create([
+                    'image1' => "front/img/instructor/1.jpg",
+                    'image2' => "front/img/instructor/big-3.jpg",
+                    'description1' => "Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua",
+                    'description2' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
+                    'name' => "M Usman",
+                    'job' => "Devloper",
+                    'facebook' => "www.facebook.com",
+                    'instagram' => "instagram.com",
+                    
                     
                     ]);
-
                     Instructor::create([
-                        'image1' => "front/img/testimonial/1.jpg",
-                        'image2' => "front/img/testimonial/1.jpg",
+                        'image1' => "front/img/instructor/1.jpg",
+                        'image2' => "front/img/instructor/big-3.jpg",
                         'description1' => "Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua",
                         'description2' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
-                        'name' => "Momen bhuiyan",
-                        'job' => "Graphic Designer",
+                        'name' => "Bilawal",
+                        'job' => "Web Designer",
                         'facebook' => "www.facebook.com",
                         'instagram' => "instagram.com",
                         
                         
                         ]);
+                        Instructor::create([
+                            'image1' => "front/img/instructor/1.jpg",
+                            'image2' => "front/img/instructor/big-3.jpg",
+                            'description1' => "Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua",
+                            'description2' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
+                            'name' => "Hamza",
+                            'job' => "Graphic Designer",
+                            'facebook' => "www.facebook.com",
+                            'instagram' => "instagram.com",
+                            
+                            
+                            ]);
+                            
+                
                                 
 
                                

@@ -204,14 +204,7 @@ public function jobberCreate()
     }
     public function jobberStore(Request $request)
     {   
-        $request->validate([
-            'job' => 'required',
-            'name'=>'required',
-            'image' => 'required',
-            'backGroundImage' => 'required',
-            'description' => 'required',
-            
-        ]);
+        
 
         $input = $request->all(); 
         if ($request->hasfile('image')) {
@@ -463,14 +456,8 @@ public function vedioCreate()
         $video = Video::first();
         
         $video->title = $request->title;
-        if ($request->hasfile('video')) {
-
-            $image1 = $request->file('video');
-            $name = time() . 'video' . '.' . $image1->getClientOriginalExtension();
-            $destinationPath = 'admin/about/';
-            $image1->move($destinationPath, $name);
-            $video->video  = 'admin/about/' . $name;
-        } 
+        $video->video = $request->video;
+        
       
         if ($request->hasfile('backGroundImage')) {
 
@@ -604,7 +591,31 @@ public function settingCreate()
             $image1->move($destinationPath, $name);
             $input['logo'] = 'admin/setting/' . $name;
         } 
-        
+        if ($request->hasfile('footerBackGroundImage')) {
+
+            $image1 = $request->file('footerBackGroundImage');
+            $name = time() . 'footerBackGroundImage' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $input['footerBackGroundImage'] = 'admin/setting/' . $name;
+        }
+        if ($request->hasfile('jooberBackGroundImage')) {
+
+            $image1 = $request->file('jooberBackGroundImage');
+            $name = time() . 'jooberBackGroundImage' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $input['jooberBackGroundImage'] = 'admin/setting/' . $name;
+        }  
+        if ($request->hasfile('pricingBackGroundImage')) {
+
+            $image1 = $request->file('pricingBackGroundImage');
+            $name = time() . 'pricingBackGroundImage' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $input['pricingBackGroundImage'] = 'admin/setting/' . $name;
+        } 
+       
         if ($request->hasfile('articleImage1')) {
 
             $image1 = $request->file('articleImage1');
@@ -692,7 +703,30 @@ public function settingCreate()
             $image1->move($destinationPath, $name);
             $setting->logo = 'admin/setting/' . $name;
         } 
-        
+        if ($request->hasfile('footerBackGroundImage')) {
+
+            $image1 = $request->file('footerBackGroundImage');
+            $name = time() . 'footerBackGroundImage' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $setting->footerBackGroundImage = 'admin/setting/' . $name;
+        } 
+        if ($request->hasfile('jooberBackGroundImage')) {
+
+            $image1 = $request->file('jooberBackGroundImage');
+            $name = time() . 'jooberBackGroundImage' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $setting->jooberBackGroundImage = 'admin/setting/' . $name;
+        }  
+        if ($request->hasfile('pricingBackGroundImage')) {
+
+            $image1 = $request->file('pricingBackGroundImage');
+            $name = time() . 'pricingBackGroundImage' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $setting->pricingBackGroundImage = 'admin/setting/' . $name;
+        } 
         if ($request->hasfile('articleImage1')) {
 
             $image1 = $request->file('articleImage1');

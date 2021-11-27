@@ -38,18 +38,11 @@ class InstructorController extends Controller
      */
     public function store(Request $request)
     {  
-        $request->validate([
-            'job' => 'required',
-            'name'=>'required',
-            'image1' => 'required',
-            'image2' => 'required',
-            'description1' => 'required',
-            'description2' => 'required',
-            'facebook' => 'required',
-            'instagram' => 'required',
-            
-        ]);
-
+    
+        $chek = Instructor::all();
+       
+        if($chek->count()<4){
+           
          $instructor = new Instructor();
         
          $instructor->name = $request->name;
@@ -80,6 +73,12 @@ class InstructorController extends Controller
         Session::flash('message', "Your Data Saved");
         $instructor = Instructor::all();
         return view('admin.front.instructor.index',compact('instructor'));
+    }
+    else{
+        Session::flash('error', "Your Data Not Saved Please Delete Data");
+        $instructor = Instructor::all();
+        return view('admin.front.instructor.index',compact('instructor'));
+    }
     
 
     

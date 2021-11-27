@@ -65,13 +65,7 @@
                                                 <input type="text" class="form-control" name="instagram" value="" placeholder="Entrez le Lien instagram " >
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->La description <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="description1" value=""  placeholder="Entrez le La description" >
-                                            </div>
-                                            
-                                        </div>
+                                        
                                              <div class="form-group row">
                                             <label class="col-sm-3 col-form-label"><!--Icon-->Image1(115x115)<strong style="color: red;font-size: 20px;"> * </strong></label>
                                             <div class="col-sm-5">

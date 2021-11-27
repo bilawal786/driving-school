@@ -48,6 +48,9 @@ class CreateWebsitesTable extends Migration
             
 
             $table->longText('copyRight')->nullable();
+            $table->string('footerBackGroundImage')->nullable();
+            $table->string('pricingBackGroundImage')->nullable();
+            $table->string('jooberBackGroundImage')->nullable();
             //End footer
 
             //Slider
