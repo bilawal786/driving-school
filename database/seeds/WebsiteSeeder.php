@@ -7,7 +7,7 @@ use App\FAQ;
 use App\Jobber;
 use App\Galery;
 use App\Video;
-use App\Pricing;
+use App\CourseEnroll;
 use App\Features;
 use App\Website;
 use App\CourseCategory;
@@ -67,37 +67,61 @@ class WebsiteSeeder extends Seeder
             'title' => "NOTRE PROCESSUS D'ENSEIGNEMENT",
             'backGroundImage' => 'front/img/section-bg/video.jpg',
             ]);
-
-        Pricing::create([
-                'pricingDescription' => "Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua",
-                'price1' => "200",
-                'pricingDetails11' => 'Cours De 2 Mois',
-                'pricingDetails12' => "3 Heures Par JourY",
-                'pricingDetails13' => "1 Test Hebdomadale",
-                'pricingDetails14' => '20 Cours Vidio',
-                'pricingDetails15' => "Permis De Conduire",
-                'pricingTitle1' => "DE BASE",
-                'pricingTitle2' => 'AMÉLIORER',
-                'price2' => "300",
-                'pricingDetails21' => "Cours De 3 Mois",
-                'pricingDetails22' => '3 Heures Par JourY',
-                'pricingDetails23' => " Test Hebdomadale 2",
-                'pricingDetails24' => "30 Cours Vidio",
-                'pricingDetails25' => 'Permis De Conduire',
-                'pricingTitle3' => 'INTELLIGENT',
-                'price3' => "400",
-                'pricingDetails31' => "Cours De 4 Mois",
-                'pricingDetails32' => '4 Heures Par JourY',
-                'pricingDetails33' => "Test Hebdomadale 3",
-                'pricingDetails34' => "40 Cours Vidio",
-                'pricingDetails35' => 'Permis De Conduire',
-                'pricingTitle4' => 'TROP INTELLIGENT',
-                'price4' => "500",
-                'pricingDetails41' => "Cours De 5 Mois",
-                'pricingDetails42' => '3 Heures Par JourY',
-                'pricingDetails43' => "Test Hebdomadale 5",
-                'pricingDetails44' => "50 Cours Vidio",
-                'pricingDetails45' => 'Permis De Conduire',
+            
+            CourseEnroll::create([
+                
+                'price' => "200",
+                'courseDetails1' => 'Cours De 2 Mois',
+                'courseDetails2' => "3 Heures Par JourY",
+                'courseDetails3' => "1 Test Hebdomadale",
+                'courseDetails4' => '20 Cours Vidio',
+                'courseDetails5' => "Permis De Conduire",
+                'courseTitle' => "DE BASE",
+                
+               
+            ]);
+            CourseEnroll::create([
+                
+                'price' => "300",
+                'courseTitle' => "Cours De 3 Mois",
+                'courseDetails1' => '3 Heures Par JourY',
+                'courseDetails2' => " Test Hebdomadale 2",
+                'courseDetails3' => "30 Cours Vidio",
+                'courseDetails4' => 'Permis De Conduire',
+                'courseDetails5' => 'INTELLIGENT',
+                
+               
+            ]);
+            CourseEnroll::create([
+                'courseTitle' => 'AMÉLIORER',
+                'price' => "400",
+                'courseDetails1' => "Cours De 4 Mois",
+                'courseDetails2' => '4 Heures Par JourY',
+                'courseDetails3' => "Test Hebdomadale 3",
+                'courseDetails4' => "40 Cours Vidio",
+                'courseDetails5' => 'Permis De Conduire',
+                
+               
+            ]);
+            CourseEnroll::create([
+                'courseTitle' => 'TROP INTELLIGENT',
+                'price' => "500",
+                'courseDetails1' => "Cours De 5 Mois",
+                'courseDetails2' => '3 Heures Par JourY',
+                'courseDetails3' => "Test Hebdomadale 5",
+                'courseDetails4' => "50 Cours Vidio",
+                'courseDetails5' => 'Permis De Conduire',
+                
+               
+            ]);
+            CourseEnroll::create([
+                'courseTitle' => 'AMÉLIORER',
+                'price' => "400",
+                'courseDetails1' => "Cours De 4 Mois",
+                'courseDetails2' => '4 Heures Par JourY',
+                'courseDetails3' => "Test Hebdomadale 3",
+                'courseDetails4' => "40 Cours Vidio",
+                'courseDetails5' => 'Permis De Conduire',
                 
                
             ]);
@@ -164,7 +188,8 @@ class WebsiteSeeder extends Seeder
                 'footerBackGroundImage' => 'front/img/section-bg/footer.jpg',
                 'copyRight' => 'Driveon ALL Right Reserved',
                 'jooberBackGroundImage' => 'front/img/section-bg/testimonial.jpg',
-                'pricingBackGroundImage' => 'front/img/section-bg/pricing.jpg',
+                'courseBackGroundImage' => 'front/img/section-bg/pricing.jpg',
+                'courseDescription' => 'Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua',
                 
                 ]);
         Jobber::create([

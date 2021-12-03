@@ -14,14 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'FrontendController@index')->name('front.index');
+Route::get('/contact', 'FrontendController@contact')->name('front.contact');
+Route::get('/fornt/login', 'FrontendController@logIN')->name('front.login');
 
+Route::middleware(['web', 'user'])->group(function () {
+   Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-// APP SETTING 
+   // APP SETTING 
 
 Route::get('/about/create', 'GeneralSettingsController@aboutCreate')->name('about.create');
 Route::post('/about/store', 'GeneralSettingsController@aboutStore')->name('about.store');
@@ -70,10 +69,14 @@ Route::post('/galery/store', 'GeneralSettingsController@galeryStore')->name('gal
 
 //END APP Galery
 
-// APP Price 
+// APP Course Enrollmant 
 
-Route::get('/price/create', 'GeneralSettingsController@priceCreate')->name('price.create');
-Route::post('/price/store', 'GeneralSettingsController@priceStore')->name('price.store');
+Route::get('/courses/create', 'CourseEnrollController@create')->name('courses.create');
+Route::post('/courses/store', 'CourseEnrollController@store')->name('courses.store');
+Route::get('/courses/index', 'CourseEnrollController@index')->name('courses.index');
+Route::get('/courses/delete/{id}', 'CourseEnrollController@destroy')->name('courses.delete');
+Route::get('/courses/edit/{id}', 'CourseEnrollController@edit')->name('courses.edit');
+Route::post('/coursess/update/{id}', 'CourseEnrollController@update')->name('courses.update');
 
 //END APP Price
 // APP Video 
@@ -100,5 +103,16 @@ Route::post('/feature/store', 'GeneralSettingsController@featureStore')->name('f
 
 Route::get('/setting/create', 'GeneralSettingsController@settingCreate')->name('setting.create');
 Route::post('/setting/store', 'GeneralSettingsController@settingStore')->name('setting.store');
+Route::get('/document/create', 'GeneralSettingsController@documentCreate')->name('document.create');
+Route::post('/document/store', 'GeneralSettingsController@documentStore')->name('document.store');
+
 
 //END APP Feature 
+
+    
+   });
+Auth::routes();
+
+
+
+

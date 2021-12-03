@@ -171,7 +171,12 @@
                         <li><a href="">Toutes les Devis</a></li>
                     </ul>
                 </li> -->
-                
+                <li><a href="{{route('document.create')}}" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-notepad"></i>
+                            <!-- APP SETTING -->
+                            <span class="nav-text">  Document</span>
+                        </a>
+                    </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-settings-2"></i>
 							<span class="nav-text"><!--Setting-->Réglage</span>
@@ -182,7 +187,7 @@
                             <li><a href="{{route('about.create')}}">A propos de nous</a></li>
                             <li><a href="{{route('course.create')}}">Catégorie de cours</a></li>
                             <li><a href="{{route('video.create')}}">Video</a></li>
-                            <li><a href="{{route('price.create')}}">Plan tarifaire</a></li>
+                            <li><a href="{{route('courses.index')}}">Courses</a></li>
                             <li><a href="{{route('instructor.index')}}">Instractur</a></li>
                             <li><a href="{{route('galery.create')}}">Galerie</a></li>
                             <li><a href="{{route('testimonial.index')}}">Témoignage</a></li>

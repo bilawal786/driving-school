@@ -22,12 +22,12 @@ class CreateFeaturesTable extends Migration
              $table->string('title4')->nullable();
              $table->string('title5')->nullable();
              $table->string('title6')->nullable();
-             $table->string('description1')->nullable();
-             $table->string('description2')->nullable();
-             $table->string('description3')->nullable();
-             $table->string('description4')->nullable();
-             $table->string('description5')->nullable();
-             $table->string('description6')->nullable();
+             $table->longText('description1')->nullable();
+             $table->longText('description2')->nullable();
+             $table->longText('description3')->nullable();
+             $table->longText('description4')->nullable();
+             $table->longText('description5')->nullable();
+             $table->longText('description6')->nullable();
              $table->string('image')->nullable();
             $table->timestamps();
         });

@@ -19,35 +19,35 @@ class CreatePricingsTable extends Migration
 
             $table->string('pricingTitle1')->nullable();
             $table->string('price1')->nullable();
-            $table->string('pricingDetails11')->nullable();
-            $table->string('pricingDetails12')->nullable();
-            $table->string('pricingDetails13')->nullable();
-            $table->string('pricingDetails14')->nullable();
-            $table->string('pricingDetails15')->nullable();
+            $table->longText('pricingDetails11')->nullable();
+            $table->longText('pricingDetails12')->nullable();
+            $table->longText('pricingDetails13')->nullable();
+            $table->longText('pricingDetails14')->nullable();
+            $table->longText('pricingDetails15')->nullable();
 
             $table->string('pricingTitle2')->nullable();
             $table->string('price2')->nullable();
-            $table->string('pricingDetails21')->nullable();
-            $table->string('pricingDetails22')->nullable();
-            $table->string('pricingDetails23')->nullable();
-            $table->string('pricingDetails24')->nullable();
-            $table->string('pricingDetails25')->nullable();
+            $table->longText('pricingDetails21')->nullable();
+            $table->longText('pricingDetails22')->nullable();
+            $table->longText('pricingDetails23')->nullable();
+            $table->longText('pricingDetails24')->nullable();
+            $table->longText('pricingDetails25')->nullable();
 
             $table->string('pricingTitle3')->nullable();
             $table->string('price3')->nullable();
-            $table->string('pricingDetails31')->nullable();
-            $table->string('pricingDetails32')->nullable();
-            $table->string('pricingDetails33')->nullable();
-            $table->string('pricingDetails34')->nullable();
-            $table->string('pricingDetails35')->nullable();
+            $table->longText('pricingDetails31')->nullable();
+            $table->longText('pricingDetails32')->nullable();
+            $table->longText('pricingDetails33')->nullable();
+            $table->longText('pricingDetails34')->nullable();
+            $table->longText('pricingDetails35')->nullable();
 
             $table->string('pricingTitle4')->nullable();
             $table->string('price4')->nullable();
-            $table->string('pricingDetails41')->nullable();
-            $table->string('pricingDetails42')->nullable();
-            $table->string('pricingDetails43')->nullable();
-            $table->string('pricingDetails44')->nullable();
-            $table->string('pricingDetails45')->nullable();
+            $table->longText('pricingDetails41')->nullable();
+            $table->longText('pricingDetails42')->nullable();
+            $table->longText('pricingDetails43')->nullable();
+            $table->longText('pricingDetails44')->nullable();
+            $table->longText('pricingDetails45')->nullable();
             $table->timestamps();
         });
     }

@@ -1,131 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('front/img/favicon.ico')}}">
-    <!-- Fonts -->
-    <link href="{{asset('front/fonts/lato/lato.css')}}" rel="stylesheet">
-    <!-- CSS -->
-    <!-- Bootstrap CSS
-    ============================================ -->
-    <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
-    <!-- Icon Font CSS
-    ============================================ -->
-    <link rel="stylesheet" href="{{asset('front/css/icofont.css')}}">
-    <!-- Plugins CSS
-    ============================================ -->
-    <link rel="stylesheet" href="{{asset('front/css/plugins.css')}}">
-    <!-- ShortCodes CSS
-    ============================================ -->
-    <link rel="stylesheet" href="{{asset('front/css/shortcode/shortcodes.css')}}">
-    <!-- Style CSS
-    ============================================ -->
-    <link rel="stylesheet" href="{{asset('front/style.css')}}">
-    <!-- Responsive CSS
-    ============================================ -->
-    <link rel="stylesheet" href="{{asset('front/css/responsive.css')}}">
-    <!-- Modernizer JS
-    ============================================ -->
-    <script src="{{asset('front/js/vendor/modernizr-2.8.3.min.js')}}"></script>
-
-    
-    <style>
- 
-
-.footer-area {
-    background: rgba(0, 0, 0, 0) url('{{ asset($website->footerBackGroundImage ?? '') }}') repeat scroll center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-.testimonial-area {
-    background: rgba(0, 0, 0, 0) url('{{ asset($website->jooberBackGroundImage ?? '') }}') repeat scroll 0 0;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-.pricing-area {
-    background: rgba(0, 0, 0, 0) url('{{ asset($website->pricingBackGroundImage ?? '') }}') repeat scroll 0 0;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-.video-area {
-    background: rgba(0, 0, 0, 0) url('{{ asset($video->backGroundImage ?? '') }}') repeat scroll 0 0;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding: 195px 0;
-}
-.heading {
-  color:red;
-}
-</style>
-</head>
-<body>
-<!-- Pre Loader
-============================================ -->
-<div class="preloader">
-    <div class="loading-center">
-        <div class="loading-center-absolute">
-            <div class="object object_one"></div>
-            <div class="object object_two"></div>
-            <div class="object object_three"></div>
-        </div>
-    </div>
-</div>
-<!-- Body main wrapper start -->
-<div class="wrapper fix">
-    <!-- Header 1
-    ============================================ -->
-    <div class="header-area header-absolute header-transparent">
-        <div class="header-top d-none d-md-block">
-            <div class="container">
-                <!-- Header Top -->
-                <div class="header-top-wrapper row">
-                    <div class="header-top-left text-left col-md-6 col-12">
-                        <p><i class="icofont icofont-envelope"></i><span>{{$website->email ?? ''}}</span></p>
-                        <p><i class="icofont icofont-ui-call"></i><span>{{$website->phone1 ?? ''}} </span></p>
-                    </div>
-                    <div class="header-top-right text-right col-md-6 col-12">
-                        <p><i class="icofont icofont-clock-time"></i><span>Mon - Sat : {{$website->startTime ?? ''}} - {{$website->endTime ?? ''}}</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-bottom sticky">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="navbar-header col-auto">
-                        <a href="#hero-area" class="logo navbar-brand"><img id="logo_img" style="width: 80px; hight:80px;" src="{{asset($website->logo ?? '')}}" alt="logo" /></a>
-                    </div>
-                    <div class="main-menu mean-menu col-auto">
-                        <nav>
-                            <ul>
-                                <li class="active"><a href="#hero-area"><!--Home-->Accueil</a></li>
-                                <li><a href="#about-area"><!--About-->Sur</a></li>
-                                <li><a href="#feature-area"><!--Feature-->Caractéristique</a></li>
-                                <!--<li><a href="#course-area">--><!--Course--><!--Cours</a></li>-->
-                                <li><a href="#video-area"><!--Video-->Vidéo</a></li>
-                                <!--<li><a href="#pricing-area">--><!--Pricing--><!--Prix</a></li>-->
-                                <!--<li><a href="#instructor-area">--><!--Instructor--><!--Instructrice</a></li>-->
-                                <li><a href="#gallery-area"><!--Gallery-->Galerie</a></li>
-                                <li><a href="#testimonial-area"><!--Testimonial-->Témoignage</a></li>
-                                <li><a href="#faq-area"><!--FAQ-->FAQ</a></li>
-                                
-                                <li><a href="#footer-area"><!--Contact Us-->Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="mobile-menu col-12"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+@extends('front.master')
+@section('content')
     <!-- Hero Slide Area
     ============================================ -->
     <div id="hero-area" class="hero-slider-area">
@@ -310,93 +184,65 @@
             </div>
         </div>
     </div>
-    <!-- Pricing Area
+    <!-- Courser Enroll Area
+    'courseTitle','price', 'courseDetails1', 'courseDetails2','courseDetails3','courseDetails4',
+        'courseDetails5',
     ============================================ -->
     <div id="pricing-area" class="pricing-area overlay overlay-black overlay-40 pt-90 pb-60">
         <div class="container">
             <!-- Section Title -->
             <div class="row">
                 <div class="section-title title-white text-center col-12 mb-45">
-                    <h3 class="heading"><!--your pricing plan-->VOTRE PLAN TARIFAIRE</h3>
+                    <h3 class="heading"><!--your Course Enroll plan-->Inscription aux Cours</h3>
                     <div class="excerpt">
-                        <p>{!!$pricing->pricingDescription ?? ' '!!}</p>
+                        <p>{!!$website->courseDescription ?? ' '!!}</p>
                     </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
             </div>
             <div class="row">
+            @foreach($courseEnroll as $key => $row)
+            @if($key+1==1)
                 <div class="col-lg-3 col-md-6 col-12 mb-30">
-                    <div class="single-pricing text-center">
+                    <div class="single-pricing  active text-center">
                         <div class="pricing-head">
-                            <h4><!--basic-->{{$pricing->pricingTitle1 ?? ''}}</h4>
+                            <h4><!--basic-->{{$row->courseTitle ?? ''}}</h4>
                         </div>
                         <div class="pricing-price">
-                            <h2><span>$</span>{{$pricing->price1 ?? ''}}</h2>
+                            <h2><span>$</span>{{$row->price ?? ''}}</h2>
                         </div>
                         <ul class="pricing-details">
-                            <li><!--2 Month Course-->{{$pricing->pricingDetails11 ?? ''}}</li>
-                            <li><!--3 Hours Per Day-->{{$pricing->pricingDetails12 ?? ''}}</li>
-                            <li><!--Weekly 1 Test-->{{$pricing->pricingDetails13 ?? ''}} </li>
-                            <li><!--20 Video Classes-->{{$pricing->pricingDetails14 ?? ''}}</li>
-                            <li><!--Driving Licence-->{{$pricing->pricingDetails15 ?? ''}}</li>
+                            <li><!--2 Month Course-->{{$row->courseDetails1 ?? ''}}</li>
+                            <li><!--3 Hours Per Day-->{{$row->courseDetails2 ?? ''}}</li>
+                            <li><!--Weekly 1 Test-->{{$row->courseDetails3 ?? ''}} </li>
+                            <li><!--20 Video Classes-->{{$row->courseDetails4 ?? ''}}</li>
+                            <li><!--Driving Licence-->{{$row->courseDetails5 ?? ''}}</li>
                         </ul>
                         <a href="#" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
                     </div>
                 </div>
+
+                @else
                 <div class="col-lg-3 col-md-6 col-12 mb-30">
-                    <div class="single-pricing text-center">
+                    <div class="single-pricing   text-center">
                         <div class="pricing-head">
-                            <h4><!--upgrade-->{{$pricing->pricingTitle2 ?? ''}}</h4>
+                            <h4><!--basic-->{{$row->courseTitle ?? ''}}</h4>
                         </div>
                         <div class="pricing-price">
-                            <h2><span>$</span>{{$pricing->price2 ?? ''}}</h2>
+                            <h2><span>$</span>{{$row->price ?? ''}}</h2>
                         </div>
                         <ul class="pricing-details">
-                            <li><!--3 Month Course-->{{$pricing->pricingDetails21 ?? ''}}</li>
-                            <li><!--4 Hours Per Day-->{{$pricing->pricingDetails22 ?? ''}}</li>
-                            <li><!--Weekly 2 Test-->{{$pricing->pricingDetails23 ?? ''}}</li>
-                            <li><!--25 Video Classes-->{{$pricing->pricingDetails24 ?? ''}}</li>
-                            <li><!--Driving Licence-->{{$pricing->pricingDetails25 ?? ''}}</li>
+                            <li><!--2 Month Course-->{{$row->courseDetails1 ?? ''}}</li>
+                            <li><!--3 Hours Per Day-->{{$row->courseDetails2 ?? ''}}</li>
+                            <li><!--Weekly 1 Test-->{{$row->courseDetails3 ?? ''}} </li>
+                            <li><!--20 Video Classes-->{{$row->courseDetails4 ?? ''}}</li>
+                            <li><!--Driving Licence-->{{$row->courseDetails5 ?? ''}}</li>
                         </ul>
                         <a href="#" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-30">
-                    <div class="single-pricing active text-center">
-                        <div class="pricing-head">
-                            <h4><!--smart-->{{$pricing->pricingTitle3 ?? ''}}</h4>
-                        </div>
-                        <div class="pricing-price">
-                            <h2><span>$</span>{{$pricing->price3 ?? ''}}</h2>
-                        </div>
-                        <ul class="pricing-details">
-                            <li><!--4 Month Course-->{{$pricing->pricingDetails31 ?? ''}}</li>
-                            <li><!--5 Hours Per Day-->{{$pricing->pricingDetails32 ?? ''}}</li>
-                            <li><!--Weekly 2 Test-->{{$pricing->pricingDetails33 ?? ''}}</li>
-                            <li><!--30 Video Classes-->{{$pricing->pricingDetails34 ?? ''}}</li>
-                            <li><!--Driving Licence-->{{$pricing->pricingDetails35 ?? ''}}</li>
-                        </ul>
-                        <a href="#" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-30">
-                    <div class="single-pricing text-center">
-                        <div class="pricing-head">
-                            <h4><!--over smart-->{{$pricing->pricingTitle4 ?? ''}}</h4>
-                        </div>
-                        <div class="pricing-price">
-                            <h2><span>$</span>{{$pricing->price4 ?? ''}}</h2>
-                        </div>
-                        <ul class="pricing-details">
-                            <li><!--6 Month Course-->{{$pricing->pricingDetails41 ?? ''}}</li>
-                            <li><!--5 Hours Per Day-->{{$pricing->pricingDetails42 ?? ''}}</li>
-                            <li><!--Weekly 3 Test--> {{$pricing->pricingDetails43 ?? '' }}</li>
-                            <li><!--35 Video Classes--> {{$pricing->pricingDetails44 ?? ''}}</li>
-                            <li><!--Driving Licence-->{{$pricing->pricingDetails45 ?? ''}}</li>
-                        </ul>
-                        <a href="#" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
-                    </div>
-                </div>
+                @endif
+                @endforeach
             </div>
         </div>
     </div>
@@ -709,109 +555,6 @@
             </div>
         </div>
     </div>
-    
+    @endsection
    
     
-    <!-- Footer Area
-    ============================================ -->
-    <div id="footer-area" class="footer-area overlay overlay-black overlay-70 pt-90">
-        <div class="container">
-            <div class="row">
-                <div class="footer-widget text-left col-lg-6 col-md-6 col-12">
-                    <h4 class="widget-title"><!--about drive on-->À PROPOS DE LA CONDUITE</h4>
-                    <div class="about-widget">
-                        <p>{{$website->aboutDescription ?? ''}}</p>
-                        <div class="widget-social fix">
-                            <a href="{{$website->facebook ?? ''}}"><i class="icofont icofont-social-facebook"></i></a>
-                            <a href="{{$website->instagram ?? ''}}"><i class="icofont icofont-social-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-widget text-left col-lg-6 col-md-6 col-12">
-                    <h4 class="widget-title">CONTACT RAPIDE</h4>
-                    <div class="contact-widget">
-                        <h5>address:</h5>
-                        <p>{{$website->address ?? ''}}</p>
-                        <h5>phone:</h5>
-                        <p>{{$website->phone1 ?? ''}} <br />{{$website->phone2 ?? ''}}</p>
-                        <h5>e-mail</h5>
-                        <p>
-                            <a href="#">{{$website->email ?? ''}}</a>
-                            
-                        </p>
-                    </div>
-                </div>
-                <!-- <div class="footer-widget text-left col-lg-4 col-md-6 col-12">
-                    <h4 class="widget-title">ARTICLE DE BLOG</h4>
-                    <div class="blog-widget">
-                        <div class="widget-blog fix">
-                            <a href="#" class="image float-left"><img src="{{asset($website->articleImage1 ?? '')}}" alt="" /></a>
-                            <div class="content fix">
-                                <a href="#">{{$website->articleBlogTitle1 ?? ''}}</a>
-                                <p>{{$website->articleDescription1 ?? ''}}</p>
-                            </div>
-                        </div>
-                        <div class="widget-blog fix">
-                            <a href="#" class="image float-left"><img src="{{asset($website->articleImage1 ?? '')}}" alt="" /></a>
-                            <div class="content fix">
-                                <a href="#">{{$website->articleBlogTitle2 ?? ''}}</a>
-                                <p>{{$website->articleDescription2 ?? ''}}</p>
-                            </div>
-                        </div>
-                        <div class="widget-blog fix">
-                            <a href="#" class="image float-left"><img src="{{asset($website->articleImage1 ?? '')}}" alt="" /></a>
-                            <div class="content fix">
-                                <a href="#">{{$website->articleBlogTitle3 ?? ''}}</a>
-                                <p>{{$website->articleDescription3 ?? ''}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="footer-widget text-left col-lg-3 col-md-6 col-12">
-                    <h4 class="widget-title">GALERIE INSTAGRAM</h4>
-                    <div class="instagram-widget">
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/1.jpg')}}" alt="" /></a></div>
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/2.jpg')}}" alt="" /></a></div>
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/3.jpg')}}" alt="" /></a></div>
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/4.jpg')}}" alt="" /></a></div>
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/5.jpg')}}" alt="" /></a></div>
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/6.jpg')}}" alt="" /></a></div>
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/7.jpg')}}" alt="" /></a></div>
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/8.jpg')}}" alt="" /></a></div>
-                        <div class="instagram-item"><a href="#"><img src="{{asset('front/img/instagram/9.jpg')}}" alt="" /></a></div>
-                    </div>
-                </div> -->
-            </div>
-            <div class="footer-bottom text-center col-12">
-                <p class="copyright">Copyright &copy; {{$website->copyRight}}</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-<!-- Body main wrapper end -->
-
-<!-- JS -->
-
-<!-- jQuery JS
-============================================ -->
-<script src="{{asset('front/js/vendor/jquery-1.12.0.min.js')}}"></script>
-<!-- Bootstrap JS
-============================================ -->
-<script src="{{asset('front/js/bootstrap.bundle.min.js')}}"></script>
-<!-- Plugins JS
-============================================ -->
-<script src="{{asset('front/js/plugins.js')}}"></script>
-<!-- Ajax Mail JS
-============================================ -->
-<script src="{{asset('front/js/ajax-mail.js')}}"></script>
-<!-- WOW JS
-============================================ -->
-<script src="{{asset('front/js/wow.min.js')}}"></script>
-<!-- Main JS
-============================================ -->
-<script src="{{asset('front/js/main.js')}}"></script>
-
-</body>
-</html>

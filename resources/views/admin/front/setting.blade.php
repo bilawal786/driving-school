@@ -221,16 +221,16 @@
                     
                                         </div></div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label"><!--Icon-->Image du fond de plan de tarification (1920x838)<strong style="color: red;font-size: 20px;"> * </strong></label>
+                                            <label class="col-sm-3 col-form-label"><!--Icon-->Inscription aux Cours (1920x838)<strong style="color: red;font-size: 20px;"> * </strong></label>
                                             <div class="col-sm-5">
-                                               <label class="form-control @error('pricingBackGroundImage') is-invalid @enderror">
-                      <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre image</strong></center><input type="file" style="display: none;"name="pricingBackGroundImage" value="{{ old('pricingBackGroundImage') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp7" onchange="preview_image9(event)">
+                                               <label class="form-control @error('courseBackGroundImage') is-invalid @enderror">
+                      <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre image</strong></center><input type="file" style="display: none;"name="courseBackGroundImage" value="{{ old('courseBackGroundImage') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp7" onchange="preview_image9(event)">
                         </label>
                                             </div>
                                         
                                         <div class="col-sm-4">
                       
-                                        <img id="output_image9" src="{{ asset($setting->pricingBackGroundImage )  }}" />
+                                        <img id="output_image9" src="{{ asset($setting->courseBackGroundImage )  }}" />
                     
                                         </div></div>
                                         <div class="form-group row">
@@ -246,6 +246,20 @@
                                         <img id="output_image10" src="{{ asset($setting->jooberBackGroundImage )  }}" />
                     
                                         </div></div>
+
+                                        <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label"><!-- Description -->Description du cours <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                        <div class="col-sm-12">
+                                        
+                                        <div class="card-body">
+
+                                        <div >
+                                        <textarea class="summernote" name="courseDescription"  >{{$setting->courseDescription ?? ''}}</textarea>
+                                        </div>
+                                        </div>
+                                    </div>
+                                        </div>
+                                        </div>
                                         
                                         
                                         <div class="form-group row">

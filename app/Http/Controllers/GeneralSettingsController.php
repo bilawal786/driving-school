@@ -8,7 +8,10 @@ use App\Funfact;
 use App\FAQ;
 use App\Jobber;
 use App\Galery;
+use App\User;
 use App\Video;
+use App\CourseEnroll;
+use App\Document;
 use App\Pricing;
 use App\Features;
 use App\Website;
@@ -609,11 +612,11 @@ public function settingCreate()
         }  
         if ($request->hasfile('pricingBackGroundImage')) {
 
-            $image1 = $request->file('pricingBackGroundImage');
-            $name = time() . 'pricingBackGroundImage' . '.' . $image1->getClientOriginalExtension();
+            $image1 = $request->file('courseBackGroundImage');
+            $name = time() . 'courseBackGroundImage' . '.' . $image1->getClientOriginalExtension();
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
-            $input['pricingBackGroundImage'] = 'admin/setting/' . $name;
+            $input['courseBackGroundImage'] = 'admin/setting/' . $name;
         } 
        
         if ($request->hasfile('articleImage1')) {
@@ -693,6 +696,7 @@ public function settingCreate()
         $setting->articleDescription2 = $request->articleDescription2;
         $setting->articleBlogTitle3 = $request->articleBlogTitle3;
         $setting->articleDescription3 = $request->articleDescription3;
+        $setting->courseDescription = $request->courseDescription;
        
 
         if ($request->hasfile('logo')) {
@@ -789,4 +793,31 @@ public function settingCreate()
     }
 
 }
+
+public function documentCreate()
+    {       $users = User::where('role','=',1)->get();
+        return view('admin.document.create',compact('users'));
+    }
+    public function documentStore(Request $request)
+    {       
+        $document = new Document();
+
+        $document->user_id = $request->user_id;
+        if ($request->hasfile('file')) {
+
+            $image1 = $request->file('file');
+            $name = time() . 'file' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $document->file = 'admin/setting/' . $name;
+        } 
+         if($document->save()){
+        Session::flash('message', "Your Data Save");
+        return back();
+          }
+        else{
+            Session::flash('error', "Your Data Not Save");
+            return back();
+        }
+    }
 }

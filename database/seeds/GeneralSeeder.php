@@ -21,5 +21,14 @@ class GeneralSeeder extends Seeder
             'address' => 'Guadeloupe',
             'password' => Hash::make('12345678'),
         ]);
+        User::create([
+            'fname' => 'Student',
+            'lname' => '',
+            'email' => 'student@gmail.com',
+            'role' => '1',
+            'phone' => '00000000',
+            'address' => 'Guadeloupe',
+            'password' => Hash::make('12345678'),
+        ]);
     }
 }
