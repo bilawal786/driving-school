@@ -177,6 +177,36 @@
                             <span class="nav-text">  Document</span>
                         </a>
                     </li>
+                    <li><a href="{{route('offers.create')}}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-television"></i>
+                            <!-- APP SETTING -->
+                            <span class="nav-text">  Des Offres</span>
+                        </a>
+                    </li>
+                    <li><a href="{{route('enrollment.details')}}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-controls-3"></i>
+                            <!-- APP SETTING -->
+                            <span class="nav-text">  Inscription</span>
+                        </a>
+                    </li>
+                    <li><a href="{{route('courses.index')}}" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-notepad"></i>
+                            <!-- APP SETTING -->
+                            <span class="nav-text">  Courses</span>
+                        </a>
+                    </li>
+                    <li><a href="{{route('instructor.index')}}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-network"></i>
+                            <!-- APP SETTING -->
+                            <span class="nav-text">  Instractur</span>
+                        </a>
+                    </li>
+                    <li><a href="{{route('testimonial.index')}}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-layer-1"></i>
+                            <!-- APP SETTING -->
+                            <span class="nav-text">  Témoignage</span>
+                        </a>
+                    </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-settings-2"></i>
 							<span class="nav-text"><!--Setting-->Réglage</span>
@@ -187,10 +217,9 @@
                             <li><a href="{{route('about.create')}}">A propos de nous</a></li>
                             <li><a href="{{route('course.create')}}">Catégorie de cours</a></li>
                             <li><a href="{{route('video.create')}}">Video</a></li>
-                            <li><a href="{{route('courses.index')}}">Courses</a></li>
-                            <li><a href="{{route('instructor.index')}}">Instractur</a></li>
+                            
                             <li><a href="{{route('galery.create')}}">Galerie</a></li>
-                            <li><a href="{{route('testimonial.index')}}">Témoignage</a></li>
+                           
                             <li><a href="{{route('faq.create')}}">FAQ</a></li>
                             <li><a href="{{route('funfact.create')}}">Fait amusant</a></li>
                         </ul>

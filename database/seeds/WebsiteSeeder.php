@@ -6,6 +6,7 @@ use App\Funfact;
 use App\FAQ;
 use App\Jobber;
 use App\Galery;
+use App\Offers;
 use App\Video;
 use App\CourseEnroll;
 use App\Features;
@@ -264,6 +265,13 @@ class WebsiteSeeder extends Seeder
                             'instagram' => "instagram.com",
                             
                             
+                            ]);
+                        Offers::create([
+                            'title' => "Web Developmant",
+                            'image' => "front/image2.png",
+                            'link' => "http://127.0.0.1:8000",
+                            'date' => "2021-12-09T05:54",
+                        
                             ]);
                             
                 

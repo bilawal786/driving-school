@@ -185,8 +185,7 @@
         </div>
     </div>
     <!-- Courser Enroll Area
-    'courseTitle','price', 'courseDetails1', 'courseDetails2','courseDetails3','courseDetails4',
-        'courseDetails5',
+    ',
     ============================================ -->
     <div id="pricing-area" class="pricing-area overlay overlay-black overlay-40 pt-90 pb-60">
         <div class="container">
@@ -218,7 +217,11 @@
                             <li><!--20 Video Classes-->{{$row->courseDetails4 ?? ''}}</li>
                             <li><!--Driving Licence-->{{$row->courseDetails5 ?? ''}}</li>
                         </ul>
-                        <a href="#" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        @auth
+                        <a href="{{route('check.out', ['id' => $row->id])}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        @else
+                        <a href="{{route('front.login')}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        @endauth
                     </div>
                 </div>
 
@@ -238,7 +241,11 @@
                             <li><!--20 Video Classes-->{{$row->courseDetails4 ?? ''}}</li>
                             <li><!--Driving Licence-->{{$row->courseDetails5 ?? ''}}</li>
                         </ul>
-                        <a href="#" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        @auth
+                        <a href="{{route('check.out', ['id' => $row->id])}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        @else
+                        <a href="{{route('front.login')}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        @endauth
                     </div>
                 </div>
                 @endif
@@ -246,6 +253,36 @@
             </div>
         </div>
     </div>
+
+    <!-- Offers us Area
+    ============================================ -->
+
+    <div id="about-area" class="course-area bg-gray pt-90 pb-60" style="background-color:#dec839;">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="col-md-6">
+                <a href="{{$offers->link ?? ''}}" > <img class="img-responsive"  src="{{ asset($about->image1 ?? ' ')  }}" alt="#" /></a>
+                </div>
+                <div class="col-md-6">
+                    <div class="heading margin_top_30">
+                        <h2 class="heading" style="text-align: center; color: black; font-size: 40px;"><!--About our shop--> {{$offers->title ??''}}</h2>
+                    </div>
+                    <div class="full margin_top_20" >
+                    <p style="text-align: center; font-size: 60px;  margin-top: 150px;" id="demotime"></p>
+                </div>
+                    </div>
+                    <div class="full margin_top_50" >
+                   
+                    <!-- <img class="img-responsive" src="{{ asset($about->image2 ?? ' ')  }}" alt="#" /> -->
+                    </div>
+                </div>
+            </div>
+       
+            </div>
+        </div>
+    </div>
+   
     <!-- Instructor Area
     ============================================ -->
     <div id="instructor-area" class="instructor-area bg-gray pt-90 pb-60">
@@ -555,6 +592,38 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Set the date we're counting down to
+        // ->format('M d, Y H:m')
+        var countDownDate = new Date("{{$offers->date ?? ''}}").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demotime").innerHTML = days + "jrs  " + hours + "h  "
+                + minutes + "m  " + seconds + "s  ";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demotime").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
     @endsection
    
     

@@ -18,9 +18,9 @@ class User
     public function handle($request, Closure $next)
     {
         if(Auth::check() && Auth::user()->role =='1'){
-            $website = Website::first();
             
-            return response()->view('front.dashboard',compact('website'));
+            return redirect('/dashboard');
+            
             }
             else{
                 return $next($request);

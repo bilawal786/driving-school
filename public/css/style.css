@@ -1,0 +1,22 @@
+.main-menu nav > ul > li > a {
+    color: black !important;
+    display: block;
+    font-size: 14px;
+    line-height: 23px;
+    position: relative;
+    text-transform: uppercase;
+}
+.header-top-left p span {
+    display: block;
+    float: left;
+    color: black;
+    font-size: 12px;
+    line-height: 28px;
+}
+.header-top-right p span {
+    display: block;
+    float: left;
+    font-size: 12px;
+    color: black;
+    line-height: 28px;
+}

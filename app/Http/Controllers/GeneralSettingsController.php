@@ -8,10 +8,12 @@ use App\Funfact;
 use App\FAQ;
 use App\Jobber;
 use App\Galery;
+use App\Offers;
 use App\User;
 use App\Video;
 use App\CourseEnroll;
 use App\Document;
+use App\ChekOut;
 use App\Pricing;
 use App\Features;
 use App\Website;
@@ -818,6 +820,122 @@ public function documentCreate()
         else{
             Session::flash('error', "Your Data Not Save");
             return back();
+        }
+    }
+
+    public function enrollmentDetailsIndex()
+    {       $details = ChekOut::all();
+            
+        return view('admin.enrolmantDetails.index',compact('details'));
+    }
+    public function enrollmentDetailsDelete($id)
+    {   $details = ChekOut::where('id','=',$id)->first();
+        $details->delete();
+        Session::flash('error', "Your Data Delete");
+        return back();
+    }
+    public function offersCreate()
+    {      $offers = Offers::first();
+       return view('admin.offers.create',compact('offers'));
+    }
+    public function offersIndex()
+    {   $offers = Offers::all();
+        return view('admin.offers.index',compact('offers'));
+    }
+    public function offersStore(Request $request)
+    {   
+        $chek = Offers::get();
+
+        if($chek->isEmpty()) {
+        $offers = new Offers();
+
+        $offers->title = $request->title;
+        $offers->date = $request->date;
+        $offers->link = $request->link;
+
+        if ($request->hasfile('image')) {
+
+            $image1 = $request->file('image');
+            $name = time() . 'image' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $offers->image = 'admin/setting/' . $name;
+        } 
+   
+        if($offers->save()){
+            Session::flash('message', "Your Data Save");
+            return back();
+        }
+        else{
+            Session::flash('error', "Your Data Not Added");
+           return back();
+        }
+    }
+
+    else{
+        $offers = Offers::first();
+        
+        $offers->title = $request->title;
+        $offers->date = $request->date;
+        $offers->link = $request->link;
+
+        if ($request->hasfile('image')) {
+
+            $image1 = $request->file('image');
+            $name = time() . 'image' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $offers->image = 'admin/setting/' . $name;
+        } 
+   
+        if($offers->update()){
+            Session::flash('message', "Your Data Update");
+            return back();
+        }
+        else{
+            Session::flash('error', "Your Data Not Update");
+           return back();
+        }
+
+    }
+     
+    }
+
+    public function offersDelete($id)
+    {   $offers = Offers::where('id','=',$id)->first();
+        $offers->delete();
+        Session::flash('error', "Your Data Delete");
+        return back();
+    }
+    public function offersEdit($id)
+    {   $offers = Offers::where('id','=',$id)->first();
+       
+        return view('admin.offers.edit',compact('offers'));
+    }
+    public function offersUpdate( Request $request, $id)
+    {   $offers = Offers::where('id','=',$id)->first();
+        
+        $offers->title = $request->title;
+        $offers->date = $request->date;
+        $offers->link = $request->link;
+
+        if ($request->hasfile('image')) {
+
+            $image1 = $request->file('image');
+            $name = time() . 'image' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $offers->image = 'admin/setting/' . $name;
+        } 
+   
+        if($offers->update()){
+            Session::flash('message', "Your Data Update");
+            $offers = Offers::all();
+        return view('admin.offers.index',compact('offers'));
+        }
+        else{
+            Session::flash('error', "Your Data Not Update");
+           return back();
         }
     }
 }

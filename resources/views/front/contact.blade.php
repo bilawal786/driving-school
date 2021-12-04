@@ -1,15 +1,16 @@
 @extends('front.master')
+<link rel="stylesheet" href="{{asset('css/style.css')}}">
 @section('content')
 
 <!-- Contatc Area
 ============================================ -->
 
-<div id="contact-area" class="contact-area bg-red overlay   AQ6overlay-black overlay-70">
+<div id="contact-area" class="contact-area bg-red overlay   AQ6overlay-black overlay-70" style="margin-top: 50px">
 	<div class="container pb-90 pt-90">
 		<!-- Section Title -->
 		<div class="row">
 			<div class="section-title text-center col-12 mb-45">
-				<h3 class="heading" style="margin-top: 20px">Nous Contacter</h3>
+				<h3 class="heading" >Nous Contacter</h3>
 				<div class="excerpt">
 					<!-- <p>Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua</p> -->
 				</div>

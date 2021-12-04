@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'FrontendController@index')->name('front.index');
 Route::get('/contact', 'FrontendController@contact')->name('front.contact');
 Route::get('/fornt/login', 'FrontendController@logIN')->name('front.login');
+Route::get('/dashboard', 'HomeController@frontIndex')->name('dashboard');
+Route::get('/check/out/{id}', 'HomeController@checkOut')->name('check.out');
+Route::post('/checkOut/store', 'HomeController@checkOutStore')->name('checkout.store');
+Route::get('/download_url/{path}', 'HomeController@download')->name('download_url');
+
 
 Route::middleware(['web', 'user'])->group(function () {
    Route::get('/home', 'HomeController@index')->name('home');
@@ -108,6 +113,21 @@ Route::post('/document/store', 'GeneralSettingsController@documentStore')->name(
 
 
 //END APP Feature 
+
+//Enrollmanr Details
+
+Route::get('/enrollment/details', 'GeneralSettingsController@enrollmentDetailsIndex')->name('enrollment.details');
+Route::get('/enrollment/delete/{id}', 'GeneralSettingsController@enrollmentDetailsDelete')->name('enrollment.delete');
+//END DEATAILS
+//offers Details
+
+Route::get('/offers/create', 'GeneralSettingsController@offersCreate')->name('offers.create');
+Route::get('/offers/index', 'GeneralSettingsController@offersIndex')->name('offers.index');
+Route::post('/offers/store', 'GeneralSettingsController@offersStore')->name('offers.store');
+Route::get('/offers/delete/{id}', 'GeneralSettingsController@offersDelete')->name('offers.delete');
+Route::get('/offers/edit/{id}', 'GeneralSettingsController@offersEdit')->name('offers.edit');
+Route::post('/offers/update/{id}', 'GeneralSettingsController@offersUpdate')->name('offers.update');
+//end offers DEATAILS
 
     
    });

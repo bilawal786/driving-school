@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\About;
 use App\Funfact;
 use App\FAQ;
+use App\Offers;
 use App\Jobber;
 use App\Galery;
 use App\CourseEnroll;
@@ -29,11 +30,12 @@ class FrontendController extends Controller
         $courseCategory = CourseCategory::first();
         $pricing = Pricing::first();
         $video = Video::first();
+        $offers = Offers::first();
         $instructor = Instructor::all();
         $courseEnroll = CourseEnroll::all();
 
 
-        return view('front.index',compact('about','funfact','feature','faq','galery','jobber','website','courseCategory','pricing','video','instructor','courseEnroll'));
+        return view('front.index',compact('about','funfact','feature','faq','galery','jobber','website','courseCategory','pricing','video','instructor','courseEnroll','offers'));
     }
     public function contact(){
        

@@ -69,7 +69,7 @@
 <body>
 <!-- Pre Loader
 ============================================ -->
-<div class="preloader">
+<!-- <div class="preloader">
     <div class="loading-center">
         <div class="loading-center-absolute">
             <div class="object object_one"></div>
@@ -77,7 +77,7 @@
             <div class="object object_three"></div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Body main wrapper start -->
 <div class="wrapper fix">
     <!-- Header 1
@@ -239,6 +239,11 @@
 <!-- Main JS
 ============================================ -->
 <script src="{{asset('front/js/main.js')}}"></script>
+<script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripeKey = "{{ env('STRIPE_PUBLISHABLE_KEY') }}";
+    </script>
+    <script src="{{asset('js/stripe.js')}}"></script>
 
 </body>
 </html>
