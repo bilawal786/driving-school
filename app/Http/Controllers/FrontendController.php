@@ -16,6 +16,9 @@ use App\Features;
 use App\Website;
 use App\CourseCategory;
 use App\Instructor;
+use Validator;
+use Session;
+use Auth;
 
 class FrontendController extends Controller
 {
@@ -47,5 +50,26 @@ class FrontendController extends Controller
        
         $website = Website::first();
         return view('front.login',compact('website'));
+    }
+    public function profileUpdate(Request $request){
+       
+        $user = Auth::user();
+
+        $user->fname = $request->fname;
+        $user->lname = $request->lname;
+        $user->phone = $request->phone;
+        $user->address = $request->address;
+        if ($request->hasfile('image')) {
+
+            $image1 = $request->file('image');
+            $name = time() . 'image' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $user->image = 'admin/setting/' . $name;
+        } 
+        $user->update();
+
+         Session::flash('message', "Your Data Not Save");
+            return back();
     }
 }

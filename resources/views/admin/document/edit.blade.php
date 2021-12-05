@@ -43,7 +43,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="basic-form">
-                                    <form method="POST" action="{{ route('document.store') }}" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ route('document.update',['id'=>$document->id]) }}" enctype="multipart/form-data">
                                              @csrf
                                              <div class="form-group row">
                                             <label class="col-sm-3 col-form-label"><!-- students -->Étudiantes <strong style="color: red;font-size: 20px;"> *</strong></label>
@@ -52,7 +52,7 @@
                                             	<option>Choisir une Étudiantes</option>
                                             	@foreach($users as $row)
                                                 
-                                                <option value="{{$row->id}}" >{{$row->fname}} {{$row->lname}}</option>
+                                                <option value="{{$row->id}}" {{ $document->user_id == $row->id ? 'selected' : '' }} >{{$row->fname}} {{$row->lname}}</option>
                                                
                                                 @endforeach
                                             </select>
@@ -62,7 +62,7 @@
                                         <div class="form-group row">
             <label class="col-sm-3 col-form-label"><!-- Course Title -->Titre  <strong style="color: red;font-size: 20px;"> *</strong></label>
             <div class="col-sm-9">
-            <input type="text" class="form-control" name="title" value=""  placeholder="Entrez le titre " >
+            <input type="text" class="form-control" name="title" value="{{$document->title}}"  placeholder="Entrez le titre " >
                 
             </div>
         </div>

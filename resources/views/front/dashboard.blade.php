@@ -24,8 +24,8 @@ body {font-family: "Lato", sans-serif;}
   color: black;
   padding: 22px 16px;
   width: 100%;
-  border: none;
-  outline: none;
+  border: #dec839;
+  outline: #dec839;s;
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
@@ -39,14 +39,14 @@ body {font-family: "Lato", sans-serif;}
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #dec839;;
 }
 
 /* Style the tab content */
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #dec839;;
   width: 70%;
   border-left: none;
   height: 300px;
@@ -64,6 +64,14 @@ body {font-family: "Lato", sans-serif;}
 			<div class="section-title text-center col-12 mb-45">
 				<h3 class="heading" style="margin-top: 50px">Tableau de bord</h3>
 				<div class="excerpt">
+				@if (Session::has('message'))
+   <div class="alert alert-success solid alert-dismissible fade show">
+									<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+									<strong>Success!</strong> {{ Session::get('message') }}.
+									<button type="button" class="close h-100" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                    </button>
+                                </div>
+                              @endif
 					<!-- <p>Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua</p> -->
 				</div>
 				<i class="icofont icofont-traffic-light"></i>
@@ -102,8 +110,7 @@ body {font-family: "Lato", sans-serif;}
   <button class="tablinks" > <a href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
                                    class="">
-                                    <svg id="" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-                                    <span class="ml-2">
+                                    
                                     Sortir
                                     </span>
                                 </a>
@@ -148,9 +155,58 @@ body {font-family: "Lato", sans-serif;}
 </div>
 
 <div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+<form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
+                                             @csrf
+  <div class="form-row" style="margin-top: 25px;">
+    <div class="col-lg-2">
+	<label ><!--Icon-->Prénom<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-4">
+      <input type="text" class="form-control" name="fname" value="{{Auth::user()->fname}}" placeholder="Prénom" >
+    </div>
+    <div class="col-lg-2">
+	<label ><!--Icon-->Nom de famille<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-4">
+      <input type="text" class="form-control" name="lname" value="{{Auth::user()->lname}}" placeholder="Nom de famille">
+    </div>
+  </div>
+  <div class="form-row" style="margin-top: 25px;">
+    <div class="col-lg-2">
+	<label ><!--Icon-->E-mail<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-4">
+      <input type="text" class="form-control" name="email" value="{{Auth::user()->email}}" placeholder="E-mail" readonly >
+    </div>
+    <div class="col-lg-2">
+	<label ><!--Icon-->Téléphone<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-4">
+      <input type="text" class="form-control" name="phone" value="{{Auth::user()->phone}}" placeholder="Téléphone">
+    </div>
+  </div>
+  <div class="form-row" style="margin-top: 25px;">
+    <div class="col-lg-2">
+	<label ><!--Icon-->Addressl<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-4">
+      <input type="text" class="form-control" name="address" value="{{Auth::user()->address}}" placeholder="Address"  >
+    </div>
+    <div class="col-lg-2">
+	<label ><!--Icon-->Image de profil<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-4">
+      <input type="file" class="form-control" name="image"  >
+    </div>
+  </div>
+  <div class="form-row" style="margin-top: 25px;">
+    
+	
+  <input type="submit"  style=" background-color: #dec839; border: 1px solid #dec839;" value="Mettre à jour" />
+    
+    
+  </div>
+</form>
 				<p class="form-messege"></p>
 			</div>
 		</div>

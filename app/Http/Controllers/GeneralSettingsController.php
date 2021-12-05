@@ -13,6 +13,9 @@ use App\User;
 use App\Video;
 use App\CourseEnroll;
 use App\Document;
+use File;
+use Response;
+use Illuminate\Support\Facades\Storage;
 use App\ChekOut;
 use App\Pricing;
 use App\Features;
@@ -802,9 +805,19 @@ public function documentCreate()
     }
     public function documentStore(Request $request)
     {       
+        $validator = Validator::make($request->all(), [
+            'file'  =>  'max:5024',
+            
+               ]);
+ 
+            if ($validator->fails()) {
+             return redirect()->back()->withErrors($validator)
+                         ->withInput();
+         }
         $document = new Document();
 
         $document->user_id = $request->user_id;
+        $document->title = $request->title;
         if ($request->hasfile('file')) {
 
             $image1 = $request->file('file');
@@ -815,12 +828,75 @@ public function documentCreate()
         } 
          if($document->save()){
         Session::flash('message', "Your Data Save");
-        return back();
+        $document = Document::all();
+        return view('admin.document.index',compact('document'));
           }
         else{
             Session::flash('error', "Your Data Not Save");
             return back();
         }
+    }
+
+    public function documentIndex()
+
+    {       $document = Document::all();
+        return view('admin.document.index',compact('document'));
+    }
+    public function documentEdit($id)
+
+    {       $document = Document::where('id','=',$id)->first();
+        $users = User::where('role','=',1)->get();
+        return view('admin.document.edit',compact('document','users'));
+    }
+    public function documentUpdate(Request $request,$id)
+    {       
+        $validator = Validator::make($request->all(), [
+            'file'  =>  'max:5024',
+            
+               ]);
+ 
+            if ($validator->fails()) {
+             return redirect()->back()->withErrors($validator)
+                         ->withInput();
+         }
+         $document = Document::where('id','=',$id)->first();
+
+        $document->user_id = $request->user_id;
+        $document->title = $request->title;
+        if ($request->hasfile('file')) {
+
+            $image1 = $request->file('file');
+            $name = time() . 'file' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'admin/setting/';
+            $image1->move($destinationPath, $name);
+            $document->file = 'admin/setting/' . $name;
+        } 
+         if($document->save()){
+        Session::flash('message', "Your Data Update");
+        $document = Document::all();
+        return view('admin.document.index',compact('document'));
+          }
+        else{
+            Session::flash('error', "Your Data Not Update");
+            return back();
+        }
+    }
+
+    public function documentDelete($id)
+
+    {       $document = Document::where('id','=',$id)->first();
+         $document->delete();
+        Session::flash('error', "Your Data Not Update");
+            return back();
+        
+    }
+    public function download($Attachment)
+
+    {       $file=Storage::disk('public')->get($Attachment);
+ 
+		return (new Response($file, 200))
+              ->header('Content-Type', ' application/pdf');
+        
     }
 
     public function enrollmentDetailsIndex()

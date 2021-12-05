@@ -23,7 +23,7 @@
 			
 			</div>
 			<!-- Contact Form -->
-			<div class="contact-form form text-left col-lg-8 col-sm-7 col-12">
+			<div class="contact-form form text-left col-lg-6 col-sm-7 col-12">
             <form method="POST" action="{{ route('login') }}">
                         @csrf
 					
@@ -31,6 +31,7 @@
 					<div class="input"><input type="password" name="password" placeholder="Entrer le mot de passe" /></div>
 					<div class="input input-submit"><input type="submit" value="Connexion" /></div>
 				</form>
+				
 				<p class="form-messege"></p>
 			</div>
 		</div>

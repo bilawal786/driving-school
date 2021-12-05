@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'FrontendController@index')->name('front.index');
 Route::get('/contact', 'FrontendController@contact')->name('front.contact');
 Route::get('/fornt/login', 'FrontendController@logIN')->name('front.login');
+Route::post('/profile/update', 'FrontendController@profileUpdate')->name('profile.update');
 Route::get('/dashboard', 'HomeController@frontIndex')->name('dashboard');
 Route::get('/check/out/{id}', 'HomeController@checkOut')->name('check.out');
 Route::post('/checkOut/store', 'HomeController@checkOutStore')->name('checkout.store');
@@ -108,8 +109,14 @@ Route::post('/feature/store', 'GeneralSettingsController@featureStore')->name('f
 
 Route::get('/setting/create', 'GeneralSettingsController@settingCreate')->name('setting.create');
 Route::post('/setting/store', 'GeneralSettingsController@settingStore')->name('setting.store');
+
 Route::get('/document/create', 'GeneralSettingsController@documentCreate')->name('document.create');
 Route::post('/document/store', 'GeneralSettingsController@documentStore')->name('document.store');
+Route::get('/document/index', 'GeneralSettingsController@documentIndex')->name('document.index');
+Route::get('/document/edit/{id}', 'GeneralSettingsController@documentEdit')->name('document.edit');
+Route::post('/document/update/{id}', 'GeneralSettingsController@documentUpdate')->name('document.update');
+Route::get('/document/delete/{id}', 'GeneralSettingsController@documentDelete')->name('document.delete');
+Route::get('/download/{Attachment}', 'GeneralSettingsController@download')->name('download');
 
 
 //END APP Feature 

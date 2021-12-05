@@ -45,31 +45,32 @@
                                             <tr>
                                                 
                                                 <th><!-- id -->Identifiant</th>
-                                                <th><!--  Name -->Titre</th>
-                                                 <th><!-- Job -->Le prix</th>
-                                                 <th><!-- Job --> Des Détails</th>
+                                                <th><!--  Name -->Nom d'utilisateur</th>
+                                                 <th><!-- Job -->title</th>
+                                                 <th><!-- document --> Document</th>
                                                  
                                                 <th><!-- Action -->Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                             @foreach($courses as $row)
+                                             @foreach($document as $row)
                                             <tr>
                                                 
                                                 <td>{{$row->id}}</td>
-                                                <td>{{$row->courseTitle }}</td>
-                                                <td>{{$row->price }}</td>
-                                                <td>{{$row->courseDetails1 }}</td>
+                                        <?php  $user =  \App\User::where('id','=',$row->user_id)->first();?>
+                                        <td>{{$user->fname}}  {{$user->lname}}</td>
+                                                <td>{{$row->title }}</td>
+                                                <td><a href="{{$row->file }}">Download Now</a></td>
                                                 
                                                
                                                 <td>
 													<div class="d-flex">
 														
                                                     
-                                                <a href="{{route('courses.delete', ['id' => $row->id])}}" id="delete" class="btn btn-danger shadow btn-xs sharp" data-toggle="tooltip" title="Delete">
+                                                <a href="{{route('document.delete', ['id' => $row->id])}}" id="delete" class="btn btn-danger shadow btn-xs sharp" data-toggle="tooltip" title="Delete">
                                                    <i class="fa fa-trash"></i>
                                                 </a>
-                                                <a href="{{route('courses.edit', ['id' => $row->id])}}" id="edit" class="btn btn-primary shadow btn-xs sharp" data-toggle="tooltip" title="edit">
+                                                <a href="{{route('document.edit', ['id' => $row->id])}}" id="edit" class="btn btn-primary shadow btn-xs sharp" data-toggle="tooltip" title="edit">
                                                    <i class="fa fa-pencil"></i>
                                                 </a>
 													</div>												
