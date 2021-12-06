@@ -76,7 +76,7 @@ class FrontendController extends Controller
         } 
         $user->update();
 
-         Session::flash('message', "Your Profile Update");
+         Session::flash('message', "Mise à jour de votre profil");
             return back();
     }
 
@@ -89,11 +89,11 @@ class FrontendController extends Controller
         
             $user->update();
     
-             Session::flash('message', "Your Password Update");
+             Session::flash('message', "Mise à jour de votre mot de passe");
                 return back();
         }
         else{
-            Session::flash('error', "Your Confirm Password Not match");
+            Session::flash('error', "Votre mot de passe de confirmation ne correspond pas");
                 return back();
         }
         
@@ -109,11 +109,11 @@ class FrontendController extends Controller
         $contact->message = $request->message;
        
         if( $contact->save()){
-            Session::flash('message', "Your Data Send ");
+            Session::flash('message', "Vos données envoyer ");
             return back();
         }
         else{
-            Session::flash('error', "Your Data  Send");
+            Session::flash('error', "Vos données ne sont pas envoyées");
            return back();
         }
        

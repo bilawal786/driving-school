@@ -42,12 +42,14 @@ class CourseEnrollController extends Controller
         $input = $request->all(); 
         if($input) {
         $courseEnroll = CourseEnroll::create($input);
-        Session::flash('message', "Your Data Saved");
+        // Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
         }
         else{
             
-            Session::flash('error', "Your Data Not Saved");
+            // Session::flash('error', "Your Data Not Saved");
+            Session::flash('error', "Vos données ne sont pas enregistrées");
             return back();
         }
     }
@@ -96,7 +98,7 @@ class CourseEnrollController extends Controller
         
         $courses->Update();
         
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         $courses = CourseEnroll::all();
         return view('admin.front.courseEnrollment.index',compact('courses'));
     }
@@ -111,7 +113,7 @@ class CourseEnrollController extends Controller
     {
         $courses = CourseEnroll::where('id','=',$id)->first();
         $courses->delete();
-        Session::flash('error', "Your Data Deleted");
+        Session::flash('error', "Vos données supprimées");
         $courses = CourseEnroll::all();
         return back();
     }

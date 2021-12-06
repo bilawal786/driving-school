@@ -56,7 +56,7 @@ class GeneralSettingsController extends Controller
             
         $about = About::create($input);
         
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -84,7 +84,7 @@ class GeneralSettingsController extends Controller
             
         $about->update();
         
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -113,7 +113,7 @@ class GeneralSettingsController extends Controller
             
         $funfact = Funfact::create($input);
         
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -140,7 +140,7 @@ class GeneralSettingsController extends Controller
         
         $funFact->update();
         
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -170,7 +170,7 @@ public function faqCreate()
             
         $faq = FAQ::create($input);
         
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -198,7 +198,7 @@ public function faqCreate()
         
         $faq->update();
         
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -235,7 +235,7 @@ public function jobberCreate()
         
         $jobber = Jobber::create($input);
         
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         $jobber = Jobber::all();
         return view('admin.front.jobber.index',compact('jobber'));
     
@@ -305,7 +305,7 @@ public function galeryCreate()
             
         $galery = Galery::create($input);
         
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -368,7 +368,7 @@ public function galeryCreate()
             
         $galery->update();
         
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -386,7 +386,7 @@ public function priceCreate()
         if($chek->isEmpty()) {
         $input = $request->all(); 
         $price = Pricing::create($input);
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -427,7 +427,7 @@ public function priceCreate()
         $price->pricingDetails45 = $request->pricingDetails45;
         
         $price->update();
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -455,7 +455,7 @@ public function vedioCreate()
         } 
 
         $video = Video::create($input);
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -478,7 +478,7 @@ public function vedioCreate()
         } 
         
         $video->update();
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -497,7 +497,7 @@ public function courseCreate()
         $input = $request->all();
         
         $course = CourseCategory::create($input);
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -513,7 +513,7 @@ public function courseCreate()
         
         
         $course->update();
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -540,7 +540,7 @@ public function featureCreate()
         } 
         
         $feature = Features::create($input);
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -573,7 +573,7 @@ public function featureCreate()
         
         
         $feature->update();
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -678,7 +678,7 @@ public function settingCreate()
         } 
         
         $setting = Website::create($input);
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
@@ -792,7 +792,7 @@ public function settingCreate()
         
         
         $setting->update();
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         return back();
         
 
@@ -828,12 +828,12 @@ public function documentCreate()
             $document->file = 'admin/setting/' . $name;
         } 
          if($document->save()){
-        Session::flash('message', "Your Data Save");
+        Session::flash('message', "Vos données sauvegardées");
         $document = Document::all();
         return view('admin.document.index',compact('document'));
           }
         else{
-            Session::flash('error', "Your Data Not Save");
+            Session::flash('error', "Vos données ne sont pas enregistrées");
             return back();
         }
     }
@@ -873,12 +873,12 @@ public function documentCreate()
             $document->file = 'admin/setting/' . $name;
         } 
          if($document->save()){
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         $document = Document::all();
         return view('admin.document.index',compact('document'));
           }
         else{
-            Session::flash('error', "Your Data Not Update");
+            Session::flash('error', "Vos données ne sont pas mises à jour");
             return back();
         }
     }
@@ -887,7 +887,7 @@ public function documentCreate()
 
     {       $document = Document::where('id','=',$id)->first();
          $document->delete();
-        Session::flash('error', "Your Data Not Update");
+        Session::flash('error', "Vos données ne sont pas mises à jour");
             return back();
         
     }
@@ -908,7 +908,7 @@ public function documentCreate()
     public function enrollmentDetailsDelete($id)
     {   $details = ChekOut::where('id','=',$id)->first();
         $details->delete();
-        Session::flash('error', "Your Data Delete");
+        Session::flash('error', "Vos données supprimer");
         return back();
     }
     public function offersCreate()
@@ -942,11 +942,11 @@ public function documentCreate()
         } 
    
         if($offers->save()){
-            Session::flash('message', "Your Data Save");
+            Session::flash('message', "Vos données sauvegardées");
             return back();
         }
         else{
-            Session::flash('error', "Your Data Not Added");
+            Session::flash('error', "Vos données ne sont pas enregistrées");
            return back();
         }
     }
@@ -970,11 +970,11 @@ public function documentCreate()
         } 
    
         if($offers->update()){
-            Session::flash('message', "Your Data Update");
+            Session::flash('message', "Votre mise à jour de données");
             return back();
         }
         else{
-            Session::flash('error', "Your Data Not Update");
+            Session::flash('error', "Vos données ne sont pas mises à jour");
            return back();
         }
 
@@ -985,7 +985,7 @@ public function documentCreate()
     public function offersDelete($id)
     {   $offers = Offers::where('id','=',$id)->first();
         $offers->delete();
-        Session::flash('error', "Your Data Delete");
+        Session::flash('error', "Vos données supprimer");
         return back();
     }
     public function offersEdit($id)
@@ -1010,12 +1010,12 @@ public function documentCreate()
         } 
    
         if($offers->update()){
-            Session::flash('message', "Your Data Update");
+            Session::flash('message', "Votre mise à jour de données");
             $offers = Offers::all();
         return view('admin.offers.index',compact('offers'));
         }
         else{
-            Session::flash('error', "Your Data Not Update");
+            Session::flash('error', "Vos données ne sont pas mises à jour");
            return back();
         }
     }
@@ -1027,7 +1027,7 @@ public function documentCreate()
     public function messageDelete($id)
     {   $contact = Contact::where('id','=',$id)->first();
         $contact->delete();
-        Session::flash('error', "Your Data Delete");
+        Session::flash('error', "Vos données supprimer");
         return back();
     }
     public function allStudents()
@@ -1037,7 +1037,7 @@ public function documentCreate()
     public function userDelete($id)
     {   $users = User::where('id','=',$id)->first();
         $users->delete();
-        Session::flash('error', "Your Data Delete");
+        Session::flash('error', "Vos données supprimer");
         return back();
     }
 }

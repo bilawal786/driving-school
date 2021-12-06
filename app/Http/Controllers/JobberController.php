@@ -94,7 +94,7 @@ class JobberController extends Controller
             $jobber->backGroundImage  = 'admin/about/' . $name;
         }
         $jobber->update();
-        Session::flash('message', "Your Data Updated");
+        Session::flash('message', "Vos données mises à jour");
         $jobber = Jobber::all();
         return view('admin.front.jobber.index',compact('jobber'));
     }
@@ -109,7 +109,7 @@ class JobberController extends Controller
     {
         $jobber = Jobber::where('id','=',$id)->first();
         $jobber->delete();
-        Session::flash('error', "Your Data Deleted");
+        Session::flash('error', "Vos données supprimées");
         $jobber = Jobber::all();
         return view('admin.front.jobber.index',compact('jobber'));
     }

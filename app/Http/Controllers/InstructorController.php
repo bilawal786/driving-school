@@ -70,12 +70,12 @@ class InstructorController extends Controller
         
         $instructor->save();
         
-        Session::flash('message', "Your Data Saved");
+        Session::flash('message', "Vos données enregistrées");
         $instructor = Instructor::all();
         return view('admin.front.instructor.index',compact('instructor'));
     }
     else{
-        Session::flash('error', "Your Data Not Saved Please Delete Data");
+        Session::flash('error', "Vos données ne sont pas enregistrées, veuillez supprimer les données");
         $instructor = Instructor::all();
         return view('admin.front.instructor.index',compact('instructor'));
     }
@@ -143,7 +143,7 @@ class InstructorController extends Controller
         
         $instructor->Update();
         
-        Session::flash('message', "Your Data Update");
+        Session::flash('message', "Votre mise à jour de données");
         $instructor = Instructor::all();
         return view('admin.front.instructor.index',compact('instructor'));
     }
@@ -157,7 +157,7 @@ class InstructorController extends Controller
     public function destroy($id)
     {$instructor = Instructor::where('id','=',$id)->first();
         $instructor->delete();
-        Session::flash('error', "Your Data Deleted");
+        Session::flash('error', "Vos données supprimées");
         $instructor = Instructor::all();
         return back();
     }
