@@ -71,7 +71,7 @@
 					@auth
 					<div class="input input-submit"><input type="submit" value="Envoyer le Message" /></div>
 					@else
-                    <div class="input input-submit"><button style=" background-color: #dec839; " ><a href="{{route('front.login')}}" >Envoyer le Message</a></button></div>
+                    <div class="input input-submit"><button style=" background-color: #dec839; " ><a href="{{route('front.login')}}" style="color:white;" >Envoyer le Message</a></button></div>
                     @endauth
 				</form>
 				<p class="form-messege"></p>

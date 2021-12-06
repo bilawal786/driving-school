@@ -115,17 +115,7 @@ class WebsiteSeeder extends Seeder
                 
                
             ]);
-            CourseEnroll::create([
-                'courseTitle' => 'AMÉLIORER',
-                'price' => "400",
-                'courseDetails1' => "Cours De 4 Mois",
-                'courseDetails2' => '4 Heures Par JourY',
-                'courseDetails3' => "Test Hebdomadale 3",
-                'courseDetails4' => "40 Cours Vidio",
-                'courseDetails5' => 'Permis De Conduire',
-                
-               
-            ]);
+            
 
             Galery::create([
                 'description' => "Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua",

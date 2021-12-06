@@ -28,7 +28,7 @@
 			
 			<!-- Contact Form -->
 			<div class="contact-form form text-center center_div col-lg-6 col-sm-7 col-12">
-            < <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register') }}">
                         @csrf
                     <div class="input "><input type="text" class="@error('fname') is-invalid @enderror" name="fname" placeholder="Entrez l'Prénom" required autocomplete="lname" /></div>
                                 @error('fname')
@@ -58,7 +58,7 @@
 					<div class="input input-submit"><input type="submit" value="Connexion" /></div>
 				</form>
 				
-				<div class="input "><p class="form-messege" style="margin-top: 30px">Pas un membre ? <a href="" style="color:#dec839;">S'inscrire maintenant</a></p></div>
+				<div class="input "><p class="form-messege" style="margin-top: 30px">Pas un membre ? <a href="{{ route('front.login') }}" style="color:#dec839;">S'inscrire maintenant</a></p></div>
 			</div>
 		</div>
 	</div>

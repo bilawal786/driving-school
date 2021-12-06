@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home</title>
+    <title>{{$website->siteName}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -106,18 +106,18 @@
                     <div class="main-menu mean-menu col-auto">
                         <nav>
                             <ul>
-                                <li class="active"><a href="{{route('front.index')}}#video-area"><!--Home-->Accueil</a></li>
-                                <li><a href="#about-area"><!--About-->Sur</a></li>
-                                <li><a href="#feature-area"><!--Feature-->Caractéristique</a></li>
+                                <li class="active"><a href="{{route('front.index')}}"><!--Home-->Accueil</a></li>
+                                <li><a href="{{route('front.index')}}#about-area"><!--About-->Sur</a></li>
+                                <li><a href="{{route('front.index')}}#feature-area"><!--Feature-->Caractéristique</a></li>
                                 <!--<li><a href="#course-area">--><!--Course--><!--Cours</a></li>-->
-                                <li><a href="#video-area"><!--Video-->Vidéo</a></li>
+                                <li><a href="{{route('front.index')}}#video-area"><!--Video-->Vidéo</a></li>
                                 <!--<li><a href="#pricing-area">--><!--Pricing--><!--Prix</a></li>-->
                                 <!--<li><a href="#instructor-area">--><!--Instructor--><!--Instructrice</a></li>-->
-                                <li><a href="#gallery-area"><!--Gallery-->Galerie</a></li>
-                                <li><a href="#testimonial-area"><!--Testimonial-->Témoignage</a></li>
-                                <li><a href="#faq-area"><!--FAQ-->FAQ</a></li>
+                                <li><a href="{{route('front.index')}}#gallery-area"><!--Gallery-->Galerie</a></li>
+                                <li><a href="{{route('front.index')}}#testimonial-area"><!--Testimonial-->Témoignage</a></li>
+                                <li><a href="{{route('front.index')}}#faq-area"><!--FAQ-->FAQ</a></li>
                                 
-                                <li><a href="{{route('front.contact')}}#faq-area"><!--Contact Us-->Contact</a></li>
+                                <li><a href="{{route('front.contact')}}"><!--Contact Us-->Contact</a></li>
                                 @auth
                                 <li><a href="{{route('home')}}"><!--Contact Us-->{{Auth::user()->fname}} {{Auth::user()->lname}}</a></li>
                                 @else

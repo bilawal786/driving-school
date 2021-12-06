@@ -36,7 +36,7 @@
 					<div class="input input-submit"><input type="submit" value="Connexion" /></div>
 				</form>
 				
-				<div class="input "><p class="form-messege" style="margin-top: 30px">si vous êtes membre s'il vous  ? <a href="{{ route('front.login') }}" style="color:#dec839;">Connexion</a></p></div>
+				<div class="input "><p class="form-messege" style="margin-top: 30px">si vous êtes membre s'il vous  ? <a href="{{ route('front.register') }}" style="color:#dec839;">Connexion</a></p></div>
 			</div>
 		</div>
 	</div>

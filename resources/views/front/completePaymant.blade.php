@@ -40,7 +40,10 @@
         {{-- <img src="{{asset('image/t.png')}}" width="40" height="50"> --}}
         {{-- <h3>Dear, Faisal khan</h3> --}}
         <p style="font-size:20px;color:#5C5C5C;">Nous avons reçu votre demande d'achat<br>
-        nous vous contacterons sous peu!</p>
+        nous vous contacterons sous peu!<br>
+        <a href="{{route('front.index')}}" style="color:#dec839;" >Retour au tableau de bord</a>
+        
+        </p>
        
     <br><br>
         </div>

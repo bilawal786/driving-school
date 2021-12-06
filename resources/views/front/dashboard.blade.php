@@ -141,14 +141,13 @@ body {font-family: "Lato", sans-serif;}
             </tr>
         </thead>
         <tbody>
+        @foreach($checkOut as $row)
             <tr> 
-			@foreach($checkOut as $row)
-                <td>{{$row->courseTitle}}</td>
+		            <td >{{$row->courseTitle}}</td>
                 <td>€{{$row->total}}</td>
                 <td>{{$row->created_at}}</td>
-		    @endforeach
-                
             </tr>
+          @endforeach
            
         </tbody>
        
@@ -156,12 +155,12 @@ body {font-family: "Lato", sans-serif;}
 </div>
 
 <div id="dashboard" class="tabcontent">
-<pre><strong>Bonjour  {{Auth::user()->fname}} {{Auth::user()->lname}}<strong>,
+<p><br><strong>Bonjour  {{Auth::user()->fname}} {{Auth::user()->lname}}</strong>,<br><br>
 
 Bienvenue dans votre espace privé.
 Mes Commandes
 Vous y touverez egalement vos commandes, et le détails de votre compte.
-</pre>
+</p>
 </div>
 
 
@@ -177,15 +176,17 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
             </tr>
         </thead>
         <tbody>
+        @foreach($document as $row)
             <tr> 
-			@foreach($document as $row)
+		
                 <td>{{$row->id}}</td>
                 <td>{{$row->title}}</td>
                 <td><a href="{{ route('download_url',$row->file) }}">Download</a></td>
                 <td>{{$row->created_at}}</td>
-		    @endforeach
+		   
                 
             </tr>
+            @endforeach
            
         </tbody>
        

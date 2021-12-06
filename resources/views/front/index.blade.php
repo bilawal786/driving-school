@@ -271,7 +271,7 @@
                     </div>
                     <div class="heading margin_top_30" style=" text-align: center; margin-top: 80px;">
                         
-                       <p ><h3 ><del>€{{$offers->oldPrice ??''}}</del></h3> <h2 style=>/€{{$offers->newPrice ??''}}</h2></p> 
+                       <p ><h3 style="float:left; margin-left:200px;" ><del>€{{$offers->oldPrice ??''}}</del></h3> <h2 style=""   >€{{$offers->newPrice ??''}}</h2></p> 
                     </div>
                     <div class="full margin_top_20" >
                     <p style=" text-align: right; font-size: 60px;  margin-top: 120px;" id="demotime"></p>
