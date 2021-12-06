@@ -1,6 +1,12 @@
 @extends('front.master')
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
 @section('content')
+<style>
+.center_div{
+    margin: 0 auto;
+    width:80% /* value of your choice which suits your alignment */
+}
+</style>
 
 <!-- Contatc Area
 ============================================ -->
@@ -17,22 +23,20 @@
 				<i class="icofont icofont-traffic-light"></i>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">
 			<!-- Contact Info -->
-			<div class="contact-info col-lg-12 col-sm-12 col-12">
 			
-			</div>
 			<!-- Contact Form -->
-			<div class="contact-form form text-left col-lg-6 col-sm-7 col-12">
-            <form method="POST" action="{{ route('login') }}">
+			<div class="contact-form form text-center center_div col-lg-6 col-sm-7 col-12">
+            <form method="POST" action="{{ route('login') }}" >
                         @csrf
 					
-					<div class="input"><input type="text" name="email" placeholder="Entrez l'e-mail" /></div>
+					<div class="input "><input type="text" name="email" placeholder="Entrez l'e-mail" /></div>
 					<div class="input"><input type="password" name="password" placeholder="Entrer le mot de passe" /></div>
 					<div class="input input-submit"><input type="submit" value="Connexion" /></div>
 				</form>
 				
-				<p class="form-messege"></p>
+				<div class="input "><p class="form-messege" style="margin-top: 30px">si vous êtes membre s'il vous  ? <a href="{{ route('front.login') }}" style="color:#dec839;">Connexion</a></p></div>
 			</div>
 		</div>
 	</div>

@@ -207,6 +207,12 @@
                             <span class="nav-text">  Témoignage</span>
                         </a>
                     </li>
+                    <li><a href="{{route('user.messages')}}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-layer-1"></i>
+                            <!-- APP SETTING -->
+                            <span class="nav-text">  Un Message</span>
+                        </a>
+                    </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-settings-2"></i>
 							<span class="nav-text"><!--Setting-->Réglage</span>
@@ -223,6 +229,12 @@
                             <li><a href="{{route('faq.create')}}">FAQ</a></li>
                             <li><a href="{{route('funfact.create')}}">Fait amusant</a></li>
                         </ul>
+                    </li>
+                    <li><a href="{{route('all.students')}}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-layer-1"></i>
+                            <!-- APP SETTING -->
+                            <span class="nav-text">  Étudiantes</span>
+                        </a>
                     </li>
 <!--                <li>
                     <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

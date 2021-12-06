@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'FrontendController@index')->name('front.index');
 Route::get('/contact', 'FrontendController@contact')->name('front.contact');
 Route::get('/fornt/login', 'FrontendController@logIN')->name('front.login');
+Route::get('/fornt/register', 'FrontendController@register')->name('front.register');
 Route::post('/profile/update', 'FrontendController@profileUpdate')->name('profile.update');
+Route::post('/password/change', 'FrontendController@passwordUpdate')->name('password.change');
+Route::post('/contact/store', 'FrontendController@contactInfoStore')->name('contact.store');
 Route::get('/dashboard', 'HomeController@frontIndex')->name('dashboard');
 Route::get('/check/out/{id}', 'HomeController@checkOut')->name('check.out');
 Route::post('/checkOut/store', 'HomeController@checkOutStore')->name('checkout.store');
@@ -30,6 +33,15 @@ Route::middleware(['web', 'user'])->group(function () {
 
 Route::get('/about/create', 'GeneralSettingsController@aboutCreate')->name('about.create');
 Route::post('/about/store', 'GeneralSettingsController@aboutStore')->name('about.store');
+//mesaages
+Route::get('/user/messages', 'GeneralSettingsController@userMessages')->name('user.messages');
+Route::get('/message/delete/{id}', 'GeneralSettingsController@messageDelete')->name('message.delete');
+
+//Studeent Show
+Route::get('/all/students', 'GeneralSettingsController@allStudents')->name('all.students');
+Route::get('/usser/delete/{id}', 'GeneralSettingsController@userDelete')->name('user.delete');
+
+
 
 //END APP SETTING
 

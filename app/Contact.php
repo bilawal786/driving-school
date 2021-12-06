@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Offers extends Model
+class Contact extends Model
 {
     protected $fillable = [
-        'title','image', 'link', 'date','oldPrice','newPrice'
+        'user_id','email', 'subject', 'message','name',
     ];
 }

@@ -271,6 +271,8 @@ class WebsiteSeeder extends Seeder
                             'image' => "front/image2.png",
                             'link' => "http://127.0.0.1:8000",
                             'date' => "2021-12-09T05:54",
+                            'oldPrice' => "300",
+                            'newPrice' => "200",
                         
                             ]);
                             

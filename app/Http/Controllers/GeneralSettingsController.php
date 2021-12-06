@@ -10,6 +10,7 @@ use App\Jobber;
 use App\Galery;
 use App\Offers;
 use App\User;
+use App\Contact;
 use App\Video;
 use App\CourseEnroll;
 use App\Document;
@@ -928,6 +929,8 @@ public function documentCreate()
         $offers->title = $request->title;
         $offers->date = $request->date;
         $offers->link = $request->link;
+        $offers->oldPrice = $request->oldPrice;
+        $offers->newPrice = $request->newPrice;
 
         if ($request->hasfile('image')) {
 
@@ -954,6 +957,8 @@ public function documentCreate()
         $offers->title = $request->title;
         $offers->date = $request->date;
         $offers->link = $request->link;
+        $offers->oldPrice = $request->oldPrice;
+        $offers->newPrice = $request->newPrice;
 
         if ($request->hasfile('image')) {
 
@@ -1013,5 +1018,26 @@ public function documentCreate()
             Session::flash('error', "Your Data Not Update");
            return back();
         }
+    }
+
+    public function userMessages()
+    {      $contact = Contact::get();
+       return view('admin.messages.index',compact('contact'));
+    }
+    public function messageDelete($id)
+    {   $contact = Contact::where('id','=',$id)->first();
+        $contact->delete();
+        Session::flash('error', "Your Data Delete");
+        return back();
+    }
+    public function allStudents()
+    {      $users = User::Where('role','=',1)->get();
+       return view('admin.users.index',compact('users'));
+    }
+    public function userDelete($id)
+    {   $users = User::where('id','=',$id)->first();
+        $users->delete();
+        Session::flash('error', "Your Data Delete");
+        return back();
     }
 }

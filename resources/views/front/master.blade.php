@@ -106,7 +106,7 @@
                     <div class="main-menu mean-menu col-auto">
                         <nav>
                             <ul>
-                                <li class="active"><a href="{{route('front.index')}}"><!--Home-->Accueil</a></li>
+                                <li class="active"><a href="{{route('front.index')}}#video-area"><!--Home-->Accueil</a></li>
                                 <li><a href="#about-area"><!--About-->Sur</a></li>
                                 <li><a href="#feature-area"><!--Feature-->Caractéristique</a></li>
                                 <!--<li><a href="#course-area">--><!--Course--><!--Cours</a></li>-->
@@ -117,9 +117,9 @@
                                 <li><a href="#testimonial-area"><!--Testimonial-->Témoignage</a></li>
                                 <li><a href="#faq-area"><!--FAQ-->FAQ</a></li>
                                 
-                                <li><a href="{{route('front.contact')}}"><!--Contact Us-->Contact</a></li>
+                                <li><a href="{{route('front.contact')}}#faq-area"><!--Contact Us-->Contact</a></li>
                                 @auth
-                                <li><a href="{{route('home')}}"><!--Contact Us-->Dashboard</a></li>
+                                <li><a href="{{route('home')}}"><!--Contact Us-->{{Auth::user()->fname}} {{Auth::user()->lname}}</a></li>
                                 @else
                                 <li><a href="{{route('front.login')}}"><!--Contact Us-->Connexion</a></li>
                                

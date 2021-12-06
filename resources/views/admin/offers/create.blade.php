@@ -74,8 +74,19 @@
                                 <label class="col-sm-2 col-form-label"><!-- link -->Relier <strong style="color: red;font-size: 20px;"> *</strong></label>
                                 <div class="col-sm-4">
                                     <input type="text" class="form-control" name="link" value="{{$offers->link ??''}}"  placeholder="Entrez le Relier" >
+                                </div> 
+                                <label class="col-sm-2 col-form-label"><!-- link -->Ancien Prix<strong style="color: red;font-size: 20px;"> *</strong></label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" name="oldPrice" value="{{$offers->oldPrice ??''}}"  placeholder="Entrez le Ancien Prix" >
                                 </div>             
                 </div>
+
+                <div class="form-group row">
+                <label class="col-sm-2 col-form-label"><!-- link -->Nouveau Prix<strong style="color: red;font-size: 20px;"> *</strong></label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" name="newPrice" value="{{$offers->newPrice ??''}}"  placeholder="Entrez le Nouveau Prix" >
+                                </div> 
+                    </div>
             </div>
                                      
                                     

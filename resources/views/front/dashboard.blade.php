@@ -47,9 +47,9 @@ body {font-family: "Lato", sans-serif;}
   float: left;
   padding: 0px 12px;
   border: 1px solid #dec839;;
-  width: 70%;
+  width: 800px;
   border-left: none;
-  height: 300px;
+  height: 400px;
 }
 </style>
 
@@ -72,6 +72,14 @@ body {font-family: "Lato", sans-serif;}
                                     </button>
                                 </div>
                               @endif
+                              @if (Session::has('error'))
+                  <div class="alert alert-danger alert-dismissible fade show">
+									<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+									<strong>Error!</strong> {{ Session::get('error') }}.
+									<button type="button" class="close h-100" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
+                                    </button>
+								</div>
+                  @endif
 					<!-- <p>Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua</p> -->
 				</div>
 				<i class="icofont icofont-traffic-light"></i>
@@ -104,14 +112,16 @@ body {font-family: "Lato", sans-serif;}
 			</div>
 			<!-- Contact Form -->
 			<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Inscription aux Cours</button>
+  <button class="tablinks" onclick="openCity(event, 'dashboard')" id="defaultOpen">Tableau de bord</button>
+  <button class="tablinks" onclick="openCity(event, 'London')" >Inscription aux Cours</button>
   <button class="tablinks" onclick="openCity(event, 'Paris')">Document</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Profil</button>
+  <button class="tablinks" onclick="openCity(event, 'Password')">Réinitialiser Password</button>
   <button class="tablinks" > <a href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
                                    class="">
                                     
-                                    Sortir
+                                    Sortie
                                     </span>
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -125,8 +135,8 @@ body {font-family: "Lato", sans-serif;}
         <thead>
             <tr>
                 <th>Cours</th>
-                <th>Price</th>
-                <th>Created_at</th>
+                <th>Prix</th>
+                <th>Créé à</th>
                
             </tr>
         </thead>
@@ -134,7 +144,7 @@ body {font-family: "Lato", sans-serif;}
             <tr> 
 			@foreach($checkOut as $row)
                 <td>{{$row->courseTitle}}</td>
-                <td>{{$row->total}}</td>
+                <td>€{{$row->total}}</td>
                 <td>{{$row->created_at}}</td>
 		    @endforeach
                 
@@ -145,15 +155,83 @@ body {font-family: "Lato", sans-serif;}
     </table>
 </div>
 
+<div id="dashboard" class="tabcontent">
+<pre><strong>Bonjour  {{Auth::user()->fname}} {{Auth::user()->lname}}<strong>,
+
+Bienvenue dans votre espace privé.
+Mes Commandes
+Vous y touverez egalement vos commandes, et le détails de votre compte.
+</pre>
+</div>
 
 
 <div id="Paris" class="tabcontent">
-@foreach($document as $row)
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Identifiant</th>
+                <th>Titre</th>
+                <th>Document</th>
+                <th>Créé à</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr> 
+			@foreach($document as $row)
+                <td>{{$row->id}}</td>
+                <td>{{$row->title}}</td>
+                <td><a href="{{ route('download_url',$row->file) }}">Download</a></td>
+                <td>{{$row->created_at}}</td>
+		    @endforeach
+                
+            </tr>
+           
+        </tbody>
+       
+    </table>
 
-<a href="{{ route('download_url',$row->file) }}">Download</a>
-@endforeach
 </div>
 
+<div id="Password" class="tabcontent">
+<form method="POST" action="{{ route('password.change')}}" enctype="multipart/form-data">
+                                             @csrf
+  <div class="form-row" style="margin-top: 25px;">
+    <div class="col-lg-3">
+	<label ><!--Icon-->Ancien mot de passe<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-6">
+      <input type="password" class="form-control" name="old_password"  placeholder="Ancien mot de passe" required >
+    </div>
+    
+  </div>
+  <div class="form-row" style="margin-top: 25px;">
+    <div class="col-lg-3">
+	<label ><!--Icon-->Nouveau mot de passe<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-6">
+      <input type="password" class="form-control" name="password"  placeholder="Nouveau mot de passe"  required>
+    </div>
+    
+  </div>
+  <div class="form-row" style="margin-top: 25px;">
+    <div class="col-lg-3">
+	<label ><!--Icon-->Confirmez le mot de passe<strong style="color: red;font-size: 20px;"> * </strong></label>
+	</div>
+	<div class="col-lg-6">
+      <input type="password" class="form-control" name="confirm_password"  placeholder="Confirmez le mot de passe" required  >
+    </div>
+    
+  </div>
+  <div class="form-row" style="margin-top: 25px;">
+    
+	
+  <input type="submit"  style=" background-color: #dec839; border: 1px solid #dec839;" value="Mettre à jour" />
+    
+    
+  </div>
+</form>
+</div>
 <div id="Tokyo" class="tabcontent">
 <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
                                              @csrf
@@ -207,6 +285,8 @@ body {font-family: "Lato", sans-serif;}
     
   </div>
 </form>
+
+
 				<p class="form-messege"></p>
 			</div>
 		</div>

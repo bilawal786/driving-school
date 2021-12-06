@@ -262,14 +262,19 @@
             <!-- Section Title -->
             <div class="row">
                 <div class="col-md-6">
-                <a href="{{$offers->link ?? ''}}" > <img class="img-responsive"  src="{{ asset($about->image1 ?? ' ')  }}" alt="#" /></a>
+                <a href="{{$offers->link ?? ''}}" > <img class="img-responsive"  src="{{ asset($offers->image ?? ' ')  }}" alt="#" /></a>
                 </div>
                 <div class="col-md-6">
                     <div class="heading margin_top_30">
                         <h2 class="heading" style="text-align: center; color: black; font-size: 40px;"><!--About our shop--> {{$offers->title ??''}}</h2>
+                       
+                    </div>
+                    <div class="heading margin_top_30" style=" text-align: center; margin-top: 80px;">
+                        
+                       <p ><h3 ><del>€{{$offers->oldPrice ??''}}</del></h3> <h2 style=>/€{{$offers->newPrice ??''}}</h2></p> 
                     </div>
                     <div class="full margin_top_20" >
-                    <p style="text-align: center; font-size: 60px;  margin-top: 150px;" id="demotime"></p>
+                    <p style=" text-align: right; font-size: 60px;  margin-top: 120px;" id="demotime"></p>
                 </div>
                     </div>
                     <div class="full margin_top_50" >

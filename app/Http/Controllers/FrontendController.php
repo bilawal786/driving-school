@@ -14,11 +14,13 @@ use App\Video;
 use App\Pricing;
 use App\Features;
 use App\Website;
+use App\Contact;
 use App\CourseCategory;
 use App\Instructor;
 use Validator;
 use Session;
 use Auth;
+use Illuminate\Support\Facades\Hash;
 
 class FrontendController extends Controller
 {
@@ -51,6 +53,11 @@ class FrontendController extends Controller
         $website = Website::first();
         return view('front.login',compact('website'));
     }
+    public function register(){
+       
+        $website = Website::first();
+        return view('front.register',compact('website'));
+    }
     public function profileUpdate(Request $request){
        
         $user = Auth::user();
@@ -69,7 +76,50 @@ class FrontendController extends Controller
         } 
         $user->update();
 
-         Session::flash('message', "Your Data Not Save");
+         Session::flash('message', "Your Profile Update");
             return back();
     }
+
+    public function passwordUpdate(Request $request){
+       
+               
+        $user = Auth::user();
+        if($request->password == $request->confirm_password){
+            $user->password = Hash::make(($request->password));
+        
+            $user->update();
+    
+             Session::flash('message', "Your Password Update");
+                return back();
+        }
+        else{
+            Session::flash('error', "Your Confirm Password Not match");
+                return back();
+        }
+        
+    }
+    
+    public function contactInfoStore(Request $request){
+        
+        $contact = new Contact();
+        $contact->user_id = Auth::user()->id;
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->subject = $request->subject;
+        $contact->message = $request->message;
+       
+        if( $contact->save()){
+            Session::flash('message', "Your Data Send ");
+            return back();
+        }
+        else{
+            Session::flash('error', "Your Data  Send");
+           return back();
+        }
+       
+        
+    }
+          
+
+     
 }
