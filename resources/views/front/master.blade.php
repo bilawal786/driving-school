@@ -101,7 +101,7 @@
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="navbar-header col-auto">
-                        <a href="#hero-area" class="logo navbar-brand"><img id="logo_img" style="width: 80px; hight:80px;" src="{{asset($website->logo ?? '')}}" alt="logo" /></a>
+                        <a href="{{route('front.index')}}" class="logo navbar-brand"><img id="logo_img" style="width: 80px; hight:80px;" src="{{asset($website->logo ?? '')}}" alt="logo" /></a>
                     </div>
                     <div class="main-menu mean-menu col-auto">
                         <nav>

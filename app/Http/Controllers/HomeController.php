@@ -9,6 +9,7 @@ use App\ChekOut;
 use App\Document;
 use App\CourseEnroll;
 use App\User;
+use Response;
 
 class HomeController extends Controller
 {
@@ -75,8 +76,18 @@ class HomeController extends Controller
         
      
     }
-    public function download($path)
- {
-     return Storage::download($path);
- }
+
+    public function downloadPath($id)
+{      
+                
+    $document = Document::where('id','=',$id)->first();
+    
+    $file=  $document->file;
+
+    $headers = array(
+              'Content-Type: application/pdf',
+            );
+
+    return Response::download($file, 'filename.pdf', $headers);
+}
 }

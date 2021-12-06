@@ -14,7 +14,7 @@ body {font-family: "Lato", sans-serif;}
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 30%;
-  height: 300px;
+
 }
 
 /* Style the buttons inside the tab */
@@ -46,10 +46,25 @@ body {font-family: "Lato", sans-serif;}
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 1px solid #dec839;;
-  width: 800px;
+  border: 1px solid #dec839;
+  width: 70%;
   border-left: none;
-  height: 400px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .tab {
+
+  width: 100%;
+
+}
+
+.tabcontent {
+
+  width: 100%;
+
+}
 }
 </style>
 
@@ -120,14 +135,14 @@ body {font-family: "Lato", sans-serif;}
   <button class="tablinks" > <a href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
                                    class="">
-                                    
+
                                     Sortie
                                     </span>
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form></button>
-  
+
 </div>
 
 <div id="London" class="tabcontent">
@@ -137,20 +152,20 @@ body {font-family: "Lato", sans-serif;}
                 <th>Cours</th>
                 <th>Prix</th>
                 <th>Créé à</th>
-               
+
             </tr>
         </thead>
         <tbody>
         @foreach($checkOut as $row)
-            <tr> 
+            <tr>
 		            <td >{{$row->courseTitle}}</td>
                 <td>€{{$row->total}}</td>
                 <td>{{$row->created_at}}</td>
             </tr>
           @endforeach
-           
+
         </tbody>
-       
+
     </table>
 </div>
 
@@ -172,24 +187,24 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
                 <th>Titre</th>
                 <th>Document</th>
                 <th>Créé à</th>
-               
+
             </tr>
         </thead>
         <tbody>
         @foreach($document as $row)
-            <tr> 
-		
+            <tr>
+
                 <td>{{$row->id}}</td>
                 <td>{{$row->title}}</td>
-                <td><a href="{{ route('download_url',$row->file) }}">Download</a></td>
+                <td><a href="{{ route('download.url',['id'=>$row->id]) }}">Download</a></td>
                 <td>{{$row->created_at}}</td>
-		   
-                
+
+
             </tr>
             @endforeach
-           
+
         </tbody>
-       
+
     </table>
 
 </div>
@@ -204,7 +219,7 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
 	<div class="col-lg-6">
       <input type="password" class="form-control" name="old_password"  placeholder="Ancien mot de passe" required >
     </div>
-    
+
   </div>
   <div class="form-row" style="margin-top: 25px;">
     <div class="col-lg-3">
@@ -213,7 +228,7 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
 	<div class="col-lg-6">
       <input type="password" class="form-control" name="password"  placeholder="Nouveau mot de passe"  required>
     </div>
-    
+
   </div>
   <div class="form-row" style="margin-top: 25px;">
     <div class="col-lg-3">
@@ -222,14 +237,14 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
 	<div class="col-lg-6">
       <input type="password" class="form-control" name="confirm_password"  placeholder="Confirmez le mot de passe" required  >
     </div>
-    
+
   </div>
   <div class="form-row" style="margin-top: 25px;">
-    
-	
+
+
   <input type="submit"  style=" background-color: #dec839; border: 1px solid #dec839;" value="Mettre à jour" />
-    
-    
+
+
   </div>
 </form>
 </div>
@@ -279,11 +294,11 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
     </div>
   </div>
   <div class="form-row" style="margin-top: 25px;">
-    
-	
+
+
   <input type="submit"  style=" background-color: #dec839; border: 1px solid #dec839;" value="Mettre à jour" />
-    
-    
+
+
   </div>
 </form>
 
@@ -292,7 +307,7 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 <script>
 function openCity(evt, cityName) {

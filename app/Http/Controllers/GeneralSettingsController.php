@@ -891,14 +891,18 @@ public function documentCreate()
             return back();
         
     }
-    public function download($Attachment)
+    public function downloadPath($path)
+{                  dd($path);
+    //PDF file is stored under project/public/download/info.pdf
+    $file= public_path(). $Attachment;
 
-    {       $file=Storage::disk('public')->get($Attachment);
- 
-		return (new Response($file, 200))
-              ->header('Content-Type', ' application/pdf');
-        
-    }
+    $headers = array(
+              'Content-Type: application/pdf',
+            );
+
+    return Response::download($file, 'filename.pdf', $headers);
+}
+    
 
     public function enrollmentDetailsIndex()
     {       $details = ChekOut::all();

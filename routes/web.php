@@ -23,7 +23,7 @@ Route::post('/contact/store', 'FrontendController@contactInfoStore')->name('cont
 Route::get('/dashboard', 'HomeController@frontIndex')->name('dashboard');
 Route::get('/check/out/{id}', 'HomeController@checkOut')->name('check.out');
 Route::post('/checkOut/store', 'HomeController@checkOutStore')->name('checkout.store');
-Route::get('/download_url/{path}', 'HomeController@download')->name('download_url');
+Route::get('/download/url/{id}', 'HomeController@downloadPath')->name('download.url');
 
 
 Route::middleware(['web', 'user'])->group(function () {
@@ -128,7 +128,7 @@ Route::get('/document/index', 'GeneralSettingsController@documentIndex')->name('
 Route::get('/document/edit/{id}', 'GeneralSettingsController@documentEdit')->name('document.edit');
 Route::post('/document/update/{id}', 'GeneralSettingsController@documentUpdate')->name('document.update');
 Route::get('/document/delete/{id}', 'GeneralSettingsController@documentDelete')->name('document.delete');
-Route::get('/download/{Attachment}', 'GeneralSettingsController@download')->name('download');
+// Route::get('/download/{Attachment}', 'GeneralSettingsController@download')->name('download');
 
 
 //END APP Feature 

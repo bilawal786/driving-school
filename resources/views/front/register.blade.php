@@ -57,8 +57,8 @@
                     <div class="input"><input type="password"  class="@error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Entrer le Confirmez le mot de passe" required autocomplete="new-password" /></div>
 					<div class="input input-submit"><input type="submit" value="Connexion" /></div>
 				</form>
-				
-				<div class="input "><p class="form-messege" style="margin-top: 30px">Pas un membre ? <a href="{{ route('front.login') }}" style="color:#dec839;">S'inscrire maintenant</a></p></div>
+				<div class="input "><p class="form-messege" style="margin-top: 30px">si vous êtes membre s'il vous  ? <a href="{{ route('front.login') }}" style="color:#dec839;">Connexion</a></p></div>
+
 			</div>
 		</div>
 	</div>

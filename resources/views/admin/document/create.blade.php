@@ -71,7 +71,7 @@
                                             <label class="col-sm-3 col-form-label"><!--Icon-->Déposer<strong style="color: red;font-size: 20px;"> * </strong></label>
                                             <div class="col-sm-9">
                                               
-                                               <input type="file" name="file" value=""  >
+                                               <input type="file" name="file" value=""  accept="application/pdf"  >
                         
                                             </div>
                                         

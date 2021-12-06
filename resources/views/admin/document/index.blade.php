@@ -60,9 +60,8 @@
                                         <?php  $user =  \App\User::where('id','=',$row->user_id)->first();?>
                                         <td>{{$user->fname}}  {{$user->lname}}</td>
                                                 <td>{{$row->title }}</td>
-                                                <td><a href="{{$row->file }}">Download Now</a></td>
+                                                <td><a target="_blank" href="{{asset($row->file)}}">Download Now</a></td>
                                                 
-                                               
                                                 <td>
 													<div class="d-flex">
 														
