@@ -46,7 +46,10 @@
             display: block;
         }
         .main-menu nav > ul > li.active > a {
-            color: white;
+            color: white !important;
+        }
+        .main-menu nav > ul > li > a {
+            color: white !important;
         }
         .course-item i {
             color: #DC143C;
