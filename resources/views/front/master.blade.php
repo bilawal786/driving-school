@@ -41,15 +41,15 @@
         }
 
         .single-feature .icon i {
-            color: red;
+            color: #DC143C;
             font-size: 36px;
             display: block;
         }
         .main-menu nav > ul > li.active > a {
-            color: red;
+            color: white;
         }
         .course-item i {
-            color: red;
+            color: #DC143C;
             display: inline-block;
             font-size: 48px;
             margin-bottom: 18px;
@@ -57,16 +57,16 @@
             transition: all 0.3s ease 0s;
         }
         .single-pricing:hover .pricing-head, .active .pricing-head {
-            background-color: red;
+            background-color: #DC143C;
         }
         .single-pricing:hover .pricing-action, .active .pricing-action {
-            background-color: red;
+            background-color: #DC143C;
         }
         .single-pricing:hover .pricing-price, .active .pricing-price {
              background-image: url(../../img/shape/pricing/price-border-color.png);
         }
         .gallery-image::before {
-            background-color: red;
+            background-color: #DC143C;
             bottom: 0;
             content: "";
             left: 0;
@@ -76,34 +76,51 @@
             top: 0;
         }
         .ti-slider .single-slide.slick-center .image {
-            border: 2px solid red;
+            border: 2px solid #DC143C;
             height: 140px;
             margin-top: 0;
             width: 140px;
         }
         .panel-title a[aria-expanded="true"] {
-            background-color: red;
+            background-color: #DC143C;
             color: #fff;
         }
         #scrollUp {
-            background-color: red;
+            background-color: #DC143C;
         }
         .section-title i {
-            color: red;
+            color: #DC143C;
             display: inline-block;
             font-size: 18px;
         }
         .course-item:hover {
             background-image: url("img/shape/course/course-color.png");
             transform: rotate(360deg);
-            background-color: red;
+            background-color: #DC143C;
+        }
+        .nivoSlider img {
+            position: absolute;
+            top: 92px;
+            left: 0px;
+            max-width: none;
+            height: 100vh;
+        }
+        .header-transparent {
+            background-color: #DC143C;
         }
     .footer-area {
         background: rgba(0, 0, 0, 0) url('{{ asset($website->footerBackGroundImage ?? '') }}') repeat scroll center center;
     -webkit-background-size: cover;
     background-size: cover;
 }
-
+        @media only screen and (max-width: 600px) {
+            .nivoSlider img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                max-width: none;
+            }
+        }
 .testimonial-area {
     background: rgba(0, 0, 0, 0) url('{{ asset($website->jooberBackGroundImage ?? '') }}') repeat scroll 0 0;
     -webkit-background-size: cover;
@@ -133,14 +150,14 @@
             background-size: cover;
         }
         .heading {
-          color:red;
+          color:#DC143C;
         }
         .contact-info .single-info .icon {
-            background-color: red;
+            background-color: #DC143C;
         }
         .form .input input[type="submit"] {
-            background-color: red;
-            border: 1px solid red;
+            background-color: #DC143C;
+            border: 1px solid #DC143C;
         }
 </style>
 </head>
