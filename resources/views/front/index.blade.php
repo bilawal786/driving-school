@@ -204,7 +204,7 @@
     <div id="pricing-area" class="pricing-area  pt-90 pb-60">
         <div class="container">
 
-            <div class="row" style="padding-top: 20px">
+            <div class="row" style="padding-top: 50px">
             @foreach($courseEnroll as $key => $row)
             @if($key+1==1)
                 <div class="col-lg-3 col-md-6 col-12 mb-30">
