@@ -25,13 +25,13 @@
 		<div class="row">
 			<!-- Contact Info -->
 			<div class="contact-info col-lg-12 col-sm-12 col-12">
-				
+
 			</div>
 			<!-- Contact Form -->
 			<div class="contact-form form text-left col-lg-8 col-sm-7 col-12">
             <form method="POST"  action="{{ route('checkout.store') }}" enctype="multipart/form-data">
              @csrf
-				
+
 					<div class="input-2">
 						<div class="input"><input type="text" name="firstname" value="{{$user->fname ?? ''}}" placeholder="Saisir le prénom" /></div>
 						<div class="input"><input type="text" name="lastname" value="{{$user->lname ?? ''}}" placeholder="Entrez le nom de famille" /></div>
@@ -43,12 +43,12 @@
                     <input type="hidden" name="user_id" value="{{$user->id ?? ''}}">
                     <input type="hidden" name="courseTitle" value="{{$courses->courseTitle ?? ''}}">
                     <input type="hidden" name="course_id" value="{{$courses->id ?? ''}}">
-				
-				
+
+
 			</div>
 		</div>
 	</div>
-	
+
 </div>
                             </div>
                             <div class="col-md-6">
@@ -66,22 +66,22 @@
                     </div>
 		<div class="row">
 			<!-- Contact Info -->
-			
-				
+
+
 			</div>
 			<!-- Contact Form -->
 			<div class="contact-form form text-left col-lg-8 col-sm-7 col-12" >
-				
+
 					<div class="input-3">
-						<strong>Cours</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <strong>Quantile</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Total</strong>
+						<strong>Cours</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <strong>Quantité</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Total</strong>
 					</div><hr>
 					<div class="input-3">
-                    {{$courses->courseTitle}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
+                    {{$courses->courseTitle}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; {{$courses->price}}<hr>
 					</div>
                     <div class="input-3">
-						<strong>Le Montant Final</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+						<strong>Le Montant Final</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <strong style="font-size: 17px;">{{$courses->price}}€</strong>
 					</div><hr>
 					<div class="input textarea">
@@ -118,21 +118,21 @@
                         </div>
                     </div>
 					<!-- <div class="input input-submit"><input type="submit" value="send message" /></div> -->
-			
-				
+
+
 			</div>
 		</div>
 	</div>
-	
+
 </div>
                 </div>
             </div>
-       
+
             </div>
         </div>
     </div>
 
-    
-    
-  
+
+
+
 @endsection
