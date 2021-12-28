@@ -165,7 +165,7 @@
                         <div class="icon"><i class="icofont icofont-clock-time"></i></div>
                         <div class="text fix">
                             <h4>{{$feature->title5 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description5, 42)}}
+                            <p> {!! Str::limit($feature->description5, 42) !!}
                             </p>
                             <a href="{{route('fetaure.detials',['title'=>$feature->title5])}}" style="color: #DC143C">Plus de détail</a>
                         </div>
