@@ -98,13 +98,13 @@
             transform: rotate(360deg);
             background-color: #DC143C;
         }
-        .nivoSlider img {
-            position: absolute;
-            top: 92px;
-            left: 0px;
-            max-width: none;
-            height: 100vh;
-        }
+        /*.nivoSlider img {*/
+        /*    position: absolute;*/
+        /*    top: 92px;*/
+        /*    left: 0px;*/
+        /*    max-width: none;*/
+        /*    height: 100vh;*/
+        /*}*/
         .header-transparent {
             background-color: rgba(0,0,0,0.7);
         }
