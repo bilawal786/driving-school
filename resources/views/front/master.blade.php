@@ -106,7 +106,7 @@
             height: 100vh;
         }
         .header-transparent {
-            background-color: #DC143C;
+            background-color: rgba(0,0,0,0.7);
         }
     .footer-area {
         background: rgba(0, 0, 0, 0) url('{{ asset($website->footerBackGroundImage ?? '') }}') repeat scroll center center;
