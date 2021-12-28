@@ -206,9 +206,9 @@
             <!-- Section Title -->
             <div class="row">
                 <div class="section-title title-white text-center col-12 mb-45">
-{{--                    <h3 class="heading"><!--your Course Enroll plan-->Inscription aux Cours</h3>--}}
+                    <h3 class="heading"></h3>
                     <div class="excerpt">
-{{--                        <p>{!!$website->courseDescription ?? ' '!!}</p>--}}
+                        <p></p>
                     </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
