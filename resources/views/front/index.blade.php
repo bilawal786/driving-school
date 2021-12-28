@@ -203,17 +203,8 @@
     ============================================ -->
     <div id="pricing-area" class="pricing-area  pt-90 pb-60">
         <div class="container">
-            <!-- Section Title -->
-            <div class="row">
-                <div class="section-title title-white text-center col-12 mb-45">
-                    <h3 class="heading"></h3>
-                    <div class="excerpt">
-                        <p></p>
-                    </div>
-{{--                    <i class="icofont icofont-traffic-light"></i>--}}
-                </div>
-            </div>
-            <div class="row">
+
+            <div class="row" style="padding-top: 20px">
             @foreach($courseEnroll as $key => $row)
             @if($key+1==1)
                 <div class="col-lg-3 col-md-6 col-12 mb-30">
