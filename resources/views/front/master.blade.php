@@ -93,6 +93,11 @@
             display: inline-block;
             font-size: 18px;
         }
+        .course-item:hover {
+            background-image: url("img/shape/course/course-color.png");
+            transform: rotate(360deg);
+            background-color: red;
+        }
     .footer-area {
         background: rgba(0, 0, 0, 0) url('{{ asset($website->footerBackGroundImage ?? '') }}') repeat scroll center center;
     -webkit-background-size: cover;
