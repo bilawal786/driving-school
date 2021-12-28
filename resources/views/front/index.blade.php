@@ -180,7 +180,7 @@
         <div class="container">
             <div class="row">
                 <div class="video-content text-center col-12">
-                    <a class="video-popup" href="https://www.youtube.com/watch?v={{$video->video ?? ''}}"><i class="icofont icofont-play-alt-2"></i></a>
+                    <a class="video-popup" href="https://www.youtube.com/embed/{{$video->video}}"><i class="icofont icofont-play-alt-2"></i></a>
                     <h3><!--our teaching process-->{{$video->title ?? ''}}</h3>
                 </div>
             </div>
