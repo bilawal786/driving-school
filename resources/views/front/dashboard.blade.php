@@ -173,9 +173,7 @@ body {font-family: "Lato", sans-serif;}
 <div id="dashboard" class="tabcontent">
 <p><br><strong>Bonjour  {{Auth::user()->fname}} {{Auth::user()->lname}}</strong>,<br><br>
 
-Bienvenue dans votre espace privé.
-Mes Commandes
-Vous y touverez egalement vos commandes, et le détails de votre compte.
+    Bienvenue dans votre espace privé.
 </p>
 </div>
 

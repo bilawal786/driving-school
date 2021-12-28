@@ -35,7 +35,7 @@
 					<div class="input input-submit"><input type="submit" value="Connexion" /></div>
 			</form>
 
-				<div class="input "><p class="form-messege" style="margin-top: 30px">Pas un membre ? <a href="{{ route('front.register') }}" style="color:#dec839;">S'inscrire maintenant</a></p></div>
+				<div class="input "><p class="form-messege" style="margin-top: 30px">Pas un membre ? <a href="{{ route('front.register') }}" style="color:red;">S'inscrire maintenant</a></p></div>
 			</div>
 		</div>
 	</div>

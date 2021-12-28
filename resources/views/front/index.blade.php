@@ -29,6 +29,8 @@
   <!-- ABou us Area
     ============================================ -->
 
+
+    </div>
     <div id="about-area" class="course-area bg-gray pt-90 pb-60" style="background-color:#ffffff;">
         <div class="container">
             <!-- Section Title -->
@@ -44,84 +46,13 @@
                         {!!$about->description !!}
                     </div>
                     <div class="full margin_top_50" >
-                    <img class="img-responsive" src="{{ asset($about->image2 ?? ' ')  }}" alt="#" />
+                        <img class="img-responsive" src="{{ asset($about->image2 ?? ' ')  }}" alt="#" />
                     </div>
                 </div>
             </div>
 
-            </div>
         </div>
     </div>
-
-    <!-- Feature Area
-    ============================================ -->
-    <div id="feature-area" class="feature-area bg-white pt-90 pb-90">
-        <div class="container">
-            <!-- Section Title -->
-            <div class="row">
-                <div class="section-title text-center col-12 mb-45">
-                    <h3 class="heading"><!--our features-->NOS FONCTIONNALITÉS</h3>
-
-                    <i class="icofont icofont-traffic-light"></i>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Left Feature -->
-                <div class="feature-wrapper feature-left text-right col-lg-4 col-12">
-                    <div class="single-feature">
-                        <div class="icon"><i class="icofont icofont-file-spreadsheet"></i></div>
-                        <div class="text fix">
-                            <h4><!--Quick License-->{{$feature->title1 ?? ''}}</h4>
-                            <p> {!! Str::limit($feature->description1, 42) !!} <a href="{{route('fetaure.detials',['title'=>$feature->title1])}}" style="color: #f5d902;">Readmore</a></p>
-                        </div>
-                    </div>
-                    <div class="single-feature">
-                        <div class="icon"><i class="icofont icofont-car-alt-4"></i></div>
-                        <div class="text fix">
-                            <h4><!--Unlimited Car Support-->{{$feature->title2 ?? ''}}</h4>
-                            <p> {!! Str::limit($feature->description2, 42 )!!} <a href="{{route('fetaure.detials',['title'=>$feature->title2])}}" style="color: #f5d902;">Readmore</a></p>
-                        </div>
-                    </div>
-                    <div class="single-feature">
-                        <div class="icon"><i class="icofont icofont-video-alt"></i></div>
-                        <div class="text fix">
-                            <h4>{{$feature->title3 ?? ''}}</h4>
-                            <p>{!! Str::limit($feature->description3, 42) !!} <a href="{{route('fetaure.detials',['title'=>$feature->title3])}}" style="color: #f5d902;">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Feature Image -->
-                <div class="feature-image text-center col-lg-4 col-12">
-                    <img src="{{asset($feature->image ?? '')}}" alt="feature" />
-                </div>
-                <!-- Right Feature -->
-                <div class="feature-wrapper feature-right text-left col-lg-4 col-12">
-                    <div class="single-feature">
-                        <div class="icon"><i class="icofont icofont-man-in-glasses"></i></div>
-                        <div class="text fix">
-                            <h4><!--Experience Instructors-->{{$feature->title4 ?? ''}}</h4>
-                            <p> {!! Str::limit($feature->description4, 42) !!}  <a href="{{route('fetaure.detials',['title'=>$feature->title4])}}" style="color: #f5d902;">Readmore</a></p>
-                        </div>
-                    </div>
-                    <div class="single-feature">
-                        <div class="icon"><i class="icofont icofont-clock-time"></i></div>
-                        <div class="text fix">
-                            <h4>{{$feature->title5 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description5, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title5])}}" style="color: #f5d902;">Readmore</a> </p>
-                        </div>
-                    </div>
-                    <div class="single-feature">
-                        <div class="icon"><i class="icofont icofont-direction-sign"></i></div>
-                         <div class="text fix">
-                            <h4>{{$feature->title6 ?? ''}}</h4>
-                            <p> {!! Str::limit($feature->description6, 41) !!}<a href="{{route('fetaure.detials',['title'=>$feature->title6])}}" style="color: #f5d902;">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Course Area
     ============================================ -->
@@ -141,37 +72,107 @@
             <div class="course-wrapper row">
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
                     <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category1])}}"><div class="course-item text-center">
-                        <i class="icofont icofont-car-alt-4"></i>
-                        <h4 ><!--normal driving-->{{Str::limit($courseCategory->category1, 20)}}</h4>
-                         <p>{{Str::limit($courseCategory->description1, 80)}} </p>
+                            <i class="icofont icofont-car-alt-4"></i>
+                            <h4 ><!--normal driving-->{{Str::limit($courseCategory->category1, 20)}}</h4>
+                            <p>{{Str::limit($courseCategory->description1, 80)}} </p>
                         </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
                     <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category2])}}"><div class="course-item text-center">
-                        <i class="icofont icofont-ambulance-cross"></i>
-                        <h4 ><!--defensive-->{{Str::limit($courseCategory->category2, 20)}}</h4>
-                        <p>{{Str::limit($courseCategory->description2, 80)}} </p>
+                            <i class="icofont icofont-ambulance-cross"></i>
+                            <h4 ><!--defensive-->{{Str::limit($courseCategory->category2, 20)}}</h4>
+                            <p>{{Str::limit($courseCategory->description2, 80)}} </p>
                         </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
                     <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category3])}}"><div class="course-item text-center">
-                        <i class="icofont icofont-fast-delivery"></i>
-                        <h4 ><!--power booster-->{{Str::limit($courseCategory->category3, 20)}}</h4>
-                        <p>{{Str::limit($courseCategory->description3, 80)}} </p>
+                            <i class="icofont icofont-fast-delivery"></i>
+                            <h4 ><!--power booster-->{{Str::limit($courseCategory->category3, 20)}}</h4>
+                            <p>{{Str::limit($courseCategory->description3, 80)}} </p>
                         </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
                     <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category4])}}"><div class="course-item text-center">
-                        <i class="icofont icofont-rocket-alt-2"></i>
-                        <h4 ><!--crash level-->{{$courseCategory->category4}}</h4>
-                        <p>{{Str::limit($courseCategory->description4, 80)}} </p>
-                    </div></a>
+                            <i class="icofont icofont-rocket-alt-2"></i>
+                            <h4 ><!--crash level-->{{$courseCategory->category4}}</h4>
+                            <p>{{Str::limit($courseCategory->description4, 80)}} </p>
+                        </div></a>
                 </div>
             </div>
         </div>
     </div>
-     <!-- Video Area
+    <!-- Video Area
+   ============================================ -->
+    <!-- Feature Area
     ============================================ -->
+    <div id="feature-area" class="feature-area bg-white pt-90 pb-90">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-12 mb-45">
+                    <h3 class="heading"><!--our features-->NOS SERVICES</h3>
+
+                    <i class="icofont icofont-traffic-light"></i>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Left Feature -->
+                <div class="feature-wrapper feature-left text-right col-lg-4 col-12">
+                    <div class="single-feature">
+                        <div class="icon"><i class="icofont icofont-file-spreadsheet"></i></div>
+                        <div class="text fix">
+                            <h4><!--Quick License-->{{$feature->title1 ?? ''}}</h4>
+                            <p> {!! Str::limit($feature->description1, 42) !!} <a href="{{route('fetaure.detials',['title'=>$feature->title1])}}" style="color: red;">Readmore</a></p>
+                        </div>
+                    </div>
+                    <div class="single-feature">
+                        <div class="icon"><i class="icofont icofont-car-alt-4"></i></div>
+                        <div class="text fix">
+                            <h4><!--Unlimited Car Support-->{{$feature->title2 ?? ''}}</h4>
+                            <p> {!! Str::limit($feature->description2, 42 )!!} <a href="{{route('fetaure.detials',['title'=>$feature->title2])}}" style="color: red;">Readmore</a></p>
+                        </div>
+                    </div>
+                    <div class="single-feature">
+                        <div class="icon"><i class="icofont icofont-video-alt"></i></div>
+                        <div class="text fix">
+                            <h4>{{$feature->title3 ?? ''}}</h4>
+                            <p>{!! Str::limit($feature->description3, 42) !!} <a href="{{route('fetaure.detials',['title'=>$feature->title3])}}" style="color: red;">Readmore</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature Image -->
+                <div class="feature-image text-center col-lg-4 col-12">
+                    <img src="{{asset($feature->image ?? '')}}" alt="feature" />
+                </div>
+                <!-- Right Feature -->
+                <div class="feature-wrapper feature-right text-left col-lg-4 col-12">
+                    <div class="single-feature">
+                        <div class="icon"><i class="icofont icofont-man-in-glasses"></i></div>
+                        <div class="text fix">
+                            <h4><!--Experience Instructors-->{{$feature->title4 ?? ''}}</h4>
+                            <p> {!! Str::limit($feature->description4, 42) !!}  <a href="{{route('fetaure.detials',['title'=>$feature->title4])}}" style="color: red;">Readmore</a></p>
+                        </div>
+                    </div>
+                    <div class="single-feature">
+                        <div class="icon"><i class="icofont icofont-clock-time"></i></div>
+                        <div class="text fix">
+                            <h4>{{$feature->title5 ?? ''}}</h4>
+                            <p> {{Str::limit($feature->description5, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title5])}}" style="color: red;">Readmore</a> </p>
+                        </div>
+                    </div>
+                    <div class="single-feature">
+                        <div class="icon"><i class="icofont icofont-direction-sign"></i></div>
+                         <div class="text fix">
+                            <h4>{{$feature->title6 ?? ''}}</h4>
+                            <p> {!! Str::limit($feature->description6, 41) !!}<a href="{{route('fetaure.detials',['title'=>$feature->title6])}}" style="color: red;">Readmore</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <div id="video-area" class="video-area overlay overlay-black overlay-50">
@@ -187,7 +188,7 @@
     <!-- Courser Enroll Area
     ',
     ============================================ -->
-    <div id="pricing-area" class="pricing-area overlay overlay-black overlay-40 pt-90 pb-60">
+    <div id="pricing-area" class="pricing-area  pt-90 pb-60">
         <div class="container">
             <!-- Section Title -->
             <div class="row">
@@ -257,7 +258,7 @@
     <!-- Offers us Area
     ============================================ -->
 
-    <div id="about-area" class="course-area bg-gray pt-90 pb-60" style="background-color:#dec839;">
+    <div id="about-area" class="course-area bg-gray pt-90 pb-60" style="background-color:red;">
         <div class="container">
             <!-- Section Title -->
             <div class="row">
@@ -266,28 +267,18 @@
                 </div>
                 <div class="col-md-6">
                     <div class="heading margin_top_30">
-                        <h2 class="heading" style="text-align: center; color: black; font-size: 40px;"><!--About our shop--> {{$offers->title ??''}}</h2>
+                        <h1 class="heading" style="text-align: left; color: white; font-size: 60px;">{{$offers->title ??''}}</h1>
+                        <br>
+                        <h1 class="heading" style="text-align: left; color: white; font-size: 60px;"><del>{{$offers->oldPrice ??''}}€</del>   {{$offers->newPrice ??''}}€</h1>
+                        <br>
+                        <h1 class="heading" style="text-align: left; color: white; font-size: 60px;" id="demotime"></h1>
+                    </div>
+                    </div>
 
-                    </div>
-                    <div class="heading margin_top_30" style=" text-align: center; margin-top: 80px;">
-
-                       <p ><h3 style="float:left; margin-left:200px;" ><del>{{$offers->oldPrice ??''}}€</del></h3> <h2 style=""   >{{$offers->newPrice ??''}}€</h2></p>
-                    </div>
-                    <div class="full margin_top_20" >
-                    <p style=" text-align: right; font-size: 60px;  margin-top: 120px;" id="demotime"></p>
-                </div>
-                    </div>
-                    <div class="full margin_top_50" >
-
-                    <!-- <img class="img-responsive" src="{{ asset($about->image2 ?? ' ')  }}" alt="#" /> -->
-                    </div>
                 </div>
             </div>
 
             </div>
-        </div>
-    </div>
-
     <!-- Instructor Area
     ============================================ -->
     <div id="instructor-area" class="instructor-area bg-gray pt-90 pb-60">
@@ -473,7 +464,6 @@
                         <h5>{{$row->name}}</h5>
                             <span>{{$row->job}}</span>
                             <p>{{$row->description}}</p>
-
 
                         </div>
                     @endforeach

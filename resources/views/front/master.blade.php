@@ -40,7 +40,59 @@
 
         }
 
-
+        .single-feature .icon i {
+            color: red;
+            font-size: 36px;
+            display: block;
+        }
+        .main-menu nav > ul > li.active > a {
+            color: red;
+        }
+        .course-item i {
+            color: red;
+            display: inline-block;
+            font-size: 48px;
+            margin-bottom: 18px;
+            -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+        }
+        .single-pricing:hover .pricing-head, .active .pricing-head {
+            background-color: red;
+        }
+        .single-pricing:hover .pricing-action, .active .pricing-action {
+            background-color: red;
+        }
+        .single-pricing:hover .pricing-price, .active .pricing-price {
+             background-image: url(../../img/shape/pricing/price-border-color.png);
+        }
+        .gallery-image::before {
+            background-color: red;
+            bottom: 0;
+            content: "";
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .ti-slider .single-slide.slick-center .image {
+            border: 2px solid red;
+            height: 140px;
+            margin-top: 0;
+            width: 140px;
+        }
+        .panel-title a[aria-expanded="true"] {
+            background-color: red;
+            color: #fff;
+        }
+        #scrollUp {
+            background-color: red;
+        }
+        .section-title i {
+            color: red;
+            display: inline-block;
+            font-size: 18px;
+        }
     .footer-area {
         background: rgba(0, 0, 0, 0) url('{{ asset($website->footerBackGroundImage ?? '') }}') repeat scroll center center;
     -webkit-background-size: cover;
@@ -75,9 +127,16 @@
             -webkit-background-size: cover;
             background-size: cover;
         }
-.heading {
-  color:red;
-}
+        .heading {
+          color:red;
+        }
+        .contact-info .single-info .icon {
+            background-color: red;
+        }
+        .form .input input[type="submit"] {
+            background-color: red;
+            border: 1px solid red;
+        }
 </style>
 </head>
 <body>
@@ -97,20 +156,7 @@
     <!-- Header 1
     ============================================ -->
     <div class="header-area header-absolute header-transparent">
-        <div class="header-top d-none d-md-block">
-            <div class="container">
-                <!-- Header Top -->
-                <div class="header-top-wrapper row">
-                    <div class="header-top-left text-left col-md-6 col-12">
-                        <p><i class="icofont icofont-envelope"></i><span>{{$website->email ?? ''}}</span></p>
-                        <p><i class="icofont icofont-ui-call"></i><span>{{$website->phone1 ?? ''}} </span></p>
-                    </div>
-                    <div class="header-top-right text-right col-md-6 col-12">
-                        <p><i class="icofont icofont-clock-time"></i><span>Mon - Sat : {{$website->startTime ?? ''}} - {{$website->endTime ?? ''}}</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="header-bottom sticky">
             <div class="container">
                 <div class="row justify-content-between">
@@ -122,7 +168,8 @@
                             <ul>
                                 <li class="active"><a href="{{route('front.index')}}"><!--Home-->Accueil</a></li>
                                 <li ><a href="{{route('front.index')}}#about-area"><!--About-->à propos</a></li>
-                                <li><a href="{{route('front.index')}}#feature-area"><!--Feature-->Caractéristique</a></li>
+                                <li><a href="{{route('front.index')}}#feature-area"><!--Feature-->NOS SERVICES
+                                    </a></li>
                                 <!--<li><a href="#course-area">--><!--Course--><!--Cours</a></li>-->
                                 <li><a href="{{route('front.index')}}#video-area"><!--Video-->Vidéo</a></li>
                                 <!--<li><a href="#pricing-area">--><!--Pricing--><!--Prix</a></li>-->
@@ -224,8 +271,8 @@
                     </div>
                 </div> -->
             </div>
-            <div class="footer-bottom text-center col-12">
-                <p class="copyright">Copyright &copy; Develop by IkaeDigital</p>
+            <div >
+                <p class="copyright">Copyright &copy; Develop by <a href="www.ikaedigital.com">Ikae Digital</a> </p>
             </div>
         </div>
     </div>

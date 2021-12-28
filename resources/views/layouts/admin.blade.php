@@ -192,13 +192,13 @@
                     <li><a href="{{route('courses.index')}}" class="ai-icon" aria-expanded="false">
                             <i class="flaticon-381-notepad"></i>
                             <!-- APP SETTING -->
-                            <span class="nav-text">  Courses</span>
+                            <span class="nav-text">  Forfait cours</span>
                         </a>
                     </li>
                     <li><a href="{{route('instructor.index')}}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-network"></i>
                             <!-- APP SETTING -->
-                            <span class="nav-text">  Instructrice</span>
+                            <span class="nav-text">  Instructeur</span>
                         </a>
                     </li>
                     <li><a href="{{route('testimonial.index')}}" class="ai-icon" aria-expanded="false">
@@ -210,7 +210,7 @@
                     <li><a href="{{route('user.messages')}}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                             <!-- APP SETTING -->
-                            <span class="nav-text">  Un Message</span>
+                            <span class="nav-text"> Message</span>
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -218,7 +218,7 @@
 							<span class="nav-text"><!--Setting-->Réglage</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{route('setting.create')}}">Paramètre d'application</a></li>
+                            <li><a href="{{route('setting.create')}}">Paramètres</a></li>
                             <li><a href="{{route('feature.create')}}">Caractéristiques</a></li>
                             <li><a href="{{route('about.create')}}">A propos de nous</a></li>
                             <li><a href="{{route('course.create')}}">Catégorie de cours</a></li>
@@ -233,7 +233,7 @@
                     <li><a href="{{route('all.students')}}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                             <!-- APP SETTING -->
-                            <span class="nav-text">  Étudiantes</span>
+                            <span class="nav-text">  Étudiants</span>
                         </a>
                     </li>
 <!--                <li>
