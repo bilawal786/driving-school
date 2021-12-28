@@ -37,6 +37,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <img class="img-responsive"  src="{{ asset($about->image1 ?? ' ')  }}" alt="#" />
+                    <h2 class="heading">Auto école LIGNE DE CONDUITE 971 est là pour vous servir</h2>
                 </div>
                 <div class="col-md-6">
                     <div class="heading margin_top_30">
@@ -205,9 +206,9 @@
             <!-- Section Title -->
             <div class="row">
                 <div class="section-title title-white text-center col-12 mb-45">
-                    <h3 class="heading"><!--your Course Enroll plan-->Inscription aux Cours</h3>
+{{--                    <h3 class="heading"><!--your Course Enroll plan-->Inscription aux Cours</h3>--}}
                     <div class="excerpt">
-                        <p>{!!$website->courseDescription ?? ' '!!}</p>
+{{--                        <p>{!!$website->courseDescription ?? ' '!!}</p>--}}
                     </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
