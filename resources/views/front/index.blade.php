@@ -210,7 +210,7 @@
                     <div class="excerpt">
                         <p></p>
                     </div>
-                    <i class="icofont icofont-traffic-light"></i>
+{{--                    <i class="icofont icofont-traffic-light"></i>--}}
                 </div>
             </div>
             <div class="row">
