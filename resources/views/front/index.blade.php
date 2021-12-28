@@ -74,28 +74,28 @@
                     <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category1])}}"><div class="course-item text-center">
                             <i class="icofont icofont-car-alt-4"></i>
                             <h4 ><!--normal driving-->{{Str::limit($courseCategory->category1, 20)}}</h4>
-                            <p>{{Str::limit($courseCategory->description1, 80)}} </p>
+{{--                            <p>{{Str::limit($courseCategory->description1, 80)}} </p>--}}
                         </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
                     <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category2])}}"><div class="course-item text-center">
                             <i class="icofont icofont-ambulance-cross"></i>
                             <h4 ><!--defensive-->{{Str::limit($courseCategory->category2, 20)}}</h4>
-                            <p>{{Str::limit($courseCategory->description2, 80)}} </p>
+{{--                            <p>{{Str::limit($courseCategory->description2, 80)}} </p>--}}
                         </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
                     <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category3])}}"><div class="course-item text-center">
                             <i class="icofont icofont-fast-delivery"></i>
                             <h4 ><!--power booster-->{{Str::limit($courseCategory->category3, 20)}}</h4>
-                            <p>{{Str::limit($courseCategory->description3, 80)}} </p>
+{{--                            <p>{{Str::limit($courseCategory->description3, 80)}} </p>--}}
                         </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
                     <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category4])}}"><div class="course-item text-center">
                             <i class="icofont icofont-rocket-alt-2"></i>
                             <h4 ><!--crash level-->{{$courseCategory->category4}}</h4>
-                            <p>{{Str::limit($courseCategory->description4, 80)}} </p>
+{{--                            <p>{{Str::limit($courseCategory->description4, 80)}} </p>--}}
                         </div></a>
                 </div>
             </div>
