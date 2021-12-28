@@ -22,21 +22,21 @@ class WebsiteSeeder extends Seeder
      * @return void
      */
     public function run()
-    { 
+    {
         About::create([
             'description' => "Toute l'histoire
 
-            Notre établissement se trouve dans la commune de Sainte-rose, section Nous 
-            avons acquis une certaine réputation grâce ux relations que nous a avec nos 
+            Notre établissement se trouve dans la commune de Sainte-rose, section Nous
+            avons acquis une certaine réputation grâce ux relations que nous a avec nos
             clients au fil des années.
-            Nous sommes convaincus que tous nos clients méritent les meilleurs serv 
+            Nous sommes convaincus que tous nos clients méritent les meilleurs serv
             avons décidé d'en faire notre mission.
             Parcourez,notre site pour découvrir nos services.
-            En cas de questions. n'hésitez pas à nous contacter. Auto école LIGNE DE 
+            En cas de questions. n'hésitez pas à nous contacter. Auto école LIGNE DE
             CONDUITE 971 est là pour vous servir",
             'image1' => 'front/image2.png',
             'image2' => 'front/image.png',
-            
+
         ]);
 
         Features::create([
@@ -46,14 +46,14 @@ class WebsiteSeeder extends Seeder
             'title4' => "INFORMATIONS ET TARIFS",
             'title5' => 'GALERIE PHOTOS',
             'title6' => 'CONTACT',
-            'description1' => "Lorem ipsum dolor sit amet, consectetur maksu",
-            'description2' => 'Lorem ipsum dolor sit amet, consectetur maksu',
-            'description3' => 'Lorem ipsum dolor sit amet, consectetur maksu',
-            'description4' => "Lorem ipsum dolor sit amet, consectetur maksu",
-            'description5' => 'Lorem ipsum dolor sit amet, consectetur maksu',
-            'description6' => 'Lorem ipsum dolor sit amet, consectetur maksu',
+            'description1' => "Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.",
+            'description2' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.',
+            'description3' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.',
+            'description4' => "Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.",
+            'description5' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.',
+            'description6' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.',
             'image' => 'front/img/feature.png',
-            
+
         ]);
 
         CourseCategory::create([
@@ -61,16 +61,21 @@ class WebsiteSeeder extends Seeder
             'category2' => 'FORMATION PRATIQUES',
             'category3' => 'CONDUITE ACCOMPAGNE',
             'category4' => "CONDUITE SUPERVISEE",
-           
+            'description1' => "Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.",
+            'description2' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.',
+            'description3' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.',
+            'description4' => "Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,making it over 2000 years old. Richard McClintock.",
+
+
         ]);
         Video::create([
             'video' => "ngaeb1jARAY",
             'title' => "NOTRE PROCESSUS D'ENSEIGNEMENT",
             'backGroundImage' => 'front/img/section-bg/video.jpg',
             ]);
-            
+
             CourseEnroll::create([
-                
+
                 'price' => "200",
                 'courseDetails1' => 'Cours De 2 Mois',
                 'courseDetails2' => "3 Heures Par JourY",
@@ -78,11 +83,11 @@ class WebsiteSeeder extends Seeder
                 'courseDetails4' => '20 Cours Vidio',
                 'courseDetails5' => "Permis De Conduire",
                 'courseTitle' => "DE BASE",
-                
-               
+
+
             ]);
             CourseEnroll::create([
-                
+
                 'price' => "300",
                 'courseTitle' => "Cours De 3 Mois",
                 'courseDetails1' => '3 Heures Par JourY',
@@ -90,8 +95,8 @@ class WebsiteSeeder extends Seeder
                 'courseDetails3' => "30 Cours Vidio",
                 'courseDetails4' => 'Permis De Conduire',
                 'courseDetails5' => 'INTELLIGENT',
-                
-               
+
+
             ]);
             CourseEnroll::create([
                 'courseTitle' => 'AMÉLIORER',
@@ -101,8 +106,8 @@ class WebsiteSeeder extends Seeder
                 'courseDetails3' => "Test Hebdomadale 3",
                 'courseDetails4' => "40 Cours Vidio",
                 'courseDetails5' => 'Permis De Conduire',
-                
-               
+
+
             ]);
             CourseEnroll::create([
                 'courseTitle' => 'TROP INTELLIGENT',
@@ -112,10 +117,10 @@ class WebsiteSeeder extends Seeder
                 'courseDetails3' => "Test Hebdomadale 5",
                 'courseDetails4' => "50 Cours Vidio",
                 'courseDetails5' => 'Permis De Conduire',
-                
-               
+
+
             ]);
-            
+
 
             Galery::create([
                 'description' => "Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua",
@@ -156,8 +161,8 @@ class WebsiteSeeder extends Seeder
                 'logo' => "local/logo.png",
                 'phone1' => "+012 345 678 102",
                 'email' => "info@example.com",
-                'startTime' => " 8am",
-                'endTime' => "9pm",
+                'startTime' => "01:55",
+                'endTime' => "03:55",
                 'aboutDescription' => "C'est un fait établi de longue date qu'un lecteur sera distrait par le contenu lisible de",
                 'address' => "Flor. 4, maison. 15, bloc-C.Route principale de Banasree, Dhaka.",
                 'phone2' => "+012 345 678 102",
@@ -181,7 +186,7 @@ class WebsiteSeeder extends Seeder
                 'jooberBackGroundImage' => 'front/img/section-bg/testimonial.jpg',
                 'courseBackGroundImage' => 'front/img/section-bg/pricing.jpg',
                 'courseDescription' => 'Lorem ipsum dolor sit amet, consectetur maksu rez do eiusmod tempor magna aliqua',
-                
+
                 ]);
         Jobber::create([
             'image' => "front/img/testimonial/1.jpg",
@@ -189,7 +194,7 @@ class WebsiteSeeder extends Seeder
             'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
             'name' => "Momen bhuiyan",
             'job' => "Graphic Designer",
-            
+
             ]);
             Jobber::create([
         'image' => "front/img/testimonial/1.jpg",
@@ -197,7 +202,7 @@ class WebsiteSeeder extends Seeder
         'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
         'name' => "Momen bhuiyan",
         'job' => "Graphic Designer",
-        
+
         ]);
         Jobber::create([
             'image' => "front/img/testimonial/1.jpg",
@@ -205,7 +210,7 @@ class WebsiteSeeder extends Seeder
             'description' => "If you need any help or assistance we'd be happy to help. Just reply to this email. Trusted by Agency proud to work many well known brands",
             'name' => "Momen bhuiyan",
             'job' => "Graphic Designer",
-            
+
             ]);
 
             Instructor::create([
@@ -217,8 +222,8 @@ class WebsiteSeeder extends Seeder
                 'job' => "Graphic Designer",
                 'facebook' => "www.facebook.com",
                 'instagram' => "instagram.com",
-                
-                
+
+
                 ]);
                 Instructor::create([
                     'image1' => "front/img/instructor/1.jpg",
@@ -229,8 +234,8 @@ class WebsiteSeeder extends Seeder
                     'job' => "Devloper",
                     'facebook' => "www.facebook.com",
                     'instagram' => "instagram.com",
-                    
-                    
+
+
                     ]);
                     Instructor::create([
                         'image1' => "front/img/instructor/1.jpg",
@@ -241,8 +246,8 @@ class WebsiteSeeder extends Seeder
                         'job' => "Web Designer",
                         'facebook' => "www.facebook.com",
                         'instagram' => "instagram.com",
-                        
-                        
+
+
                         ]);
                         Instructor::create([
                             'image1' => "front/img/instructor/1.jpg",
@@ -253,35 +258,35 @@ class WebsiteSeeder extends Seeder
                             'job' => "Graphic Designer",
                             'facebook' => "www.facebook.com",
                             'instagram' => "instagram.com",
-                            
-                            
+
+
                             ]);
                         Offers::create([
                             'title' => "Web Developmant",
                             'image' => "front/image2.png",
                             'link' => "http://127.0.0.1:8000",
-                            'date' => "2021-12-09T05:54",
+                            'date' => "2021-12-31T05:54",
                             'oldPrice' => "300",
                             'newPrice' => "200",
-                        
+
                             ]);
-                            
-                
-                                
-
-                               
 
 
 
 
-                    
 
-    
-       
 
-         
 
-       
-        
+
+
+
+
+
+
+
+
+
+
+
     }
 }

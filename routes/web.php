@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'FrontendController@index')->name('front.index');
 Route::get('/contact', 'FrontendController@contact')->name('front.contact');
+Route::get('/fetaure/details/{title}', 'FrontendController@fetaureDetails')->name('fetaure.detials');
+Route::get('/categorycourse/details/{category}', 'FrontendController@categoryCourseDetails')->name('categorycourse.detials');
 Route::get('/fornt/login', 'FrontendController@logIN')->name('front.login');
 Route::get('/fornt/register', 'FrontendController@register')->name('front.register');
 Route::post('/profile/update', 'FrontendController@profileUpdate')->name('profile.update');
@@ -29,7 +31,7 @@ Route::get('/download/url/{id}', 'HomeController@downloadPath')->name('download.
 Route::middleware(['web', 'user'])->group(function () {
    Route::get('/home', 'HomeController@index')->name('home');
 
-   // APP SETTING 
+   // APP SETTING
 
 Route::get('/about/create', 'GeneralSettingsController@aboutCreate')->name('about.create');
 Route::post('/about/store', 'GeneralSettingsController@aboutStore')->name('about.store');
@@ -45,20 +47,20 @@ Route::get('/usser/delete/{id}', 'GeneralSettingsController@userDelete')->name('
 
 //END APP SETTING
 
-// APP FunFact 
+// APP FunFact
 
 Route::get('/funfact/create', 'GeneralSettingsController@funfactCreate')->name('funfact.create');
 Route::post('/funfact/store', 'GeneralSettingsController@funfactStore')->name('funfact.store');
 
 //END APP FunFact
-// APP FAQ 
+// APP FAQ
 
 Route::get('/faq/create', 'GeneralSettingsController@faqCreate')->name('faq.create');
 Route::post('/faq/store', 'GeneralSettingsController@faqStore')->name('faq.store');
 
 //END APP FAQ
 
-// APP jobber 
+// APP jobber
 
 Route::get('/testimonial/create', 'GeneralSettingsController@jobberCreate')->name('testimonial.create');
 Route::post('/testimonial/store', 'GeneralSettingsController@jobberStore')->name('testimonial.store');
@@ -80,14 +82,14 @@ Route::post('/instructor/update/{id}', 'InstructorController@update')->name('ins
 
 //END instructor
 
-// APP Galery 
+// APP Galery
 
 Route::get('/galery/create', 'GeneralSettingsController@galeryCreate')->name('galery.create');
 Route::post('/galery/store', 'GeneralSettingsController@galeryStore')->name('galery.store');
 
 //END APP Galery
 
-// APP Course Enrollmant 
+// APP Course Enrollmant
 
 Route::get('/courses/create', 'CourseEnrollController@create')->name('courses.create');
 Route::post('/courses/store', 'CourseEnrollController@store')->name('courses.store');
@@ -97,27 +99,27 @@ Route::get('/courses/edit/{id}', 'CourseEnrollController@edit')->name('courses.e
 Route::post('/coursess/update/{id}', 'CourseEnrollController@update')->name('courses.update');
 
 //END APP Price
-// APP Video 
+// APP Video
 
 Route::get('/video/create', 'GeneralSettingsController@vedioCreate')->name('video.create');
 Route::post('/video/store', 'GeneralSettingsController@vedioStore')->name('video.store');
 
 //END APP Video
 
-// APP Course Category 
+// APP Course Category
 
 Route::get('/course/create', 'GeneralSettingsController@courseCreate')->name('course.create');
 Route::post('/course/store', 'GeneralSettingsController@courseStore')->name('course.store');
 
 //END APP Course Category
 
-// APP Feature  
+// APP Feature
 
 Route::get('/feature/create', 'GeneralSettingsController@featureCreate')->name('feature.create');
 Route::post('/feature/store', 'GeneralSettingsController@featureStore')->name('feature.store');
 
-//END APP Feature 
-// APP Feature  
+//END APP Feature
+// APP Feature
 
 Route::get('/setting/create', 'GeneralSettingsController@settingCreate')->name('setting.create');
 Route::post('/setting/store', 'GeneralSettingsController@settingStore')->name('setting.store');
@@ -131,7 +133,7 @@ Route::get('/document/delete/{id}', 'GeneralSettingsController@documentDelete')-
 // Route::get('/download/{Attachment}', 'GeneralSettingsController@download')->name('download');
 
 
-//END APP Feature 
+//END APP Feature
 
 //Enrollmanr Details
 
@@ -148,7 +150,7 @@ Route::get('/offers/edit/{id}', 'GeneralSettingsController@offersEdit')->name('o
 Route::post('/offers/update/{id}', 'GeneralSettingsController@offersUpdate')->name('offers.update');
 //end offers DEATAILS
 
-    
+
    });
 Auth::routes();
 

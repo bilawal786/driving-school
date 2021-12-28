@@ -16,10 +16,10 @@
 
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
 
-    
+
     <!-- Summernote -->
     <link href="{{asset('admin/vendor/summernote/summernote.css')}}" rel="stylesheet">
-    
+
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -198,7 +198,7 @@
                     <li><a href="{{route('instructor.index')}}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-network"></i>
                             <!-- APP SETTING -->
-                            <span class="nav-text">  Instractur</span>
+                            <span class="nav-text">  Instructrice</span>
                         </a>
                     </li>
                     <li><a href="{{route('testimonial.index')}}" class="ai-icon" aria-expanded="false">
@@ -223,9 +223,9 @@
                             <li><a href="{{route('about.create')}}">A propos de nous</a></li>
                             <li><a href="{{route('course.create')}}">Catégorie de cours</a></li>
                             <li><a href="{{route('video.create')}}">Video</a></li>
-                            
+
                             <li><a href="{{route('galery.create')}}">Galerie</a></li>
-                           
+
                             <li><a href="{{route('faq.create')}}">FAQ</a></li>
                             <li><a href="{{route('funfact.create')}}">Fait amusant</a></li>
                         </ul>
@@ -350,6 +350,6 @@
     });
 </script>
 
- 
+
 </body>
 </html>

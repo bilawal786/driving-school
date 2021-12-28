@@ -33,10 +33,10 @@ class GeneralSettingsController extends Controller
         return view('admin.front.about',compact('about'));
     }
     public function aboutStore(Request $request)
-    {  
+    {
         $chek = About::get();
         if($chek->isEmpty()) {
-        $input = $request->all(); 
+        $input = $request->all();
         if ($request->hasfile('image1')) {
 
             $image1 = $request->file('image1');
@@ -53,14 +53,14 @@ class GeneralSettingsController extends Controller
             $image1->move($destinationPath, $name);
             $input['image2'] = 'admin/about/' . $name;
         }
-            
+
         $about = About::create($input);
-        
+
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
         $about = About::first();
 
@@ -81,12 +81,12 @@ class GeneralSettingsController extends Controller
             $image1->move($destinationPath, $name);
             $about->image2 = 'admin/about/' . $name;
         }
-            
+
         $about->update();
-        
+
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -97,10 +97,10 @@ class GeneralSettingsController extends Controller
         return view('admin.front.funfact',compact('funFact'));
     }
     public function funfactStore(Request $request)
-    {  
+    {
         $chek = Funfact::get();
         if($chek->isEmpty()) {
-        $input = $request->all(); 
+        $input = $request->all();
         if ($request->hasfile('backGroundImage')) {
 
             $image1 = $request->file('backGroundImage');
@@ -109,15 +109,15 @@ class GeneralSettingsController extends Controller
             $image1->move($destinationPath, $name);
             $input['backGroundImage'] = 'admin/about/' . $name;
         }
-        
-            
+
+
         $funfact = Funfact::create($input);
-        
+
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
         $funFact = Funfact::first();
 
@@ -137,12 +137,12 @@ class GeneralSettingsController extends Controller
             $image1->move($destinationPath, $name);
             $funFact->backGroundImage = 'admin/about/' . $name;
         }
-        
+
         $funFact->update();
-        
+
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -154,10 +154,10 @@ public function faqCreate()
         return view('admin.front.faq',compact('faq'));
     }
     public function faqStore(Request $request)
-    {  
+    {
         $chek = FAQ::get();
         if($chek->isEmpty()) {
-        $input = $request->all(); 
+        $input = $request->all();
         if ($request->hasfile('image')) {
 
             $image1 = $request->file('image');
@@ -166,15 +166,15 @@ public function faqCreate()
             $image1->move($destinationPath, $name);
             $input['image'] = 'admin/about/' . $name;
         }
-        
-            
+
+
         $faq = FAQ::create($input);
-        
+
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
         $faq = FAQ::first();
 
@@ -195,12 +195,12 @@ public function faqCreate()
             $image1->move($destinationPath, $name);
             $faq->image = 'admin/about/' . $name;
         }
-        
+
         $faq->update();
-        
+
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -212,10 +212,10 @@ public function jobberCreate()
         return view('admin.front.jobber',compact('jobber'));
     }
     public function jobberStore(Request $request)
-    {   
-        
+    {
 
-        $input = $request->all(); 
+
+        $input = $request->all();
         if ($request->hasfile('image')) {
 
             $image1 = $request->file('image');
@@ -232,16 +232,16 @@ public function jobberCreate()
             $image1->move($destinationPath, $name);
             $input['backGroundImage'] = 'admin/about/' . $name;
         }
-        
+
         $jobber = Jobber::create($input);
-        
+
         Session::flash('message', "Vos données enregistrées");
         $jobber = Jobber::all();
         return view('admin.front.jobber.index',compact('jobber'));
-    
 
-    
-   
+
+
+
 }
 
 public function galeryCreate()
@@ -249,10 +249,10 @@ public function galeryCreate()
         return view('admin.front.galery',compact('galery'));
     }
     public function galeryStore(Request $request)
-    {  
+    {
         $chek = Galery::get();
         if($chek->isEmpty()) {
-        $input = $request->all(); 
+        $input = $request->all();
         if ($request->hasfile('image1')) {
 
             $image1 = $request->file('image1');
@@ -302,19 +302,19 @@ public function galeryCreate()
             $image1->move($destinationPath, $name);
             $input['image6'] = 'admin/about/' . $name;
         }
-            
+
         $galery = Galery::create($input);
-        
+
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
         $galery = Galery::first();
 
         $galery->description = $request->description;
-        
+
         if ($request->hasfile('image1')) {
 
             $image1 = $request->file('image1');
@@ -364,13 +364,13 @@ public function galeryCreate()
             $image1->move($destinationPath, $name);
             $galery->image6 = 'admin/about/' . $name;
         }
-            
-            
+
+
         $galery->update();
-        
+
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -381,20 +381,20 @@ public function priceCreate()
         return view('admin.front.pricing',compact('price'));
     }
     public function priceStore(Request $request)
-    {  
+    {
         $chek = Pricing::get();
         if($chek->isEmpty()) {
-        $input = $request->all(); 
+        $input = $request->all();
         $price = Pricing::create($input);
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
-        
+
         $price = Pricing::first();
-        
+
         $price->pricingDescription = $request->pricingDescription;
         $price->price1 = $request->price1;
         $price->pricingDetails11 = $request->pricingDetails11;
@@ -425,11 +425,11 @@ public function priceCreate()
         $price->pricingDetails43 = $request->pricingDetails43;
         $price->pricingDetails44 = $request->pricingDetails44;
         $price->pricingDetails45 = $request->pricingDetails45;
-        
+
         $price->update();
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -440,11 +440,11 @@ public function vedioCreate()
         return view('admin.front.video',compact('video'));
     }
     public function vedioStore(Request $request)
-    {  
+    {
         $chek = Video::get();
         if($chek->isEmpty()) {
         $input = $request->all();
-        
+
         if ($request->hasfile('backGroundImage')) {
 
             $image1 = $request->file('backGroundImage');
@@ -452,22 +452,22 @@ public function vedioCreate()
             $destinationPath = 'admin/about/';
             $image1->move($destinationPath, $name);
             $input['backGroundImage']  = 'admin/about/' . $name;
-        } 
+        }
 
         $video = Video::create($input);
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
-        
+
         $video = Video::first();
-        
+
         $video->title = $request->title;
         $video->video = $request->video;
-        
-      
+
+
         if ($request->hasfile('backGroundImage')) {
 
             $image1 = $request->file('backGroundImage');
@@ -475,12 +475,12 @@ public function vedioCreate()
             $destinationPath = 'admin/about/';
             $image1->move($destinationPath, $name);
             $video->backGroundImage  = 'admin/about/' . $name;
-        } 
-        
+        }
+
         $video->update();
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -491,31 +491,35 @@ public function courseCreate()
         return view('admin.front.courseCategory',compact('course'));
     }
     public function courseStore(Request $request)
-    {  
+    {
         $chek = CourseCategory::get();
         if($chek->isEmpty()) {
         $input = $request->all();
-        
+
         $course = CourseCategory::create($input);
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
-        
+
         $course = CourseCategory::first();
-        
+
         $course->category1 = $request->category1;
         $course->category2 = $request->category2;
         $course->category3 = $request->category3;
         $course->category4 = $request->category4;
-        
-        
+        $course->description1 = $request->description1;
+        $course->description2 = $request->description2;
+        $course->description3 = $request->description3;
+        $course->description4 = $request->description4;
+
+
         $course->update();
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -526,7 +530,7 @@ public function featureCreate()
         return view('admin.front.feature',compact('feature'));
     }
     public function featureStore(Request $request)
-    {  
+    {
         $chek = Features::get();
         if($chek->isEmpty()) {
         $input = $request->all();
@@ -537,18 +541,18 @@ public function featureCreate()
             $destinationPath = 'admin/about/';
             $image1->move($destinationPath, $name);
             $input['image'] = 'admin/about/' . $name;
-        } 
-        
+        }
+
         $feature = Features::create($input);
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
-        
+
         $feature = Features::first();
-        
+
         $feature->title1 = $request->title1;
         $feature->title2 = $request->title2;
         $feature->title3 = $request->title3;
@@ -569,13 +573,13 @@ public function featureCreate()
             $destinationPath = 'admin/about/';
             $image1->move($destinationPath, $name);
             $feature->image = 'admin/about/' . $name;
-        } 
-        
-        
+        }
+
+
         $feature->update();
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -586,12 +590,12 @@ public function settingCreate()
         return view('admin.front.setting',compact('setting'));
     }
     public function settingStore(Request $request)
-    {  
+    {
         $chek = Website::get();
         if($chek->isEmpty()) {
         $input = $request->all();
 
-        
+
         if ($request->hasfile('logo')) {
 
             $image1 = $request->file('logo');
@@ -599,7 +603,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['logo'] = 'admin/setting/' . $name;
-        } 
+        }
         if ($request->hasfile('footerBackGroundImage')) {
 
             $image1 = $request->file('footerBackGroundImage');
@@ -615,16 +619,16 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['jooberBackGroundImage'] = 'admin/setting/' . $name;
-        }  
-        if ($request->hasfile('pricingBackGroundImage')) {
+        }
+        if ($request->hasfile('courseBackGroundImage')) {
 
             $image1 = $request->file('courseBackGroundImage');
             $name = time() . 'courseBackGroundImage' . '.' . $image1->getClientOriginalExtension();
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['courseBackGroundImage'] = 'admin/setting/' . $name;
-        } 
-       
+        }
+
         if ($request->hasfile('articleImage1')) {
 
             $image1 = $request->file('articleImage1');
@@ -632,7 +636,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['articleImage1'] = 'admin/setting/' . $name;
-        } 
+        }
 
         if ($request->hasfile('articleImage2')) {
 
@@ -641,7 +645,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['articleImage2'] = 'admin/setting/' . $name;
-        } 
+        }
 
         if ($request->hasfile('articleImage3')) {
 
@@ -650,7 +654,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['articleImage3'] = 'admin/setting/' . $name;
-        } 
+        }
 
         if ($request->hasfile('simage1')) {
 
@@ -659,7 +663,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['simage1'] = 'admin/setting/' . $name;
-        } 
+        }
         if ($request->hasfile('simage2')) {
 
             $image1 = $request->file('simage2');
@@ -667,7 +671,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['simage2'] = 'admin/setting/' . $name;
-        } 
+        }
         if ($request->hasfile('simage3')) {
 
             $image1 = $request->file('simage3');
@@ -675,18 +679,18 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $input['simage3'] = 'admin/setting/' . $name;
-        } 
-        
+        }
+
         $setting = Website::create($input);
         Session::flash('message', "Vos données enregistrées");
         return back();
     }
 
-    
+
     else{
-        
+
         $setting = Website::first();
-        
+
         $setting->phone1 = $request->phone1;
         $setting->email = $request->email;
         $setting->startTime = $request->startTime;
@@ -703,7 +707,7 @@ public function settingCreate()
         $setting->articleBlogTitle3 = $request->articleBlogTitle3;
         $setting->articleDescription3 = $request->articleDescription3;
         $setting->courseDescription = $request->courseDescription;
-       
+
 
         if ($request->hasfile('logo')) {
 
@@ -712,7 +716,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->logo = 'admin/setting/' . $name;
-        } 
+        }
         if ($request->hasfile('footerBackGroundImage')) {
 
             $image1 = $request->file('footerBackGroundImage');
@@ -720,7 +724,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->footerBackGroundImage = 'admin/setting/' . $name;
-        } 
+        }
         if ($request->hasfile('jooberBackGroundImage')) {
 
             $image1 = $request->file('jooberBackGroundImage');
@@ -728,15 +732,16 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->jooberBackGroundImage = 'admin/setting/' . $name;
-        }  
-        if ($request->hasfile('pricingBackGroundImage')) {
+        }
 
-            $image1 = $request->file('pricingBackGroundImage');
-            $name = time() . 'pricingBackGroundImage' . '.' . $image1->getClientOriginalExtension();
+        if ($request->hasfile('courseBackGroundImage')) {
+
+            $image1 = $request->file('courseBackGroundImage');
+            $name = time() . 'courseBackGroundImage' . '.' . $image1->getClientOriginalExtension();
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
-            $setting->pricingBackGroundImage = 'admin/setting/' . $name;
-        } 
+            $setting->courseBackGroundImage = 'admin/setting/' . $name;
+        }
         if ($request->hasfile('articleImage1')) {
 
             $image1 = $request->file('articleImage1');
@@ -744,7 +749,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->articleImage1 = 'admin/setting/' . $name;
-        } 
+        }
 
         if ($request->hasfile('articleImage2')) {
 
@@ -753,7 +758,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->articleImage2 = 'admin/setting/' . $name;
-        } 
+        }
 
         if ($request->hasfile('articleImage3')) {
 
@@ -762,7 +767,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->articleImage3 = 'admin/setting/' . $name;
-        } 
+        }
 
         if ($request->hasfile('simage1')) {
 
@@ -771,7 +776,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->simage1 = 'admin/setting/' . $name;
-        } 
+        }
         if ($request->hasfile('simage2')) {
 
             $image1 = $request->file('simage2');
@@ -779,7 +784,7 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->simage2 = 'admin/setting/' . $name;
-        } 
+        }
         if ($request->hasfile('simage3')) {
 
             $image1 = $request->file('simage3');
@@ -787,14 +792,14 @@ public function settingCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $setting->simage3 = 'admin/setting/' . $name;
-        } 
-        
-        
-        
+        }
+
+
+
         $setting->update();
         Session::flash('message', "Votre mise à jour de données");
         return back();
-        
+
 
     }
 
@@ -805,12 +810,12 @@ public function documentCreate()
         return view('admin.document.create',compact('users'));
     }
     public function documentStore(Request $request)
-    {       
+    {
         $validator = Validator::make($request->all(), [
             'file'  =>  'max:5024',
-            
+
                ]);
- 
+
             if ($validator->fails()) {
              return redirect()->back()->withErrors($validator)
                          ->withInput();
@@ -826,7 +831,7 @@ public function documentCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $document->file = 'admin/setting/' . $name;
-        } 
+        }
          if($document->save()){
         Session::flash('message', "Vos données sauvegardées");
         $document = Document::all();
@@ -850,12 +855,12 @@ public function documentCreate()
         return view('admin.document.edit',compact('document','users'));
     }
     public function documentUpdate(Request $request,$id)
-    {       
+    {
         $validator = Validator::make($request->all(), [
             'file'  =>  'max:5024',
-            
+
                ]);
- 
+
             if ($validator->fails()) {
              return redirect()->back()->withErrors($validator)
                          ->withInput();
@@ -871,7 +876,7 @@ public function documentCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $document->file = 'admin/setting/' . $name;
-        } 
+        }
          if($document->save()){
         Session::flash('message', "Votre mise à jour de données");
         $document = Document::all();
@@ -889,7 +894,7 @@ public function documentCreate()
          $document->delete();
         Session::flash('error', "Vos données ne sont pas mises à jour");
             return back();
-        
+
     }
     public function downloadPath($path)
 {                  dd($path);
@@ -902,11 +907,11 @@ public function documentCreate()
 
     return Response::download($file, 'filename.pdf', $headers);
 }
-    
+
 
     public function enrollmentDetailsIndex()
     {       $details = ChekOut::all();
-            
+
         return view('admin.enrolmantDetails.index',compact('details'));
     }
     public function enrollmentDetailsDelete($id)
@@ -924,7 +929,7 @@ public function documentCreate()
         return view('admin.offers.index',compact('offers'));
     }
     public function offersStore(Request $request)
-    {   
+    {
         $chek = Offers::get();
 
         if($chek->isEmpty()) {
@@ -943,8 +948,8 @@ public function documentCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $offers->image = 'admin/setting/' . $name;
-        } 
-   
+        }
+
         if($offers->save()){
             Session::flash('message', "Vos données sauvegardées");
             return back();
@@ -957,7 +962,7 @@ public function documentCreate()
 
     else{
         $offers = Offers::first();
-        
+
         $offers->title = $request->title;
         $offers->date = $request->date;
         $offers->link = $request->link;
@@ -971,8 +976,8 @@ public function documentCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $offers->image = 'admin/setting/' . $name;
-        } 
-   
+        }
+
         if($offers->update()){
             Session::flash('message', "Votre mise à jour de données");
             return back();
@@ -983,7 +988,7 @@ public function documentCreate()
         }
 
     }
-     
+
     }
 
     public function offersDelete($id)
@@ -994,12 +999,12 @@ public function documentCreate()
     }
     public function offersEdit($id)
     {   $offers = Offers::where('id','=',$id)->first();
-       
+
         return view('admin.offers.edit',compact('offers'));
     }
     public function offersUpdate( Request $request, $id)
     {   $offers = Offers::where('id','=',$id)->first();
-        
+
         $offers->title = $request->title;
         $offers->date = $request->date;
         $offers->link = $request->link;
@@ -1011,8 +1016,8 @@ public function documentCreate()
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $offers->image = 'admin/setting/' . $name;
-        } 
-   
+        }
+
         if($offers->update()){
             Session::flash('message', "Votre mise à jour de données");
             $offers = Offers::all();
@@ -1026,6 +1031,7 @@ public function documentCreate()
 
     public function userMessages()
     {      $contact = Contact::get();
+
        return view('admin.messages.index',compact('contact'));
     }
     public function messageDelete($id)
@@ -1040,7 +1046,8 @@ public function documentCreate()
     }
     public function userDelete($id)
     {   $users = User::where('id','=',$id)->first();
-        $users->delete();
+        $users->status = 0;
+        $users->update();
         Session::flash('error', "Vos données supprimer");
         return back();
     }

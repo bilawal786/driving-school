@@ -74,7 +74,7 @@
                                     </button>
                                 </div>
                   @endif
-                
+
                 <!-- row -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12">
@@ -93,13 +93,13 @@
                       <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre Logo</strong></center><input type="file" style="display: none;"name="logo" value="{{ old('logo') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp1" onchange="preview_image1(event)">
                         </label>
                                             </div>
-                                        
+
                                         <div class="col-sm-4">
-                      
+
                                         <img id="output_image1" src="{{ asset($setting->logo ?? ' ')  }}" />
-                    
+
                                         </div></div>
-                                        
+
                                         <div class="form-group row">
                                             <label class="col-sm-2 col-form-label"><!-- Title -->Nom Site <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
@@ -119,17 +119,17 @@
                                             <div class="col-sm-4">
                                                 <input type="text" class="form-control" name="phone2" value="{{$setting->phone2 ?? ''}}" placeholder="Entrez le Téléphone2" >
                                             </div>
-                                            
+
                                         </div>
 
                                         <div class="form-group row">
                                         <label class="col-sm-2 col-form-label"><!-- start time --> Heure  début <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
-                                                <input type="time" class="form-control" name="startTime" value="{{$setting->startTime ?? ''}}"  placeholder="Entrez le Temps" >
+                                                <input type="time" class="form-control" name="startTime" value="{{$setting->startTime ?? ''}}" >
                                             </div>
                                             <label class="col-sm-2 col-form-label"><!-- end time -->heure de fin  <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
-                                                <input type="time" class="form-control" name="endTime" value="{{$setting->endTime ?? ''}}" placeholder="Entrez le Address " >
+                                                <input type="time" class="form-control" name="endTime" value="{{$setting->endTime ?? ''}}" >
                                             </div>
                                         </div>
 
@@ -142,7 +142,7 @@
                                             <div class="col-sm-4">
                                                 <input type="text" class="form-control" name="aboutDescription" value="{{$setting->aboutDescription ?? ''}}" placeholder="Entrez le à propos de la description" >
                                             </div>
-                                            
+
                                         </div>
                                         <div class="form-group row">
                                         <label class="col-sm-2 col-form-label"><!-- Title -->Facebook <strong style="color: red;font-size: 20px;"> *</strong></label>
@@ -153,18 +153,18 @@
                                             <div class="col-sm-4">
                                                 <input type="text" class="form-control" name="instagram" value="{{$setting->instagram ?? ''}}" placeholder="Entrez le Instagram" >
                                             </div>
-                                            
+
                                         </div>
 
-                             
 
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label"><!-- copy right -->Droits d'auteur <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="copyRight" value="{{$setting->copyRight ?? ''}}" placeholder="Entrez le Droits d'auteur" >
-                                            </div>
-                                            
-                                        </div>
+
+{{--                                        <div class="form-group row">--}}
+{{--                                            <label class="col-sm-2 col-form-label"><!-- copy right -->Droits d'auteur <strong style="color: red;font-size: 20px;"> *</strong></label>--}}
+{{--                                            <div class="col-sm-4">--}}
+{{--                                                <input type="text" class="form-control" name="copyRight" value="{{$setting->copyRight ?? ''}}" placeholder="Entrez le Droits d'auteur" >--}}
+{{--                                            </div>--}}
+
+{{--                                        </div>--}}
 
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label"><!--Icon-->Image du curseur1 (1920x850)<strong style="color: red;font-size: 20px;"> * </strong></label>
@@ -173,11 +173,11 @@
                       <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre image</strong></center><input type="file" style="display: none;"name="simage1" value="{{ old('simage1') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp5" onchange="preview_image5(event)">
                         </label>
                                             </div>
-                                        
+
                                         <div class="col-sm-4">
-                      
+
                                         <img id="output_image5" src="{{ asset($setting->simage1 ?? ' ')  }}" />
-                    
+
                                         </div></div>
 
                                         <div class="form-group row">
@@ -187,11 +187,11 @@
                       <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre image</strong></center><input type="file" style="display: none;"name="simage2" value="{{ old('simage2') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp6" onchange="preview_image6(event)">
                         </label>
                                             </div>
-                                        
+
                                         <div class="col-sm-4">
-                      
+
                                         <img id="output_image6" src="{{ asset($setting->simage2 ?? ' ')  }}" />
-                    
+
                                         </div></div>
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label"><!--Icon-->Image du curseur3 (1920x850)<strong style="color: red;font-size: 20px;"> * </strong></label>
@@ -200,11 +200,11 @@
                       <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre image</strong></center><input type="file" style="display: none;"name="simage3" value="{{ old('simage3') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp7" onchange="preview_image7(event)">
                         </label>
                                             </div>
-                                        
+
                                         <div class="col-sm-4">
-                      
+
                                         <img id="output_image7" src="{{ asset($setting->simage3 ?? ' ')  }}" />
-                    
+
                                         </div></div>
 
                                         <div class="form-group row">
@@ -214,11 +214,11 @@
                       <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre image</strong></center><input type="file" style="display: none;"name="footerBackGroundImage" value="{{ old('footerBackGroundImage') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp7" onchange="preview_image8(event)">
                         </label>
                                             </div>
-                                        
+
                                         <div class="col-sm-4">
-                      
+
                                         <img id="output_image8" src="{{ asset($setting->footerBackGroundImage )  }}" />
-                    
+
                                         </div></div>
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label"><!--Icon-->Inscription aux Cours (1920x838)<strong style="color: red;font-size: 20px;"> * </strong></label>
@@ -227,11 +227,11 @@
                       <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre image</strong></center><input type="file" style="display: none;"name="courseBackGroundImage" value="{{ old('courseBackGroundImage') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp7" onchange="preview_image9(event)">
                         </label>
                                             </div>
-                                        
+
                                         <div class="col-sm-4">
-                      
+
                                         <img id="output_image9" src="{{ asset($setting->courseBackGroundImage )  }}" />
-                    
+
                                         </div></div>
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label"><!--Icon-->Image du fond de témoignage (1920x516)<strong style="color: red;font-size: 20px;"> * </strong></label>
@@ -240,17 +240,17 @@
                       <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre image</strong></center><input type="file" style="display: none;"name="jooberBackGroundImage" value="{{ old('jooberBackGroundImage') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp7" onchange="preview_image10(event)">
                         </label>
                                             </div>
-                                        
+
                                         <div class="col-sm-4">
-                      
+
                                         <img id="output_image10" src="{{ asset($setting->jooberBackGroundImage )  }}" />
-                    
+
                                         </div></div>
 
                                         <div class="form-group row">
                                         <label class="col-sm-3 col-form-label"><!-- Description -->Description du cours <strong style="color: red;font-size: 20px;"> *</strong></label>
                                         <div class="col-sm-12">
-                                        
+
                                         <div class="card-body">
 
                                         <div >
@@ -260,8 +260,8 @@
                                     </div>
                                         </div>
                                         </div>
-                                        
-                                        
+
+
                                         <div class="form-group row">
                                             <div class="col-sm-10">
                                                 <button type="submit" class="btn btn-primary"><!-- Submit -->Soumettre</button>
@@ -279,7 +279,7 @@
             Content body start
         ***********************************-->
         <script>
-function preview_image1(event) 
+function preview_image1(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -294,7 +294,7 @@ function preview_image1(event)
 </script>
 
 <script>
-function preview_image2(event) 
+function preview_image2(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -308,7 +308,7 @@ function preview_image2(event)
 </script>
 
 <script>
-function preview_image3(event) 
+function preview_image3(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -323,7 +323,7 @@ function preview_image3(event)
 </script>
 
 <script>
-function preview_image4(event) 
+function preview_image4(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -336,7 +336,7 @@ function preview_image4(event)
 
 </script>
         <script>
-function preview_image5(event) 
+function preview_image5(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -351,7 +351,7 @@ function preview_image5(event)
 </script>
 
 <script>
-function preview_image6(event) 
+function preview_image6(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -364,7 +364,7 @@ function preview_image6(event)
 
 </script>
         <script>
-function preview_image7(event) 
+function preview_image7(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -375,7 +375,7 @@ function preview_image7(event)
  reader.readAsDataURL(event.target.files[0]);
 }
 
-function preview_image8(event) 
+function preview_image8(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -386,7 +386,7 @@ function preview_image8(event)
  reader.readAsDataURL(event.target.files[0]);
 }
 
-function preview_image9(event) 
+function preview_image9(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -396,7 +396,7 @@ function preview_image9(event)
  }
  reader.readAsDataURL(event.target.files[0]);
 }
-function preview_image10(event) 
+function preview_image10(event)
 {
  var reader = new FileReader();
  reader.onload = function()

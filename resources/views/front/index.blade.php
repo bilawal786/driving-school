@@ -10,17 +10,17 @@
         </div>
         <div id="htmlcaption1" class="nivo-html-caption">
             <div class="slide-table container">
-                
+
             </div>
         </div>
         <div id="htmlcaption2" class="nivo-html-caption">
             <div class="slide-table container">
-               
+
             </div>
         </div>
         <div id="htmlcaption3" class="nivo-html-caption">
             <div class="slide-table container">
-                
+
         </div>
     </div>
 
@@ -48,11 +48,11 @@
                     </div>
                 </div>
             </div>
-       
+
             </div>
         </div>
     </div>
-   
+
     <!-- Feature Area
     ============================================ -->
     <div id="feature-area" class="feature-area bg-gray pt-90 pb-90">
@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="section-title text-center col-12 mb-45">
                     <h3 class="heading"><!--our features-->NOS FONCTIONNALITÉS</h3>
-                    
+
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
             </div>
@@ -72,21 +72,21 @@
                         <div class="icon"><i class="icofont icofont-file-spreadsheet"></i></div>
                         <div class="text fix">
                             <h4><!--Quick License-->{{$feature->title1 ?? ''}}</h4>
-                            <p>{{$feature->description1 ?? ''}} </p>
+                            <p> {{Str::limit($feature->description1, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title1])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-car-alt-4"></i></div>
                         <div class="text fix">
                             <h4><!--Unlimited Car Support-->{{$feature->title2 ?? ''}}</h4>
-                            <p>{{$feature->description2 ?? ''}}</p>
+                            <p> {{Str::limit($feature->description2, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title2])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-video-alt"></i></div>
                         <div class="text fix">
                             <h4>{{$feature->title3 ?? ''}}</h4>
-                            <p>{{$feature->description3 ?? ''}} </p>
+                            <p> {{Str::limit($feature->description3, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title3])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                 </div>
@@ -100,21 +100,21 @@
                         <div class="icon"><i class="icofont icofont-man-in-glasses"></i></div>
                         <div class="text fix">
                             <h4><!--Experience Instructors-->{{$feature->title4 ?? ''}}</h4>
-                            <p>{{$feature->description4 ?? ''}}</p>
+                            <p> {{Str::limit($feature->description4, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title4])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-clock-time"></i></div>
                         <div class="text fix">
                             <h4>{{$feature->title5 ?? ''}}</h4>
-                            <p>{{$feature->description5 ?? ''}} </p>
+                            <p> {{Str::limit($feature->description5, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title5])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-direction-sign"></i></div>
                         <div class="text fix">
                             <h4>{{$feature->title6 ?? ''}}</h4>
-                            <p>{{$feature->description6 ?? ''}} </p>
+                            <p> {{Str::limit($feature->description6, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title6])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                 </div>
@@ -140,32 +140,32 @@
             <!-- Course Wrapper -->
             <div class="course-wrapper row">
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
-                    <div class="course-item text-center">
+                    <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category1])}}"><div class="course-item text-center">
                         <i class="icofont icofont-car-alt-4"></i>
-                        <h4 ><!--normal driving-->{{$courseCategory->category1 ?? ''}}</h4>
-                        <!-- <p>There are many variations of items passag LoIpsum available the majority ratomised </p> -->
-                    </div>
+                        <h4 ><!--normal driving-->{{Str::limit($courseCategory->category1, 20)}}</h4>
+                         <p>{{Str::limit($courseCategory->description1, 80)}} </p>
+                        </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
-                    <div class="course-item text-center">
+                    <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category2])}}"><div class="course-item text-center">
                         <i class="icofont icofont-ambulance-cross"></i>
-                        <h4 ><!--defensive-->{{$courseCategory->category2 ?? ''}}</h4>
-                        <!-- <p>There are many variations of items passag LoIpsum available the majority ratomised </p> -->
-                    </div>
+                        <h4 ><!--defensive-->{{Str::limit($courseCategory->category2, 20)}}</h4>
+                        <p>{{Str::limit($courseCategory->description2, 80)}} </p>
+                        </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
-                    <div class="course-item text-center">
+                    <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category3])}}"><div class="course-item text-center">
                         <i class="icofont icofont-fast-delivery"></i>
-                        <h4 ><!--power booster-->{{$courseCategory->category3 ?? ''}}</h4>
-                        <!-- <p>There are many variations of items passag LoIpsum available the majority ratomised </p> -->
-                    </div>
+                        <h4 ><!--power booster-->{{Str::limit($courseCategory->category3, 20)}}</h4>
+                        <p>{{Str::limit($courseCategory->description3, 80)}} </p>
+                        </div></a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mb-30 fix">
-                    <div class="course-item text-center">
+                    <a href="{{route('categorycourse.detials',['category'=>$courseCategory->category4])}}"><div class="course-item text-center">
                         <i class="icofont icofont-rocket-alt-2"></i>
-                        <h4 s><!--crash level-->{{$courseCategory->category4 ?? ''}}</h4>
-                        <!-- <p>There are many variations of items passag LoIpsum available the majority ratomised </p> -->
-                    </div>
+                        <h4 ><!--crash level-->{{$courseCategory->category4}}</h4>
+                        <p>{{Str::limit($courseCategory->description4, 80)}} </p>
+                    </div></a>
                 </div>
             </div>
         </div>
@@ -173,7 +173,7 @@
      <!-- Video Area
     ============================================ -->
 
-    
+
     <div id="video-area" class="video-area overlay overlay-black overlay-50">
         <div class="container">
             <div class="row">
@@ -208,7 +208,7 @@
                             <h4><!--basic-->{{$row->courseTitle ?? ''}}</h4>
                         </div>
                         <div class="pricing-price">
-                            <h2><span>$</span>{{$row->price ?? ''}}</h2>
+                            <h2><span>€</span>{{$row->price ?? ''}}</h2>
                         </div>
                         <ul class="pricing-details">
                             <li><!--2 Month Course-->{{$row->courseDetails1 ?? ''}}</li>
@@ -232,7 +232,7 @@
                             <h4><!--basic-->{{$row->courseTitle ?? ''}}</h4>
                         </div>
                         <div class="pricing-price">
-                            <h2><span>$</span>{{$row->price ?? ''}}</h2>
+                            <h2><span>€</span>{{$row->price ?? ''}}</h2>
                         </div>
                         <ul class="pricing-details">
                             <li><!--2 Month Course-->{{$row->courseDetails1 ?? ''}}</li>
@@ -267,27 +267,27 @@
                 <div class="col-md-6">
                     <div class="heading margin_top_30">
                         <h2 class="heading" style="text-align: center; color: black; font-size: 40px;"><!--About our shop--> {{$offers->title ??''}}</h2>
-                       
+
                     </div>
                     <div class="heading margin_top_30" style=" text-align: center; margin-top: 80px;">
-                        
-                       <p ><h3 style="float:left; margin-left:200px;" ><del>€{{$offers->oldPrice ??''}}</del></h3> <h2 style=""   >€{{$offers->newPrice ??''}}</h2></p> 
+
+                       <p ><h3 style="float:left; margin-left:200px;" ><del>€{{$offers->oldPrice ??''}}</del></h3> <h2 style=""   >€{{$offers->newPrice ??''}}</h2></p>
                     </div>
                     <div class="full margin_top_20" >
                     <p style=" text-align: right; font-size: 60px;  margin-top: 120px;" id="demotime"></p>
                 </div>
                     </div>
                     <div class="full margin_top_50" >
-                   
+
                     <!-- <img class="img-responsive" src="{{ asset($about->image2 ?? ' ')  }}" alt="#" /> -->
                     </div>
                 </div>
             </div>
-       
+
             </div>
         </div>
     </div>
-   
+
     <!-- Instructor Area
     ============================================ -->
     <div id="instructor-area" class="instructor-area bg-gray pt-90 pb-60">
@@ -297,7 +297,7 @@
                 <div class="section-title text-center col-12 mb-45">
                     <h3 class="heading">INSTRUCTEUR</h3>
                     <div class="excerpt">
-                        
+
                     </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
@@ -307,7 +307,7 @@
                     <!-- Instructor Tab Content -->
                     <div class="tab-content">
                     @foreach($instructor as $key=> $row)
-                      
+
                     @if($key+1 == 1)
                         <div class="tab-pane fade show active" id="instructor-{{$row->id}}">
                             <div class="row">
@@ -315,11 +315,11 @@
                                     <h4 class="instructor-name">{{$row->name ?? ''}}</h4>
                                     <h5 class="instructor-title">{{$row->job ?? ''}}</h5>
                                     <p>{!! $row->description2 ?? '' !!}</p>
-                                    <div class="instructor-social fix">
-                                    <a href="{{$row->facebook}}"><i class="icofont icofont-social-facebook"></i></a>
-                                    <a href="{{$row->instagram}}"><i class="icofont icofont-social-instagram"></i></a>
-                                        
-                                    </div>
+{{--                                    <div class="instructor-social fix">--}}
+{{--                                    <a href="{{$row->facebook}}"><i class="icofont icofont-social-facebook"></i></a>--}}
+{{--                                    <a href="{{$row->instagram}}"><i class="icofont icofont-social-instagram"></i></a>--}}
+{{--                                        --}}
+{{--                                    </div>--}}
                                 </div>
                                 <div class="instructor-image col-lg-5 col-md-6 col-12">
                                     <img src="{{asset($row->image1 ?? '')}}" alt="" />
@@ -336,7 +336,7 @@
                                     <div class="instructor-social fix">
                                     <a href="{{$row->facebook}}"><i class="icofont icofont-social-facebook"></i></a>
                                     <a href="{{$row->instagram}}"><i class="icofont icofont-social-instagram"></i></a>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="instructor-image col-lg-5 col-md-6 col-12">
@@ -348,19 +348,19 @@
                     @endif
 
                     @endforeach
-                        
+
                     </div>
                     <!-- Instructor Tab List -->
                     <ul class="nav instructor-tab-list fix">
                     @foreach($instructor as $key=>$row)
-                        
+
                         @if($key+1 == 1)
                         <li class="active"><a href="#instructor-{{$row->id ??''}}" data-toggle="tab"><img src="{{asset($row->image2 ?? '')}}" alt="" /></a></li>
                         @else
                         <li><a href="#instructor-{{$row->id ?? ''}}" data-toggle="tab"><img src="{{asset($row->image2 ?? '')}}" alt="" /></a></li>
                         @endif
                     @endforeach
-                        
+
                     </ul>
                 </div>
             </div>
@@ -448,15 +448,15 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Testimonial Area
     ============================================ -->
     <div id="testimonial-area" class="testimonial-area overlay overlay-white overlay-80 text-center pt-90 pb-90">
         <div class="container">
-       
+
             <div class="row">
-            
-            
+
+
                 <div class="col-lg-8 col-12 mx-auto">
                     <!-- Testimonial Image Slider -->
                     <div class="ti-slider mb-40">
@@ -465,31 +465,31 @@
                     @endforeach
                     </div>
                     <!-- Testimonial Content Slider -->
-                   
+
                     <div class="tc-slider">
                     @foreach($jobber as $row)
                         <div class="single-slide">
-                        
+
                         <h5>{{$row->name}}</h5>
                             <span>{{$row->job}}</span>
                             <p>{{$row->description}}</p>
-                           
-                     
+
+
                         </div>
                     @endforeach
-                        
+
                     </div>
-                    
+
                 </div>
-        
+
             </div>
         </div>
         <!-- Slider Arrows -->
         <button class="ts-arrows ts-prev"><i class="icofont icofont-caret-left"></i></button>
         <button class="ts-arrows ts-next"><i class="icofont icofont-caret-right"></i></button>
     </div>
-    
-    
+
+
     <!-- FAQ Area
     ============================================ -->
     <div id="faq-area" class="faq-area bg-white pt-90 pb-60">
@@ -630,5 +630,4 @@
         }, 1000);
     </script>
     @endsection
-   
-    
+

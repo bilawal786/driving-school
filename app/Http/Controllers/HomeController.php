@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Instructor;
 use Illuminate\Http\Request;
 use Auth;
 use App\Website;
@@ -30,9 +31,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-        return view('home');
-     
+        $user = User::where('role','=',1)->where('status','=',1)->count();
+        $instructor = Instructor::count();
+        $courses = CourseEnroll::count();
+        return view('home',compact('user','instructor','courses'));
+
     }
     public function frontIndex()
     {
@@ -40,11 +43,11 @@ class HomeController extends Controller
         $document = Document::where('user_id','=',Auth::user()->id)->get();
         $checkOut = ChekOut::where('user_id','=',Auth::user()->id)->get();
         return view('front.dashboard',compact('website','checkOut','document'));
-     
+
     }
-    
+
     public function checkOut($id)
-    {  
+    {
         $user = Auth::user();
         $website = Website::first();
         $courses = CourseEnroll::where('id','=',$id)->first();
@@ -58,10 +61,10 @@ class HomeController extends Controller
         }
         $intent = $payment_intent->client_secret;
         return view('front.checkOut',compact('user','website','courses','intent'));
-     
+
     }
     public function checkOutStore(Request $request)
-    {  
+    {
         $checkOut = new ChekOut();
 
         $checkOut->user_id = $request->user_id;
@@ -72,16 +75,16 @@ class HomeController extends Controller
         $checkOut->save();
 
         return view('front.completePaymant');
-        
-        
-     
+
+
+
     }
 
     public function downloadPath($id)
-{      
-                
+{
+
     $document = Document::where('id','=',$id)->first();
-    
+
     $file=  $document->file;
 
     $headers = array(

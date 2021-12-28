@@ -33,12 +33,16 @@
     ============================================ -->
     <script src="{{asset('front/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 
-    
-    <style>
- 
 
-.footer-area {
-    background: rgba(0, 0, 0, 0) url('{{ asset($website->footerBackGroundImage ?? '') }}') repeat scroll center center;
+    <style>
+        .nivo-caption {
+            position: inherit;
+
+        }
+
+
+    .footer-area {
+        background: rgba(0, 0, 0, 0) url('{{ asset($website->footerBackGroundImage ?? '') }}') repeat scroll center center;
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -61,6 +65,16 @@
     background-size: cover;
     padding: 195px 0;
 }
+        .overlay-80:before {
+            opacity: 0.6;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+        }
+
+        .funfact-area {
+            background: rgba(0, 0, 0, 0) url('{{ asset($funfact->backGroundImage ?? '') }}') no-repeat scroll center center;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
 .heading {
   color:red;
 }
@@ -107,7 +121,7 @@
                         <nav>
                             <ul>
                                 <li class="active"><a href="{{route('front.index')}}"><!--Home-->Accueil</a></li>
-                                <li><a href="{{route('front.index')}}#about-area"><!--About-->Sur</a></li>
+                                <li ><a href="{{route('front.index')}}#about-area"><!--About-->Sur</a></li>
                                 <li><a href="{{route('front.index')}}#feature-area"><!--Feature-->Caractéristique</a></li>
                                 <!--<li><a href="#course-area">--><!--Course--><!--Cours</a></li>-->
                                 <li><a href="{{route('front.index')}}#video-area"><!--Video-->Vidéo</a></li>
@@ -116,13 +130,13 @@
                                 <li><a href="{{route('front.index')}}#gallery-area"><!--Gallery-->Galerie</a></li>
                                 <li><a href="{{route('front.index')}}#testimonial-area"><!--Testimonial-->Témoignage</a></li>
                                 <li><a href="{{route('front.index')}}#faq-area"><!--FAQ-->FAQ</a></li>
-                                
+
                                 <li><a href="{{route('front.contact')}}"><!--Contact Us-->Contact</a></li>
                                 @auth
                                 <li><a href="{{route('home')}}"><!--Contact Us-->{{Auth::user()->fname}} {{Auth::user()->lname}}</a></li>
                                 @else
                                 <li><a href="{{route('front.login')}}"><!--Contact Us-->Connexion</a></li>
-                               
+
                                 @endauth
                             </ul>
                         </nav>
@@ -138,7 +152,7 @@
 
 @yield('content')
 
-    
+
     <!-- Footer Area
     ============================================ -->
     <div id="footer-area" class="footer-area overlay overlay-black overlay-70 pt-90">
@@ -151,21 +165,21 @@
                         <div class="widget-social fix">
                             <a href="{{$website->facebook ?? ''}}"><i class="icofont icofont-social-facebook"></i></a>
                             <a href="{{$website->instagram ?? ''}}"><i class="icofont icofont-social-instagram"></i></a>
-                            
+
                         </div>
                     </div>
                 </div>
                 <div class="footer-widget text-left col-lg-6 col-md-6 col-12">
                     <h4 class="widget-title">CONTACT RAPIDE</h4>
                     <div class="contact-widget">
-                        <h5>address:</h5>
+                        <h5>adresse:</h5>
                         <p>{{$website->address ?? ''}}</p>
                         <h5>phone:</h5>
                         <p>{{$website->phone1 ?? ''}} <br />{{$website->phone2 ?? ''}}</p>
                         <h5>e-mail</h5>
                         <p>
                             <a href="#">{{$website->email ?? ''}}</a>
-                            
+
                         </p>
                     </div>
                 </div>
@@ -211,7 +225,7 @@
                 </div> -->
             </div>
             <div class="footer-bottom text-center col-12">
-                <p class="copyright">Copyright &copy; {{$website->copyRight}}</p>
+                <p class="copyright">Copyright &copy; Develop by IkaeDigital</p>
             </div>
         </div>
     </div>

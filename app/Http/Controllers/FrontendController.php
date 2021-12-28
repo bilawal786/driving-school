@@ -43,23 +43,35 @@ class FrontendController extends Controller
         return view('front.index',compact('about','funfact','feature','faq','galery','jobber','website','courseCategory','pricing','video','instructor','courseEnroll','offers'));
     }
     public function contact(){
-       
+
         $website = Website::first();
-       
+
         return view('front.contact',compact('website'));
     }
+    public function fetaureDetails($title){
+
+        $website = Website::first();
+        $fetaure = Features::first();
+        return view('front.details.fetaure',compact('website','title','fetaure'));
+    }
+    public function categoryCourseDetails($category){
+
+        $website = Website::first();
+        $categoryCourse = CourseCategory::first();
+        return view('front.details.categorycourse',compact('website','category','categoryCourse'));
+    }
     public function logIN(){
-       
+
         $website = Website::first();
         return view('front.login',compact('website'));
     }
     public function register(){
-       
+
         $website = Website::first();
         return view('front.register',compact('website'));
     }
     public function profileUpdate(Request $request){
-       
+
         $user = Auth::user();
 
         $user->fname = $request->fname;
@@ -73,7 +85,7 @@ class FrontendController extends Controller
             $destinationPath = 'admin/setting/';
             $image1->move($destinationPath, $name);
             $user->image = 'admin/setting/' . $name;
-        } 
+        }
         $user->update();
 
          Session::flash('message', "Mise à jour de votre profil");
@@ -81,14 +93,14 @@ class FrontendController extends Controller
     }
 
     public function passwordUpdate(Request $request){
-       
-               
+
+
         $user = Auth::user();
         if($request->password == $request->confirm_password){
             $user->password = Hash::make(($request->password));
-        
+
             $user->update();
-    
+
              Session::flash('message', "Mise à jour de votre mot de passe");
                 return back();
         }
@@ -96,18 +108,18 @@ class FrontendController extends Controller
             Session::flash('error', "Votre mot de passe de confirmation ne correspond pas");
                 return back();
         }
-        
+
     }
-    
+
     public function contactInfoStore(Request $request){
-        
+
         $contact = new Contact();
         $contact->user_id = Auth::user()->id;
         $contact->name = $request->name;
         $contact->email = $request->email;
         $contact->subject = $request->subject;
         $contact->message = $request->message;
-       
+
         if( $contact->save()){
             Session::flash('message', "Vos données envoyer ");
             return back();
@@ -116,10 +128,10 @@ class FrontendController extends Controller
             Session::flash('error', "Vos données ne sont pas envoyées");
            return back();
         }
-       
-        
-    }
-          
 
-     
+
+    }
+
+
+
 }

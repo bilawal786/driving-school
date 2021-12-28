@@ -33,7 +33,7 @@
                                     </button>
                                 </div>
                   @endif
-                
+
                 <!-- row -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12">
@@ -50,68 +50,70 @@
                                             <div class="col-sm-4">
                                                 <input type="text" class="form-control" name="title1" value="{{$feature->title1 ?? ''}}" placeholder="Entrez le Title1" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title --> Description1 <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="description1" value="{{$feature->description1 ?? ''}}" placeholder="Entrez le La Description1" >
-                                            </div>
-                                           
-                                        </div> 
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Title2 <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="title2" value="{{$feature->title2 ?? ''}}" placeholder="Entrez le Title2" >
-                                            </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Description2 <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="description2" value="{{$feature->description2 ?? ''}}" placeholder="Entrez le La Description2" >
-                                            </div>
-                                           
-                                        </div> 
+                                                 <label class="col-sm-2 col-form-label"><!-- Title -->Title2 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                                 <div class="col-sm-4">
+                                                     <input type="text" class="form-control" name="title2" value="{{$feature->title2 ?? ''}}" placeholder="Entrez le Title2" >
+                                                 </div>
+
+                                        </div>
+
                                         <div class="form-group row">
                                             <label class="col-sm-2 col-form-label"><!-- Title -->Title3 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                                 <input type="text" class="form-control" name="title3" value="{{$feature->title3 ?? ''}}" placeholder="Entrez le Title3" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Description3 <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="description3" value="{{$feature->description3 ?? ''}}" placeholder="Entrez le La Description3" >
-                                            </div>
-                                           
-                                        </div> 
-                                        <div class="form-group row">
                                             <label class="col-sm-2 col-form-label"><!-- Title -->Title4 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                                 <input type="text" class="form-control" name="title4" value="{{$feature->title4 ?? ''}}" placeholder="Entrez le Title4" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Description4 <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="description4" value="{{$feature->description4 ?? ''}}" placeholder="Entrez le La Description4" >
-                                            </div>
-                                           
-                                        </div> 
+
+                                        </div>
 
                                          <div class="form-group row">
                                             <label class="col-sm-2 col-form-label"><!-- Title -->Title5 <strong style="color: red;font-size: 20px;"> *</strong></label>
                                             <div class="col-sm-4">
                                                 <input type="text" class="form-control" name="title5" value="{{$feature->title5 ?? ''}}" placeholder="Entrez le Title5" >
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Description5 <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="description5" value="{{$feature->description5 ?? ''}}" placeholder="Entrez le La Description5" >
-                                            </div>
-                                           
-                                        </div> 
+                                             <label class="col-sm-2 col-form-label"><!-- Title -->Title6 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                             <div class="col-sm-4">
+                                                 <input type="text" class="form-control" name="title6" value="{{$feature->title6 ?? ''}}" placeholder="Entrez le Title6" >
+                                             </div>
+
+                                        </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Title6 <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="title6" value="{{$feature->title6 ?? ''}}" placeholder="Entrez le Title6" >
+                                            <label class="col-sm-1 col-form-label"><!-- Title --> Description1 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <div class="col-sm-5">
+                                                <textarea class="summernote"  name="description1" >{{$feature->description1 ?? ''}}</textarea>
                                             </div>
-                                            <label class="col-sm-2 col-form-label"><!-- Title -->Description6 <strong style="color: red;font-size: 20px;"> *</strong></label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="description6" value="{{$feature->description6 ?? ''}}" placeholder="Entrez le La Description6" >
+                                            <label class="col-sm-1 col-form-label"><!-- Title --> Description2 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <div class="col-sm-5">
+                                                <textarea class="summernote"  name="description2" >{{$feature->description2 ?? ''}}</textarea>
                                             </div>
-                                           
-                                        </div> 
+
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-1 col-form-label"><!-- Title --> Description3 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <div class="col-sm-5">
+                                                <textarea class="summernote"  name="description3" >{{$feature->description3 ?? ''}}</textarea>
+                                            </div>
+                                            <label class="col-sm-1 col-form-label"><!-- Title --> Description4 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <div class="col-sm-5">
+                                                <textarea class="summernote"  name="description4" >{{$feature->description4 ?? ''}}</textarea>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-1 col-form-label"><!-- Title --> Description5 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <div class="col-sm-5">
+                                                <textarea class="summernote"  name="description5" >{{$feature->description5 ?? ''}}</textarea>
+                                            </div>
+                                            <label class="col-sm-1 col-form-label"><!-- Title --> Description6 <strong style="color: red;font-size: 20px;"> *</strong></label>
+                                            <div class="col-sm-5">
+                                                <textarea class="summernote"  name="description6" >{{$feature->description6 ?? ''}}</textarea>
+                                            </div>
+
+                                        </div>
+
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label"><!--Icon-->image(370x369)<strong style="color: red;font-size: 20px;"> * </strong></label>
                                             <div class="col-sm-5">
@@ -119,17 +121,17 @@
                       <center><i class="fa fa-image"></i> <!-- Add Your Image --> <strong style="font-size: 18px;">Ajoutez Votre Image</strong></center><input type="file" style="display: none;"name="image" value="{{ old('image') }}"  accept="image/png, image/gif, image/jpeg" id="imgInp1" onchange="preview_image1(event)">
                         </label>
                                             </div>
-                                        
+
                                         <div class="col-sm-4">
-                      
+
                                         <img id="output_image1" src="{{ asset($feature->image ?? ' ')  }}" />
-                    
+
                                         </div></div>
 
 
 
-                                      
-                                        
+
+
                                         <div class="form-group row">
                                             <div class="col-sm-10">
                                                 <button type="submit" class="btn btn-primary"><!-- Submit -->Soumettre</button>
@@ -146,9 +148,9 @@
         <!--**********************************
             Content body start
         ***********************************-->
-    
+
         <script>
-function preview_image1(event) 
+function preview_image1(event)
 {
  var reader = new FileReader();
  reader.onload = function()

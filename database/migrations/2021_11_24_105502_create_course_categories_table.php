@@ -19,6 +19,10 @@ class CreateCourseCategoriesTable extends Migration
             $table->string('category2')->nullable();
             $table->string('category3')->nullable();
             $table->string('category4')->nullable();
+            $table->longText('description1')->nullable();
+            $table->longText('description2')->nullable();
+            $table->longText('description3')->nullable();
+            $table->longText('description4')->nullable();
             $table->timestamps();
         });
     }

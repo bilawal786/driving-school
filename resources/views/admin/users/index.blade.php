@@ -32,9 +32,9 @@
                             <div class="card-header">
                                 <h4 class="card-title"><!-- Developer -->Étudiantes</h4>
                                 <div class="float-lg-right">
-                                
-                                
-               
+
+
+
 
                                  </div>
                             </div>
@@ -43,43 +43,44 @@
                                     <table id="example3" class="display min-w850">
                                         <thead>
                                             <tr>
-                                                
+
                                                 <th><!-- id -->Identifiant</th>
                                                 <th><!--  Name -->Name</th>
                                                 <th><!--  Name -->Email</th>
                                                  <th><!-- Job -->Phone</th>
                                                  <th><!-- Job -->Address</th>
-                                                
+
                                                 <th><!-- Action -->Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                              @foreach($users as $row)
+                                                 @if($row->status==1)
                                             <tr>
-                                                
+
                                                 <td>{{$row->id}}</td>
                                                 <td>{{$row->fname }} {{$row->lname }}</td>
                                                 <td>{{$row->email }}</td>
                                                 <td>{{$row->phone }}</td>
                                                 <td>{{$row->address }}</td>
-                                                
-                                               
+
+
                                                 <td>
 													<div class="d-flex">
-														
-                                                    
+
+
                                                 <a href="{{route('user.delete', ['id' => $row->id])}}" id="delete" class="btn btn-danger shadow btn-xs sharp" data-toggle="tooltip" title="Delete">
                                                    <i class="fa fa-trash"></i>
                                                 </a>
                                                 <!-- <a href="{{route('offers.edit', ['id' => $row->id])}}" id="edit" class="btn btn-primary shadow btn-xs sharp" data-toggle="tooltip" title="edit">
                                                    <i class="fa fa-pencil"></i>
                                                 </a> -->
-													</div>												
-												</td>												
+													</div>
+												</td>
                                             </tr>
-
+                                                 @endif
                                             @endforeach
-                                           
+
                                         </tbody>
                                     </table>
                                 </div>
