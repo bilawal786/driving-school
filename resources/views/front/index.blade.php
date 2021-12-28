@@ -122,9 +122,9 @@
                         <div class="icon"><i class="icofont icofont-file-spreadsheet"></i></div>
                         <div class="text fix">
                             <h4><!--Quick License-->{{$feature->title1 ?? ''}}</h4>
-                            <p> {!! Str::limit($feature->description1, 42) !!}
-                                <a href="{{route('fetaure.detials',['title'=>$feature->title1])}}" style="color: #DC143C">Readmore</a>
+                            <p> {!! Str::limit($feature->description1, 42) !!}plus de détail
                             </p>
+                            <a href="{{route('fetaure.detials',['title'=>$feature->title1])}}" style="color: #DC143C">Plus de détail</a>
                         </div>
                     </div>
                     <div class="single-feature">
@@ -132,8 +132,8 @@
                         <div class="text fix">
                             <h4><!--Unlimited Car Support-->{{$feature->title2 ?? ''}}</h4>
                             <p> {!! Str::limit($feature->description2, 42 )!!}
-                                <a href="{{route('fetaure.detials',['title'=>$feature->title2])}}" style="color: #DC143C">Readmore</a>
                             </p>
+                            <a href="{{route('fetaure.detials',['title'=>$feature->title2])}}" style="color: #DC143C">Plus de détail</a>
                         </div>
                     </div>
                     <div class="single-feature">
@@ -141,8 +141,8 @@
                         <div class="text fix">
                             <h4>{{$feature->title3 ?? ''}}</h4>
                             <p>{!! Str::limit($feature->description3, 42) !!}
-                                <a href="{{route('fetaure.detials',['title'=>$feature->title3])}}" style="color: #DC143C">Readmore</a>
                             </p>
+                            <a href="{{route('fetaure.detials',['title'=>$feature->title3])}}" style="color: #DC143C">Plus de détail</a>
                         </div>
                     </div>
                 </div>
@@ -156,21 +156,27 @@
                         <div class="icon"><i class="icofont icofont-man-in-glasses"></i></div>
                         <div class="text fix">
                             <h4><!--Experience Instructors-->{{$feature->title4 ?? ''}}</h4>
-                            <p> {!! Str::limit($feature->description4, 42) !!}  <a href="{{route('fetaure.detials',['title'=>$feature->title4])}}" style="color: #DC143C">Readmore</a></p>
+                            <p> {!! Str::limit($feature->description4, 42) !!}
+                            </p>
+                            <a href="{{route('fetaure.detials',['title'=>$feature->title4])}}" style="color: #DC143C">Plus de détail</a>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-clock-time"></i></div>
                         <div class="text fix">
                             <h4>{{$feature->title5 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description5, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title5])}}" style="color: #DC143C">Readmore</a> </p>
+                            <p> {{Str::limit($feature->description5, 42)}}
+                            </p>
+                            <a href="{{route('fetaure.detials',['title'=>$feature->title5])}}" style="color: #DC143C">Plus de détail</a>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-direction-sign"></i></div>
                          <div class="text fix">
                             <h4>{{$feature->title6 ?? ''}}</h4>
-                            <p> {!! Str::limit($feature->description6, 41) !!}<a href="{{route('fetaure.detials',['title'=>$feature->title6])}}" style="color: #DC143C">Readmore</a></p>
+                            <p> {!! Str::limit($feature->description6, 41) !!}
+                            </p>
+                             <a href="{{route('fetaure.detials',['title'=>$feature->title6])}}" style="color: #DC143C">Plus de détail</a>
                         </div>
                     </div>
                 </div>
