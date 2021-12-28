@@ -121,7 +121,7 @@
                         <nav>
                             <ul>
                                 <li class="active"><a href="{{route('front.index')}}"><!--Home-->Accueil</a></li>
-                                <li ><a href="{{route('front.index')}}#about-area"><!--About-->Sur</a></li>
+                                <li ><a href="{{route('front.index')}}#about-area"><!--About-->à propos</a></li>
                                 <li><a href="{{route('front.index')}}#feature-area"><!--Feature-->Caractéristique</a></li>
                                 <!--<li><a href="#course-area">--><!--Course--><!--Cours</a></li>-->
                                 <li><a href="{{route('front.index')}}#video-area"><!--Video-->Vidéo</a></li>

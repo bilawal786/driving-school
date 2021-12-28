@@ -25,36 +25,36 @@
 		</div>
 		<div class="row ">
 			<!-- Contact Info -->
-			
+
 			<!-- Contact Form -->
 			<div class="contact-form form text-center center_div col-lg-6 col-sm-7 col-12">
             <form method="POST" action="{{ route('register') }}">
                         @csrf
-                    <div class="input "><input type="text" class="@error('fname') is-invalid @enderror" name="fname" placeholder="Entrez l'Prénom" required autocomplete="lname" /></div>
+                    <div class="input "><input type="text" class="@error('fname') is-invalid @enderror" name="fname" placeholder="L'Prénom" required autocomplete="lname" /></div>
                                 @error('fname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                    <div class="input "><input type="text"  class="@error('lname') is-invalid @enderror" name="lname" placeholder="Entrez l'Nom de famille"  required autocomplete="lname"></div>
+                    <div class="input "><input type="text"  class="@error('lname') is-invalid @enderror" name="lname" placeholder="L'Nom de famille"  required autocomplete="lname"></div>
                     @error('lname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-					<div class="input "><input type="text"  class="@error('email') is-invalid @enderror" name="email" placeholder="Entrez l'e-mail" required autocomplete="email"/></div>
+					<div class="input "><input type="text"  class="@error('email') is-invalid @enderror" name="email" placeholder="L'e-mail" required autocomplete="email"/></div>
                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-					<div class="input"><input type="password"  class="@error('password') is-invalid @enderror" name="password" placeholder="Entrer le mot de passe" required autocomplete="new-password" /></div>
+					<div class="input"><input type="password"  class="@error('password') is-invalid @enderror" name="password" placeholder="Le mot de passe" required autocomplete="new-password" /></div>
                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                    <div class="input"><input type="password"  class="@error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Entrer le Confirmez le mot de passe" required autocomplete="new-password" /></div>
+                    <div class="input"><input type="password"  class="@error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Le Confirmez le mot de passe" required autocomplete="new-password" /></div>
 					<div class="input input-submit"><input type="submit" value="Connexion" /></div>
 				</form>
 				<div class="input "><p class="form-messege" style="margin-top: 30px">si vous êtes membre s'il vous  ? <a href="{{ route('front.login') }}" style="color:#dec839;">Connexion</a></p></div>
@@ -62,7 +62,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 </div>
-  
+
 @endsection

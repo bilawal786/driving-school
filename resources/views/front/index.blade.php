@@ -55,7 +55,7 @@
 
     <!-- Feature Area
     ============================================ -->
-    <div id="feature-area" class="feature-area bg-gray pt-90 pb-90">
+    <div id="feature-area" class="feature-area bg-white pt-90 pb-90">
         <div class="container">
             <!-- Section Title -->
             <div class="row">
@@ -72,21 +72,21 @@
                         <div class="icon"><i class="icofont icofont-file-spreadsheet"></i></div>
                         <div class="text fix">
                             <h4><!--Quick License-->{{$feature->title1 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description1, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title1])}}" style="color: #f5d902;">Readmore</a></p>
+                            <p> {!! Str::limit($feature->description1, 42) !!} <a href="{{route('fetaure.detials',['title'=>$feature->title1])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-car-alt-4"></i></div>
                         <div class="text fix">
                             <h4><!--Unlimited Car Support-->{{$feature->title2 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description2, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title2])}}" style="color: #f5d902;">Readmore</a></p>
+                            <p> {!! Str::limit($feature->description2, 42 )!!} <a href="{{route('fetaure.detials',['title'=>$feature->title2])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-video-alt"></i></div>
                         <div class="text fix">
                             <h4>{{$feature->title3 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description3, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title3])}}" style="color: #f5d902;">Readmore</a></p>
+                            <p>{!! Str::limit($feature->description3, 42) !!} <a href="{{route('fetaure.detials',['title'=>$feature->title3])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                 </div>
@@ -100,21 +100,21 @@
                         <div class="icon"><i class="icofont icofont-man-in-glasses"></i></div>
                         <div class="text fix">
                             <h4><!--Experience Instructors-->{{$feature->title4 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description4, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title4])}}" style="color: #f5d902;">Readmore</a></p>
+                            <p> {!! Str::limit($feature->description4, 42) !!}  <a href="{{route('fetaure.detials',['title'=>$feature->title4])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-clock-time"></i></div>
                         <div class="text fix">
                             <h4>{{$feature->title5 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description5, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title5])}}" style="color: #f5d902;">Readmore</a></p>
+                            <p> {{Str::limit($feature->description5, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title5])}}" style="color: #f5d902;">Readmore</a> </p>
                         </div>
                     </div>
                     <div class="single-feature">
                         <div class="icon"><i class="icofont icofont-direction-sign"></i></div>
-                        <div class="text fix">
+                         <div class="text fix">
                             <h4>{{$feature->title6 ?? ''}}</h4>
-                            <p> {{Str::limit($feature->description6, 42)}} <a href="{{route('fetaure.detials',['title'=>$feature->title6])}}" style="color: #f5d902;">Readmore</a></p>
+                            <p> {!! Str::limit($feature->description6, 41) !!}<a href="{{route('fetaure.detials',['title'=>$feature->title6])}}" style="color: #f5d902;">Readmore</a></p>
                         </div>
                     </div>
                 </div>
@@ -208,7 +208,7 @@
                             <h4><!--basic-->{{$row->courseTitle ?? ''}}</h4>
                         </div>
                         <div class="pricing-price">
-                            <h2><span>€</span>{{$row->price ?? ''}}</h2>
+                            <h2>{{$row->price ?? ''}}€</h2>
                         </div>
                         <ul class="pricing-details">
                             <li><!--2 Month Course-->{{$row->courseDetails1 ?? ''}}</li>
@@ -218,9 +218,9 @@
                             <li><!--Driving Licence-->{{$row->courseDetails5 ?? ''}}</li>
                         </ul>
                         @auth
-                        <a href="{{route('check.out', ['id' => $row->id])}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        <a href="{{route('check.out', ['id' => $row->id])}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAIT</a>
                         @else
-                        <a href="{{route('front.login')}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        <a href="{{route('front.login')}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAIT</a>
                         @endauth
                     </div>
                 </div>
@@ -232,7 +232,7 @@
                             <h4><!--basic-->{{$row->courseTitle ?? ''}}</h4>
                         </div>
                         <div class="pricing-price">
-                            <h2><span>€</span>{{$row->price ?? ''}}</h2>
+                            <h2><span></span>{{$row->price ?? ''}}€</h2>
                         </div>
                         <ul class="pricing-details">
                             <li><!--2 Month Course-->{{$row->courseDetails1 ?? ''}}</li>
@@ -242,9 +242,9 @@
                             <li><!--Driving Licence-->{{$row->courseDetails5 ?? ''}}</li>
                         </ul>
                         @auth
-                        <a href="{{route('check.out', ['id' => $row->id])}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        <a href="{{route('check.out', ['id' => $row->id])}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAIT</a>
                         @else
-                        <a href="{{route('front.login')}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAITH</a>
+                        <a href="{{route('front.login')}}" class="pricing-action"><!--choose plan-->CHOISIR LE FORFAIT</a>
                         @endauth
                     </div>
                 </div>
@@ -271,7 +271,7 @@
                     </div>
                     <div class="heading margin_top_30" style=" text-align: center; margin-top: 80px;">
 
-                       <p ><h3 style="float:left; margin-left:200px;" ><del>€{{$offers->oldPrice ??''}}</del></h3> <h2 style=""   >€{{$offers->newPrice ??''}}</h2></p>
+                       <p ><h3 style="float:left; margin-left:200px;" ><del>{{$offers->oldPrice ??''}}€</del></h3> <h2 style=""   >{{$offers->newPrice ??''}}€</h2></p>
                     </div>
                     <div class="full margin_top_20" >
                     <p style=" text-align: right; font-size: 60px;  margin-top: 120px;" id="demotime"></p>

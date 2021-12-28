@@ -25,16 +25,16 @@
                         <div class="content fix">
                             @if($categoryCourse->category1==$category)
                                 <h5 style="font-size: 30px;"><!--call us-->{{$categoryCourse->category1 ?? ''}}</h5>
-                                <p style="font-size: 20px;">{{$categoryCourse->description1 ?? ''}}</p>
+                                <p style="font-size: 20px;">{!! $categoryCourse->description1 ?? '' !!}</p>
                             @elseif($categoryCourse->category2==$category)
                                 <h5 style="font-size: 30px;"><!--call us-->{{$categoryCourse->category2 ?? ''}}</h5>
-                                <p style="font-size: 20px;">{{$categoryCourse->description2 ?? ''}}</p>
+                                <p style="font-size: 20px;">{!! $categoryCourse->description2 ?? '' !!}</p>
                             @elseif($categoryCourse->category3==$category)
                                 <h5 style="font-size: 30px;"><!--call us-->{{$categoryCourse->category3 ?? ''}}</h5>
-                                <p style="font-size: 20px;">{{$categoryCourse->description3 ?? ''}}</p>
+                                <p style="font-size: 20px;">{!! $categoryCourse->description3 ?? '' !!}</p>
                             @elseif($categoryCourse->category4==$category)
                                 <h5 style="font-size: 30px;"><!--call us-->{{$categoryCourse->category4 ?? ''}}</h5>
-                                <p style="font-size: 20px;">{{$categoryCourse->description4 ?? ''}}</p>
+                                <p style="font-size: 20px;">{!! $categoryCourse->description4 ?? '' !!}</p>
 
 
                             @endif

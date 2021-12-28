@@ -25,22 +25,22 @@
                         <div class="content fix">
                             @if($fetaure->title1==$title)
                             <h5 style="font-size: 30px;"><!--call us-->{{$fetaure->title1 ?? ''}}</h5>
-                            <p style="font-size: 20px;">{{$fetaure->description1 ?? ''}}</p>
+                            <p style="font-size: 20px;">{!! $fetaure->description1 ?? '' !!}</p>
                             @elseif($fetaure->title2==$title)
                             <h5 style="font-size: 30px;"><!--call us-->{{$fetaure->title2 ?? ''}}</h5>
-                            <p style="font-size: 20px;">{{$fetaure->description2 ?? ''}}</p>
+                            <p style="font-size: 20px;">{!! $fetaure->description2 ?? '' !!}</p>
                             @elseif($fetaure->title3==$title)
                             <h5 style="font-size: 30px;"><!--call us-->{{$fetaure->title3 ?? ''}}</h5>
-                            <p style="font-size: 20px;">{{$fetaure->description3 ?? ''}}</p>
+                            <p style="font-size: 20px;">{!! $fetaure->description3 ?? '' !!}</p>
                             @elseif($fetaure->title4==$title)
                             <h5 style="font-size: 30px;"><!--call us-->{{$fetaure->title4 ?? ''}}</h5>
-                            <p style="font-size: 20px;">{{$fetaure->description4 ?? ''}}</p>
+                            <p style="font-size: 20px;">{!! $fetaure->description4 ?? '' !!}</p>
                             @elseif($fetaure->title5==$title)
                             <h5 style="font-size: 30px;"><!--call us-->{{$fetaure->title5 ?? ''}}</h5>
-                            <p style="font-size: 20px;">{{$fetaure->description5 ?? ''}}</p>
+                            <p style="font-size: 20px;">{!! $fetaure->description5 ?? '' !!}</p>
                             @elseif($fetaure->title6==$title)
                             <h5 style="font-size: 30px;"><!--call us-->{{$fetaure->title6 ?? ''}}</h5>
-                            <p style="font-size: 20px;">{{$fetaure->description6 ?? ''}}</p>
+                            <p style="font-size: 20px;">{!! $fetaure->description6 ?? '' !!}</p>
 
                             @endif
                         </div>

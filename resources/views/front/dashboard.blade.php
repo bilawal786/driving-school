@@ -11,7 +11,7 @@ body {font-family: "Lato", sans-serif;}
 /* Style the tab */
 .tab {
   float: left;
-  border: 1px solid #ccc;
+  border: 1px solid red;
   background-color: #f1f1f1;
   width: 30%;
 
@@ -24,8 +24,9 @@ body {font-family: "Lato", sans-serif;}
   color: black;
   padding: 22px 16px;
   width: 100%;
+    /*#dec839*/
   border: #dec839;
-  outline: #dec839;s;
+  outline: #dec839;
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
@@ -39,14 +40,14 @@ body {font-family: "Lato", sans-serif;}
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: #dec839;;
+  background-color: red;
 }
 
 /* Style the tab content */
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 1px solid #dec839;
+  border: 1px solid red;
   width: 70%;
   border-left: none;
 
@@ -242,7 +243,7 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
   <div class="form-row" style="margin-top: 25px;">
 
 
-  <input type="submit"  style=" background-color: #dec839; border: 1px solid #dec839;" value="Mettre à jour" />
+  <input type="submit"  style=" background-color: red; border: 1px solid red;" value="Mettre à jour" />
 
 
   </div>
@@ -262,7 +263,7 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
 	<label ><!--Icon-->Nom de famille<strong style="color: red;font-size: 20px;"> * </strong></label>
 	</div>
 	<div class="col-lg-4">
-      <input type="text" class="form-control" name="lname" value="{{Auth::user()->lname}}" placeholder="Nom de famille">
+      <input type="text" class="form-control" name="lname" value="{{Auth::user()->lname}}" placeholder="Nom de famille" required>
     </div>
   </div>
   <div class="form-row" style="margin-top: 25px;">
@@ -296,7 +297,7 @@ Vous y touverez egalement vos commandes, et le détails de votre compte.
   <div class="form-row" style="margin-top: 25px;">
 
 
-  <input type="submit"  style=" background-color: #dec839; border: 1px solid #dec839;" value="Mettre à jour" />
+  <input type="submit"  style=" background-color: red; border: 1px solid red;" value="Mettre à jour" />
 
 
   </div>
