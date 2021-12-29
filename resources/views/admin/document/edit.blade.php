@@ -33,7 +33,7 @@
                                     </button>
                                 </div>
                   @endif
-                
+
                 <!-- row -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12">
@@ -51,9 +51,9 @@
                                                 <select class="form-control form-control-lg default-select select2" id="user_id" name="user_id">
                                             	<option>Choisir une Étudiantes</option>
                                             	@foreach($users as $row)
-                                                
+
                                                 <option value="{{$row->id}}" {{ $document->user_id == $row->id ? 'selected' : '' }} >{{$row->fname}} {{$row->lname}}</option>
-                                               
+
                                                 @endforeach
                                             </select>
                                             </div>
@@ -63,22 +63,22 @@
             <label class="col-sm-3 col-form-label"><!-- Course Title -->Titre  <strong style="color: red;font-size: 20px;"> *</strong></label>
             <div class="col-sm-9">
             <input type="text" class="form-control" name="title" value="{{$document->title}}"  placeholder="Entrez le titre " >
-                
+
             </div>
         </div>
 
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label"><!--Icon-->Déposer<strong style="color: red;font-size: 20px;"> * </strong></label>
                                             <div class="col-sm-9">
-                                              
-                                               <input type="file" name="file" value=""  >
-                        
+
+                                               <input type="file" name="file" value=""  accept="application/pdf"  >
+
                                             </div>
-                                        
+
                                         </div>
-                                        
-                                           
-                                        
+
+
+
                                         <div class="form-group row">
                                             <div class="col-sm-10">
                                                 <button type="submit" class="btn btn-primary"><!-- Submit -->Soumettre</button>
@@ -96,7 +96,7 @@
             Content body start
         ***********************************-->
         <script>
-function preview_image1(event) 
+function preview_image1(event)
 {
  var reader = new FileReader();
  reader.onload = function()
@@ -111,7 +111,7 @@ function preview_image1(event)
 </script>
 
 <script>
-function preview_image2(event) 
+function preview_image2(event)
 {
  var reader = new FileReader();
  reader.onload = function()

@@ -32,11 +32,9 @@
                             <div class="card-header">
                                 <h4 class="card-title"><!-- Developer -->Étudiantes</h4>
                                 <div class="float-lg-right">
+                                    <a href="{{route('students.create')}}" class="btn btn-primary">Ajouter un nouveau</a>
 
-
-
-
-                                 </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -45,10 +43,10 @@
                                             <tr>
 
                                                 <th><!-- id -->Identifiant</th>
-                                                <th><!--  Name -->Name</th>
-                                                <th><!--  Name -->Email</th>
-                                                 <th><!-- Job -->Phone</th>
-                                                 <th><!-- Job -->Address</th>
+                                                <th><!--  Name -->Prénom</th>
+                                                <th><!--  Name -->Nom de famille</th>
+                                                 <th><!-- Job -->E-mail</th>
+{{--                                                 <th><!-- Job -->Address</th>--}}
 
                                                 <th><!-- Action -->Action</th>
                                             </tr>
@@ -59,10 +57,11 @@
                                             <tr>
 
                                                 <td>{{$row->id}}</td>
-                                                <td>{{$row->fname }} {{$row->lname }}</td>
+                                                <td>{{$row->fname }} </td>
+                                                <td> {{$row->lname }}</td>
                                                 <td>{{$row->email }}</td>
-                                                <td>{{$row->phone }}</td>
-                                                <td>{{$row->address }}</td>
+{{--                                                <td>{{$row->phone }}</td>--}}
+{{--                                                <td>{{$row->address }}</td>--}}
 
 
                                                 <td>

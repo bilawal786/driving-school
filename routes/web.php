@@ -26,6 +26,10 @@ Route::get('/dashboard', 'HomeController@frontIndex')->name('dashboard');
 Route::get('/check/out/{id}', 'HomeController@checkOut')->name('check.out');
 Route::post('/checkOut/store', 'HomeController@checkOutStore')->name('checkout.store');
 Route::get('/download/url/{id}', 'HomeController@downloadPath')->name('download.url');
+Route::get('/student/download/url/{id}', 'HomeController@downloadPathStudent')->name('student.download.url');
+
+//Document User
+Route::post('/student/document/store', 'HomeController@documentStore')->name('student.document.store');
 
 
 Route::middleware(['web', 'user'])->group(function () {
@@ -40,6 +44,8 @@ Route::get('/user/messages', 'GeneralSettingsController@userMessages')->name('us
 Route::get('/message/delete/{id}', 'GeneralSettingsController@messageDelete')->name('message.delete');
 
 //Studeent Show
+Route::get('/students/create', 'GeneralSettingsController@studentCreate')->name('students.create');
+Route::post('/students/store', 'GeneralSettingsController@studentStore')->name('students.store');
 Route::get('/all/students', 'GeneralSettingsController@allStudents')->name('all.students');
 Route::get('/usser/delete/{id}', 'GeneralSettingsController@userDelete')->name('user.delete');
 

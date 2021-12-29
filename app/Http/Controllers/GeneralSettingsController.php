@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\StudenDocument;
 use Illuminate\Http\Request;
 use App\About;
 use App\Funfact;
@@ -15,6 +16,7 @@ use App\Video;
 use App\CourseEnroll;
 use App\Document;
 use File;
+use Illuminate\Support\Facades\Hash;
 use Response;
 use Illuminate\Support\Facades\Storage;
 use App\ChekOut;
@@ -835,7 +837,7 @@ public function documentCreate()
          if($document->save()){
         Session::flash('message', "Vos données sauvegardées");
         $document = Document::all();
-        return view('admin.document.index',compact('document'));
+             return redirect()->route('document.index');
           }
         else{
             Session::flash('error', "Vos données ne sont pas enregistrées");
@@ -846,7 +848,8 @@ public function documentCreate()
     public function documentIndex()
 
     {       $document = Document::all();
-        return view('admin.document.index',compact('document'));
+        $studentDocument = StudenDocument::all();
+        return view('admin.document.index',compact('document','studentDocument'));
     }
     public function documentEdit($id)
 
@@ -879,8 +882,7 @@ public function documentCreate()
         }
          if($document->save()){
         Session::flash('message', "Votre mise à jour de données");
-        $document = Document::all();
-        return view('admin.document.index',compact('document'));
+             return redirect()->route('document.index');
           }
         else{
             Session::flash('error', "Vos données ne sont pas mises à jour");
@@ -1039,6 +1041,28 @@ public function documentCreate()
         $contact->delete();
         Session::flash('error', "Vos données supprimer");
         return back();
+    }
+    public function studentCreate()
+    {
+        return view('admin.users.create');
+    }
+    public function studentStore(Request $data)
+    {
+        $this->validate($data, [
+
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+
+        ]);
+        $user = new User();
+        $user->fname = $data->fname;
+        $user->lname = $data->lname;
+        $user->email = $data->email;
+        $user->password = $data->password;
+
+        if($user->save()){
+            Session::flash('message', "Votre mise à jour de données");
+            return back();
+        }
     }
     public function allStudents()
     {      $users = User::Where('role','=',1)->get();

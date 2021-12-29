@@ -23,7 +23,7 @@ class GeneralSeeder extends Seeder
         ]);
         User::create([
             'fname' => 'Student',
-            'lname' => '',
+            'lname' => 'Student',
             'email' => 'student@gmail.com',
             'role' => '1',
             'phone' => '00000000',
