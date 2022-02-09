@@ -434,42 +434,51 @@
 
     <!-- Testimonial Area
     ============================================ -->
-    <div id="testimonial-area" class="testimonial-area overlay overlay-white overlay-80 text-center pt-90 pb-90">
+    <div id="testimonial-area" class="text-center pt-90 pb-90">
         <div class="container">
-
             <div class="row">
-
-
-                <div class="col-lg-8 col-12 mx-auto">
-                    <!-- Testimonial Image Slider -->
-                    <div class="ti-slider mb-40">
-                    @foreach($jobber as $row)
-                        <div class="single-slide"><div class="image fix"><img src="{{asset($row->image ?? '')}}" alt="" /></div></div>
-                    @endforeach
-                    </div>
-                    <!-- Testimonial Content Slider -->
-
-                    <div class="tc-slider">
-                    @foreach($jobber as $row)
-                        <div class="single-slide">
-
-                        <h5>{{$row->name}}</h5>
-                            <span>{{$row->job}}</span>
-                            <p>{{$row->description}}</p>
-
-                        </div>
-                    @endforeach
-
-                    </div>
-
+                <div class="col-md-12">
+                    <iframe sandbox='allow-scripts allow-forms allow-same-origin' src='https://www.vroomvroom.fr/ratings?school_id=576114533736b600030000e2&verified=ok&positive=true' width='800px' height='600px' id='iniframe' style='border-style: none; overflow: scroll' allowfullscreen></iframe><br/><br/><a href='https://www.vroomvroom.fr/auto-ecoles/guadeloupe/sainte-rose/ligne-de-conduite-971' target='_blank' rel='noopener noreferrer'>Découvrez notre page sur VroomVroom.fr</a>
                 </div>
-
             </div>
         </div>
-        <!-- Slider Arrows -->
-        <button class="ts-arrows ts-prev"><i class="icofont icofont-caret-left"></i></button>
-        <button class="ts-arrows ts-next"><i class="icofont icofont-caret-right"></i></button>
     </div>
+{{--    <div id="testimonial-area" class="testimonial-area overlay overlay-white overlay-80 text-center pt-90 pb-90">--}}
+{{--        <div class="container">--}}
+
+{{--            <div class="row">--}}
+
+
+{{--                <div class="col-lg-8 col-12 mx-auto">--}}
+{{--                    <!-- Testimonial Image Slider -->--}}
+{{--                    <div class="ti-slider mb-40">--}}
+{{--                    @foreach($jobber as $row)--}}
+{{--                        <div class="single-slide"><div class="image fix"><img src="{{asset($row->image ?? '')}}" alt="" /></div></div>--}}
+{{--                    @endforeach--}}
+{{--                    </div>--}}
+{{--                    <!-- Testimonial Content Slider -->--}}
+
+{{--                    <div class="tc-slider">--}}
+{{--                    @foreach($jobber as $row)--}}
+{{--                        <div class="single-slide">--}}
+
+{{--                        <h5>{{$row->name}}</h5>--}}
+{{--                            <span>{{$row->job}}</span>--}}
+{{--                            <p>{{$row->description}}</p>--}}
+
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+
+{{--                    </div>--}}
+
+{{--                </div>--}}
+
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <!-- Slider Arrows -->--}}
+{{--        <button class="ts-arrows ts-prev"><i class="icofont icofont-caret-left"></i></button>--}}
+{{--        <button class="ts-arrows ts-next"><i class="icofont icofont-caret-right"></i></button>--}}
+{{--    </div>--}}
 
 
     <!-- FAQ Area
